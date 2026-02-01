@@ -75,6 +75,110 @@ static inline uint32_t hash_xorshift(uint32_t x) {
   x ^= x << 5;
   return x;
 }
+OpTimings do_zipfian_inserts_noprefetch(
+    BaseHashTable *hashtable, double skew, int64_t seed, unsigned int count,
+    unsigned int id, std::barrier<std::function<void()>> *sync_barrier,
+    std::vector<key_type, huge_page_allocator<key_type>> *zipf_set) {
+  collector_type *const collector{};
+  uint64_t duration = 0;
+
+  // Setup item for scalar insert
+  InsertFindArgument item;
+
+  sync_barrier->arrive_and_wait();
+  stop_sync = true;
+
+  // Reset Phase
+  cur_phase = ExecPhase::none;
+  sync_barrier->arrive_and_wait();
+  cur_phase = ExecPhase::insertions;
+
+  if (id == 0) std::cout << "\nSTART SCALAR INSERT TEST {" << std::endl;
+
+  for (auto j = 0u; j < config.insert_factor; j++) {
+    uint64_t value;
+    uint64_t start = RDTSC_START();
+
+#if defined(ZIPFIAN)
+    uint64_t zipf_idx = 0;
+#endif
+
+    for (unsigned int n = 0; n < HT_TESTS_NUM_INSERTS; ++n) {
+#if defined(INFLIGHT)
+      value = hash_knuth((HT_TESTS_NUM_INSERTS * id + n));
+#elif defined(ZIPFIAN)
+      // Note: No prefetch logic here for zipf_set
+      value = zipf_set->at(zipf_idx);
+      zipf_idx++;
+#else
+      value = (HT_TESTS_NUM_INSERTS * id) + n;
+#endif
+      item.key = item.value = value;
+      item.id = n;
+
+      // Direct Insert call
+      hashtable->insert_noprefetch(&item, collector);
+    }
+
+    uint64_t end = RDTSCP();
+    duration += end - start;
+  }
+
+  sync_barrier->arrive_and_wait();
+  if (id == 0) std::cout << "} END SCALAR INSERT TEST" << std::endl;
+
+  return {duration, HT_TESTS_NUM_INSERTS * config.insert_factor};
+}
+
+OpTimings do_zipfian_gets_noprefetch(
+    BaseHashTable *hashtable, unsigned int num_threads, unsigned int id,
+    auto sync_barrier,
+    std::vector<key_type, huge_page_allocator<key_type>> *zipf_set) {
+  collector_type *const collector{};
+  uint64_t duration = 0;
+  uint64_t found = 0;
+
+  sync_barrier->arrive_and_wait();
+  stop_sync = true;
+
+  if (id == 0) std::cout << "\nSTART SCALAR FIND TEST {" << std::endl;
+
+  for (auto j = 0u; j < config.read_factor; j++) {
+    uint64_t start = RDTSC_START();
+    uint64_t value;
+#if defined(ZIPFIAN)
+    uint64_t zipf_idx = 0;
+#else
+    value = id * HT_TESTS_NUM_INSERTS;
+#endif
+
+    for (uint64_t n = 0; n < HT_TESTS_NUM_INSERTS; n++) {
+#if defined(INFLIGHT)
+      value = hash_knuth((id * HT_TESTS_NUM_INSERTS + n));
+#elif defined(ZIPFIAN)
+      value = zipf_set->at(zipf_idx);
+      zipf_idx++;
+#else
+      value++;
+#endif
+      // Direct Find Call
+      bool ret = hashtable->find_noprefetch(&value, collector);
+      if (ret) found++;
+    }
+    uint64_t end = RDTSCP();
+    duration += end - start;
+  }
+
+  sync_barrier->arrive_and_wait();
+  if (id == 0) std::cout << "} END SCALAR FIND TEST" << std::endl;
+
+  if (found > 0) {
+    PLOGI.printf("DEBUG: thread %u | actual found %lu | cycles per get: %lu",
+                 id, found, duration / found);
+  }
+
+  return {duration, HT_TESTS_NUM_INSERTS * config.read_factor};
+}
 
 OpTimings do_zipfian_inserts(
     BaseHashTable *hashtable, double skew, int64_t seed, unsigned int count,
@@ -286,8 +390,6 @@ OpTimings do_zipfian_gets(
 void ZipfianTest::run(Shard *shard, BaseHashTable *hashtable, double skew,
                       int64_t zipf_seed, unsigned int count,
                       std::barrier<std::function<void()>> *sync_barrier) {
-
-  
   OpTimings insert_timings{};
   OpTimings find_timings{};
   OpTimings upsertion_timings{1, 1};
@@ -334,9 +436,19 @@ void ZipfianTest::run(Shard *shard, BaseHashTable *hashtable, double skew,
   //     __itt_event_create("insert_test", strlen("insert_test"));
   // __itt_event_start(insert_event);
 #endif
-  insert_timings =
-      do_zipfian_inserts(hashtable, skew, zipf_seed, count, shard->shard_idx,
-                         sync_barrier, zipf_set_local);
+  // insert_timings =
+  //     do_zipfian_inserts(hashtable, skew, zipf_seed, count, shard->shard_idx,
+  //                        sync_barrier, zipf_set_local);
+
+  if (config.no_prefetch) {
+    insert_timings = do_zipfian_inserts_noprefetch(
+        hashtable, skew, zipf_seed, count, shard->shard_idx, sync_barrier,
+        zipf_set_local);
+  } else {
+    insert_timings =
+        do_zipfian_inserts(hashtable, skew, zipf_seed, count, shard->shard_idx,
+                           sync_barrier, zipf_set_local);
+  }
 #ifdef WITH_VTUNE_LIB
   //__itt_event_end(insert_event);
 #endif
@@ -435,8 +547,16 @@ void ZipfianTest::run(Shard *shard, BaseHashTable *hashtable, double skew,
   if (shard->shard_idx == 0) pcm_cnt.start_bw();
 #endif
 
-  find_timings = do_zipfian_gets(hashtable, count, shard->shard_idx,
-                                 sync_barrier, zipf_set_local);
+  // find_timings = do_zipfian_gets(hashtable, count, shard->shard_idx,
+  //                                sync_barrier, zipf_set_local);
+
+  if (config.no_prefetch) {
+    find_timings = do_zipfian_gets_noprefetch(
+        hashtable, count, shard->shard_idx, sync_barrier, zipf_set_local);
+  } else {
+    find_timings = do_zipfian_gets(hashtable, count, shard->shard_idx,
+                                   sync_barrier, zipf_set_local);
+  }
 
 #if defined(WITH_PCM)
   if (shard->shard_idx == 0) {

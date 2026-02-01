@@ -248,9 +248,9 @@ class CAS23HashTable : public BaseHashTable {
 
     // return empty_element if nothing is found
     if (!found) {
-      printf("key %" PRIu64 " not found at idx %" PRIu64 " | hash %" PRIu64
-             "\n",
-             item->key, idx, hash);
+      // printf("key %" PRIu64 " not found at idx %" PRIu64 " | hash %" PRIu64
+      //        "\n",
+      //        item->key, idx, hash);
       curr = nullptr;
     }
 

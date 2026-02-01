@@ -54,7 +54,7 @@ fi
 # insertFactor=1000000
 # numThreads=1
 
-fill=10
+fill=70
 
 HASHJOIN=13
 rsize=375809638
@@ -88,14 +88,16 @@ cmake --build $(pwd)/build
 
 
 #FOLKLORE
-    # cmd="--perf_cnt_path ./perf_cnt.txt --perf_def_path ./perf-cpp/perf_list.csv \
-    # --find_queue 64 --ht-fill $fill --ht-type $DRAMHIT23 --insert-factor $insertFactor --read-factor $readFactor\
-    # --num-threads $numThreads --numa-split $numa_policy --no-prefetch 1 --mode $ZIPFIAN --ht-size $size --skew 0.01\
-    # --hw-pref 0 --batch-len 16 --relation_r_size $rsize"
+    cmd="--perf_cnt_path ./perf_cnt.txt --perf_def_path ./perf-cpp/perf_list.csv \
+    --find_queue 64 --ht-fill $fill --ht-type $DRAMHIT23 --insert-factor $insertFactor --read-factor $readFactor\
+    --num-threads $numThreads --numa-split $numa_policy --no-prefetch 1 --mode $ZIPFIAN --ht-size $size --skew 0.01\
+    --hw-pref 0 --batch-len 16 --relation_r_size $rsize"
 
     # EVENTS="unc_m_cas_count.all,unc_m_cas_count.rd,unc_m_cas_count.wr"
     # sudo perf stat -I 1000 -e $EVENTS -- $(pwd)/build/dramhit $cmd 
     # >/dev/null
+    sudo $(pwd)/build/dramhit $cmd
+
 
 
 
@@ -103,15 +105,15 @@ cmake --build $(pwd)/build
 
 
 # regular test, has to be its own file
-for fill in $(seq 10 10 90);
-do  
-    # Define your events
-    cmd="--perf_cnt_path ./perf_cnt.txt --perf_def_path ./perf-cpp/perf_list.csv \
-    --find_queue 64 --ht-fill $fill --ht-type $DRAMHIT --insert-factor $insertFactor --read-factor $readFactor\
-    --num-threads $numThreads --numa-split $numa_policy --no-prefetch 0 --mode $ZIPFIAN --ht-size $size --skew 0.8\
-    --hw-pref 0 --batch-len 16 --relation_r_size $rsize"
-    echo $(pwd)/build/dramhit $cmd
-    sudo $(pwd)/build/dramhit $cmd
-    echo $(pwd)/build/dramhit $cmd
-done    
+# for fill in $(seq 10 10 90);
+# do  
+#     # Define your events
+#     cmd="--perf_cnt_path ./perf_cnt.txt --perf_def_path ./perf-cpp/perf_list.csv \
+#     --find_queue 64 --ht-fill $fill --ht-type $DRAMHIT --insert-factor $insertFactor --read-factor $readFactor\
+#     --num-threads $numThreads --numa-split $numa_policy --no-prefetch 0 --mode $ZIPFIAN --ht-size $size --skew 0.8\
+#     --hw-pref 0 --batch-len 16 --relation_r_size $rsize"
+#     echo $(pwd)/build/dramhit $cmd
+#     sudo $(pwd)/build/dramhit $cmd
+#     echo $(pwd)/build/dramhit $cmd
+# done    
 
