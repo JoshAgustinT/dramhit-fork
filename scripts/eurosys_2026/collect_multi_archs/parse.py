@@ -2,70 +2,53 @@ import re
 import pandas as pd
 import sys
 
-def parse_perf_output(text):
-    # This regex looks for START [Name] TEST { ... } END [Name] TEST
-    # It allows for extra characters (like # or whitespace) before/after the braces
-    blocks = re.findall(r"START (.*?) TEST \{?\s*\n(.*?)\} END \1 TEST", text, re.DOTALL)
+def parse_final_log(text):
+    # 1. Extract MLC Peak first to use as a baseline/reference
+    mlc_match = re.search(r"Numa node\s+0\s+1\s+\n\s+0\s+(\d+\.\d+)", text)
+    mlc_peak_gbs = float(mlc_match.group(1)) / 1000.0 if mlc_match else 0.0
+
+    # 2. Find the top-level variant blocks
+    variants = re.findall(r"START (\w+) \{(.*?)\} END \1", text, re.DOTALL)
     
-    summary = {}
+    records = []
     
-    for test_name, content in blocks:
-        data = []
-        # Matches: [Timestamp] [Count] [Event Name]
-        # Handles commas in counts and ignores extra text at the end of lines
-        pattern = r"(\d+\.\d+)\s+([\d,]+)\s+unc_m_cas_count\.(\w+)"
-        matches = re.findall(pattern, content)
+    for var_name, var_content in variants:
+        # Extract Bandwidth from perf samples
+        bw_pattern = r"(\d+\.\d+)\s+([\d,]+)\s+unc_m_cas_count\.(\w+)"
+        bw_matches = re.findall(bw_pattern, var_content)
         
-        if not matches:
-            continue
-            
-        for ts, count, event in matches:
-            data.append({
-                'time': float(ts),
-                'count': int(count.replace(',', '')),
-                'event': event # all, rd, wr
+        bw_sums = {'all': [], 'rd': [], 'wr': []}
+        for ts, count, event in bw_matches:
+            if event in bw_sums:
+                bw_sums[event].append(int(count.replace(',', '')) * 64 / 1e9)
+        
+        avg_bw = {k: (sum(v)/len(v) if v else 0.0) for k, v in bw_sums.items()}
+
+        # Extract MOPS and Fill levels
+        mops_sections = re.findall(r"\{.*?set_mops\s*:\s*(\d+\.\d+),\s*get_mops\s*:\s*(\d+\.\d+)\s*\}\n.*?--ht-fill (\d+)", var_content, re.DOTALL)
+
+        for set_m, get_m, fill in mops_sections:
+            records.append({
+                'Variant': var_name,
+                'Fill_Level': int(fill),
+                'Set_MOPS': float(set_m),
+                'Get_MOPS': float(get_m),
+                'Total_BW': round(avg_bw['all'], 2),
+                'MLC_Baseline_GBs': round(mlc_peak_gbs, 2)
             })
-            
-        df = pd.DataFrame(data)
-        
-        # Pivot by time so we have 'all', 'rd', 'wr' as columns for each 1s sample
-        pivot = df.pivot_table(index='time', columns='event', values='count', aggfunc='sum').fillna(0)
-        
-        # Bandwidth Formula: (Count * 64 bytes) / 10^9
-        # Assuming 1s intervals (-I 1000 in perf)
-        for col in ['all', 'rd', 'wr']:
-            if col in pivot.columns:
-                pivot[f'bw_{col}'] = (pivot[col] * 64) / 1e9
-            else:
-                pivot[f'bw_{col}'] = 0.0
-        
-        summary[test_name] = {
-            'avg_all': pivot['bw_all'].mean(),
-            'avg_rd': pivot['bw_rd'].mean(),
-            'avg_wr': pivot['bw_wr'].mean()
-        }
-    
-    return summary
+
+    return pd.DataFrame(records)
 
 if __name__ == "__main__":
     if len(sys.argv) < 2:
-        print("Usage: python3 parse_perf.py <log_file>")
+        print("Usage: python3 parse_final.py <log_file>")
         sys.exit(1)
 
-    try:
-        with open(sys.argv[1], 'r') as f:
-            log_data = f.read()
-            
-        results = parse_perf_output(log_data)
-        
-        if not results:
-            print("No test blocks found. Check if your log contains 'START [Name] TEST {'")
-        
-        for test, stats in results.items():
-            print(f"--- {test} TEST Averages ---")
-            print(f"Total BW: {stats['avg_all']:8.4f} GB/s")
-            print(f"Read BW:  {stats['avg_rd']:8.4f} GB/s")
-            print(f"Write BW: {stats['avg_wr']:8.4f} GB/s\n")
-            
-    except FileNotFoundError:
-        print(f"Error: File '{sys.argv[1]}' not found.")
+    with open(sys.argv[1], 'r') as f:
+        log_text = f.read()
+
+    df_results = parse_final_log(log_text)
+    df_results.to_csv("thesis_data_with_mlc.csv", index=False)
+    
+    print(f"\n--- Parsed Results (MLC Peak detected: {df_results['MLC_Baseline_GBs'].iloc[0] if not df_results.empty else 0} GB/s) ---")
+    print(df_results.to_string(index=False))
