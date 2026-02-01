@@ -83,6 +83,7 @@ else()
     message(FATAL_ERROR "Invalid DRAMHiT_VARIANT: ${DRAMHiT_VARIANT}")
 endif()
 
+
 # Define a single option variable with X choices for PREFETCH
 set(PREFETCH "DOUBLE" CACHE STRING "Choose PREFETCH: DOUBLE, L1, L2, L3, NTA")
 # Tell CMake what the valid values are (for GUIs like ccmake / cmake-gui)
@@ -100,6 +101,17 @@ elseif(PREFETCH STREQUAL "NTA")
     add_definitions(-DNTA_PREFETCH)
 else()
     message(FATAL_ERROR "Invalid PREFETCH option: ${PREFETCH}")
+endif()
+
+# 1. Define the boolean option (Defaulting to OFF)
+option(IN_ORDER_BATCHING "Enable in-order batching logic" OFF)
+# 2. Check and define
+if(IN_ORDER_BATCHING)
+    # Adds -DIN_ORDER_BATCHING to the compiler flags
+    add_compile_definitions(IN_ORDER_BATCHING)
+    message(STATUS "In-Order Batching: ENABLED")
+else()
+    message(STATUS "In-Order Batching: DISABLED")
 endif()
 
 
