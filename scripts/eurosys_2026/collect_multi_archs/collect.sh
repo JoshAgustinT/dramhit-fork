@@ -44,8 +44,8 @@ elif [ "$test" = "large" ]; then
     # size=1073741824
     # size=268435456
     # size=134217728
-    insertFactor=1
-    readFactor=100
+    insertFactor=10
+    readFactor=50
 fi
 
 # size=134217728
@@ -61,12 +61,13 @@ rsize=375809638
 ZIPFIAN=11
 UNIFORM=14
 
-
+OUTPUT_FILE=output.txt
 # This is for in-order batching tests
 cmake -S $(pwd) -B $(pwd)/build -DIN_ORDER_BATCHING=OFF -DDRAMHiT_VARIANT=2025_INLINE -DBUCKETIZATION=ON -DBRANCH=simd -DUNIFORM_PROBING=OFF -DPREFETCH=DOUBLE
 cmake --build $(pwd)/build
 
-# Let's test this with Folklore, DRAMHit, dramblast regular double prefetch?
+# Let's test this with MLC, Folklore, DRAMHit, dramblast regular double prefetch?
+# collect... performance 10-90, bw at 70%?, probably it...lfb might as well.
 
 # DRAMBLAST
     # cmd="--perf_cnt_path ./perf_cnt.txt --perf_def_path ./perf-cpp/perf_list.csv \
@@ -78,25 +79,26 @@ cmake --build $(pwd)/build
     # sudo perf stat -I 1000 -e $EVENTS -- $(pwd)/build/dramhit $cmd >/dev/null
 
 #DRAMHIT23
-    # cmd="--perf_cnt_path ./perf_cnt.txt --perf_def_path ./perf-cpp/perf_list.csv \
-    # --find_queue 64 --ht-fill $fill --ht-type $DRAMHIT23 --insert-factor $insertFactor --read-factor $readFactor\
-    # --num-threads $numThreads --numa-split $numa_policy --no-prefetch 0 --mode $ZIPFIAN --ht-size $size --skew 0.01\
-    # --hw-pref 0 --batch-len 16 --relation_r_size $rsize"
+   
+    cmd="--perf_cnt_path ./perf_cnt.txt --perf_def_path ./perf-cpp/perf_list.csv \
+    --find_queue 64 --ht-fill $fill --ht-type $DRAMHIT23 --insert-factor $insertFactor --read-factor $readFactor\
+    --num-threads $numThreads --numa-split $numa_policy --no-prefetch 0 --mode $ZIPFIAN --ht-size $size --skew 0.01\
+    --hw-pref 0 --batch-len 16 --relation_r_size $rsize"
 
-    # EVENTS="unc_m_cas_count.all,unc_m_cas_count.rd,unc_m_cas_count.wr"
-    # sudo perf stat -I 1000 -e $EVENTS -- $(pwd)/build/dramhit $cmd >/dev/null
+    EVENTS="unc_m_cas_count.all,unc_m_cas_count.rd,unc_m_cas_count.wr"
+    sudo perf stat -I 1000 -e $EVENTS -- $(pwd)/build/dramhit $cmd > /dev/null 2> $OUTPUT_FILE
 
 
 #FOLKLORE
-    cmd="--perf_cnt_path ./perf_cnt.txt --perf_def_path ./perf-cpp/perf_list.csv \
-    --find_queue 64 --ht-fill $fill --ht-type $DRAMHIT23 --insert-factor $insertFactor --read-factor $readFactor\
-    --num-threads $numThreads --numa-split $numa_policy --no-prefetch 1 --mode $ZIPFIAN --ht-size $size --skew 0.01\
-    --hw-pref 0 --batch-len 16 --relation_r_size $rsize"
+    # cmd="--perf_cnt_path ./perf_cnt.txt --perf_def_path ./perf-cpp/perf_list.csv \
+    # --find_queue 64 --ht-fill $fill --ht-type $DRAMHIT23 --insert-factor $insertFactor --read-factor $readFactor\
+    # --num-threads $numThreads --numa-split $numa_policy --no-prefetch 1 --mode $ZIPFIAN --ht-size $size --skew 0.01\
+    # --hw-pref 0 --batch-len 16 --relation_r_size $rsize"
 
     # EVENTS="unc_m_cas_count.all,unc_m_cas_count.rd,unc_m_cas_count.wr"
     # sudo perf stat -I 1000 -e $EVENTS -- $(pwd)/build/dramhit $cmd 
     # >/dev/null
-    sudo $(pwd)/build/dramhit $cmd
+    # sudo $(pwd)/build/dramhit $cmd
 
 
 
@@ -112,7 +114,7 @@ cmake --build $(pwd)/build
 #     --find_queue 64 --ht-fill $fill --ht-type $DRAMHIT --insert-factor $insertFactor --read-factor $readFactor\
 #     --num-threads $numThreads --numa-split $numa_policy --no-prefetch 0 --mode $ZIPFIAN --ht-size $size --skew 0.8\
 #     --hw-pref 0 --batch-len 16 --relation_r_size $rsize"
-#     echo $(pwd)/build/dramhit $cmd
+    echo $(pwd)/build/dramhit $cmd
 #     sudo $(pwd)/build/dramhit $cmd
 #     echo $(pwd)/build/dramhit $cmd
 # done    

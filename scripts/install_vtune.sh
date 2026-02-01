@@ -26,7 +26,7 @@ sudo add-apt-repository "deb https://apt.repos.intel.com/oneapi all main"
 sudo apt update
 
 #   Download latest version:
-#sudo apt install intel-oneapi-vtune
+# sudo apt install intel-oneapi-vtune
 
 #   Or install other version since it must match your vtune gui version. Can check available versions with:
 #apt-cache policy intel-oneapi-vtune
@@ -37,7 +37,7 @@ sudo apt update
 # sudo apt install -y intel-oneapi-vtune=2025.1.0-683
 
 # Josh's install version
-sudo apt install -y intel-oneapi-vtune=2025.0.0-1129
+sudo apt install -y intel-oneapi-vtune=2025.0.1-14
 
 #   Installs in dir:
 #/opt/intel/oneapi/vtune/latest/bin64/vtune
@@ -47,7 +47,7 @@ sudo apt install -y intel-oneapi-vtune=2025.0.0-1129
 cd /opt/intel/oneapi/vtune/latest/sepdk/src
 sudo ./build-driver -ni
 groups
-sudo ./insmod-sep -r -g redshift-PG0
+sudo ./insmod-sep -r -g dramhit-PG0
 ./insmod-sep -q
 
 #Now to use inside the vtune gui application click the ssh option and fill out your info:
@@ -72,3 +72,8 @@ sudo ./insmod-sep -r -g redshift-PG0
 #    ./insmod-sep -q
 # go back to home directory...
 
+
+
+# /opt/intel/oneapi/vtune/latest/bin64/vtune -collect memory-access \
+#   -result-dir=./vtune_dramblast_bw \
+#   -- /opt/dramhit-fork/build/dramhit --perf_cnt_path ./perf_cnt.txt --perf_def_path ./perf-cpp/perf_list.csv --find_queue 64 --ht-fill 10 --ht-type 3 --insert-factor 100 --read-factor 100 --num-threads 32 --numa-split 4 --no-prefetch 0 --mode 11 --ht-size 134217728 --skew 0.01 --hw-pref 0 --batch-len 16 --relation_r_size 375809638
