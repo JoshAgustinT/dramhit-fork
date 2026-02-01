@@ -66,6 +66,7 @@ auto get_ht_size = [](int ncons) {
 std::vector<key_type> *g_zipf_values;
 
 void init_zipfian_dist(double skew, int64_t seed) {
+  return;
   std::uint64_t keyrange_width = (1ull << 63);
   if constexpr (std::is_same_v<key_type, std::uint32_t>) {
     keyrange_width = (1ull << 31);
