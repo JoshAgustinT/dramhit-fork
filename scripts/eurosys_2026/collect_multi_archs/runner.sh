@@ -1,5 +1,5 @@
 
-# nohup bash ./collect.sh large dual 64 &
+# nohup ./collect.sh large single-local 32 &
 
 
 python parse.py output.txt

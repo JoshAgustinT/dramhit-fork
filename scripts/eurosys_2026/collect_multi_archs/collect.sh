@@ -49,8 +49,8 @@ elif [ "$test" = "large" ]; then
     # size=1073741824
     # size=268435456
     # size=524288
-    insertFactor=100
-    readFactor=100
+    insertFactor=200
+    readFactor=200
 fi
 
 # size=134217728
@@ -75,7 +75,6 @@ cmake --build $HOME_DIR/build
 # Let's test this with MLC, Folklore, DRAMHit, dramblast regular double prefetch?
 # collect... performance 10-90, bw at 70%?, probably it...lfb might as well.
 
-OUTPUT_FILE="output-all.txt"
 echo "" > $OUTPUT_FILE
 
 # DRAMBLAST
