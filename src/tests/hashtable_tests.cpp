@@ -93,7 +93,7 @@ OpTimings do_zipfian_inserts_noprefetch(
   sync_barrier->arrive_and_wait();
   cur_phase = ExecPhase::insertions;
 
-  if (id == 0) std::cout << "\nSTART SCALAR INSERT TEST {" << std::endl;
+  if (id == 0) std::cerr << "\nSTART Insert TEST {" << std::endl;
 
   for (auto j = 0u; j < config.insert_factor; j++) {
     uint64_t value;
@@ -123,9 +123,8 @@ OpTimings do_zipfian_inserts_noprefetch(
     uint64_t end = RDTSCP();
     duration += end - start;
   }
-
+  if (id == 0) std::cerr << "} END Insert TEST\n" << std::endl;
   sync_barrier->arrive_and_wait();
-  if (id == 0) std::cout << "} END SCALAR INSERT TEST" << std::endl;
 
   return {duration, HT_TESTS_NUM_INSERTS * config.insert_factor};
 }
@@ -141,7 +140,7 @@ OpTimings do_zipfian_gets_noprefetch(
   sync_barrier->arrive_and_wait();
   stop_sync = true;
 
-  if (id == 0) std::cout << "\nSTART SCALAR FIND TEST {" << std::endl;
+  if (id == 0) std::cerr << "\nSTART FIND TEST {" << std::endl;
 
   for (auto j = 0u; j < config.read_factor; j++) {
     uint64_t start = RDTSC_START();
@@ -168,9 +167,9 @@ OpTimings do_zipfian_gets_noprefetch(
     uint64_t end = RDTSCP();
     duration += end - start;
   }
+  if (id == 0) std::cerr << "} END FIND TEST\n" << std::endl;
 
   sync_barrier->arrive_and_wait();
-  if (id == 0) std::cout << "} END SCALAR FIND TEST" << std::endl;
 
   if (found > 0) {
     PLOGI.printf("DEBUG: thread %u | actual found %lu | cycles per get: %lu",
@@ -250,13 +249,13 @@ OpTimings do_zipfian_inserts(
     end = RDTSCP();
     duration += end - start;
   }
+    if (id == 0) std::cerr << "} END Insert TEST\n" << std::endl;
 
   PLOG_DEBUG << "Inserts done; Reprobes: " << hashtable->num_reprobes
              << ", Soft Reprobes: " << hashtable->num_soft_reprobes;
-
   sync_barrier->arrive_and_wait();
 
-  if (id == 0) std::cerr << "} END Insert TEST\n" << std::endl;
+
 
   return {duration, HT_TESTS_NUM_INSERTS * config.insert_factor};
 }
@@ -369,9 +368,8 @@ OpTimings do_zipfian_gets(
     // if(id==0)
     //   __itt_event_end(vtune_evt);
   }
-
-  sync_barrier->arrive_and_wait();
   if (id == 0) std::cerr << "} END FIND TEST\n" << std::endl;
+  sync_barrier->arrive_and_wait();
 
   if (found > 0) {
     PLOGI.printf("DEBUG: thread %u | actual found %lu | cycles per get: %lu",

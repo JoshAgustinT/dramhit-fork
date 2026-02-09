@@ -67,7 +67,7 @@ if __name__ == "__main__":
 
     df_results = parse_final_log(log_text)
     
-    output_file = "data.csv"
+    output_file = "thesis_data_steady_state.csv"
     df_results.to_csv(output_file, index=False)
     
     if not df_results.empty:
