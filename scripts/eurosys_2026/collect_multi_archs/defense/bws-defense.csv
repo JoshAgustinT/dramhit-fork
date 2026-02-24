@@ -1,0 +1,7 @@
+Variant,Fill_Level,Set_MOPS,Get_MOPS,Total_BW_GBs,MLC_Baseline_GBs
+dramblast,70,1454.618,3283.185,240.67,250.85
+dramhit23,70,1250.761,1944.378,170.39,250.85
+folklore,70,744.868,1002.166,134.84,250.85
+dramblast_no_inline,70,1456.795,3122.363,232.02,250.85
+dramblast_no_double,70,1329.738,2771.356,208.17,250.85
+dramblast_no_simd,70,1256.956,2188.958,186.93,250.85
