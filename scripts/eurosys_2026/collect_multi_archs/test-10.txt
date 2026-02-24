@@ -1,0 +1,216 @@
+
+START dramblast {
+#           time             counts unit events
+     1.000919126        155,286,919      unc_m_cas_count.all                                                   
+     1.000919126         78,688,715      unc_m_cas_count.rd                                                    
+     1.000919126         76,602,552      unc_m_cas_count.wr                                                    
+     2.002911787        210,177,153      unc_m_cas_count.all                                                   
+     2.002911787        105,211,867      unc_m_cas_count.rd                                                    
+     2.002911787        104,964,501      unc_m_cas_count.wr                                                    
+     3.003911956        210,903,602      unc_m_cas_count.all                                                   
+     3.003911956        104,822,117      unc_m_cas_count.rd                                                    
+     3.003911956        106,081,086      unc_m_cas_count.wr                                                    
+
+START Insert TEST {
+} END Insert TEST
+
+
+START FIND TEST {
+     4.004912127      3,530,621,448      unc_m_cas_count.all                                                   
+     4.004912127      3,466,219,620      unc_m_cas_count.rd                                                    
+     4.004912127         64,485,252      unc_m_cas_count.wr                                                    
+} END FIND TEST
+
+     5.006913802      1,927,784,102      unc_m_cas_count.all                                                   
+     5.006913802      1,925,548,184      unc_m_cas_count.rd                                                    
+     5.006913802          2,154,161      unc_m_cas_count.wr                                                    
+     5.129593700         28,624,981      unc_m_cas_count.all                                                   
+     5.129593700         27,904,392      unc_m_cas_count.rd                                                    
+     5.129593700            714,956      unc_m_cas_count.wr                                                    
+START uniform test {
+{ set_cycles : 101, get_cycles : 40, set_mops : 1575.994, get_mops : 3965.233 }
+/opt/dramhit-fork/build/dramhit --perf_cnt_path ./perf_cnt.txt --perf_def_path ./perf-cpp/perf_list.csv --find_queue 64 --ht-fill 10 --ht-type 3 --insert-factor 1 --read-factor 100 --num-threads 64 --numa-split 4 --no-prefetch 0 --mode 11 --ht-size 536870912 --skew 0.01 --hw-pref 0 --batch-len 16 --relation_r_size 375809638
+} END uniform test
+} END dramblast
+START dramhit23 {
+#           time             counts unit events
+     1.000082386        180,808,405      unc_m_cas_count.all                                                   
+     1.000082386         91,548,368      unc_m_cas_count.rd                                                    
+     1.000082386         89,262,673      unc_m_cas_count.wr                                                    
+     2.002083579        208,060,914      unc_m_cas_count.all                                                   
+     2.002083579        104,831,378      unc_m_cas_count.rd                                                    
+     2.002083579        103,229,254      unc_m_cas_count.wr                                                    
+
+START Insert TEST {
+} END Insert TEST
+
+
+START FIND TEST {
+     3.003079584        402,828,739      unc_m_cas_count.all                                                   
+     3.003079584        251,936,518      unc_m_cas_count.rd                                                    
+     3.003079584        150,961,125      unc_m_cas_count.wr                                                    
+     4.006084378      3,335,677,265      unc_m_cas_count.all                                                   
+     4.006084378      3,332,734,529      unc_m_cas_count.rd                                                    
+     4.006084378          2,942,730      unc_m_cas_count.wr                                                    
+} END FIND TEST
+
+     5.008081481      2,035,959,343      unc_m_cas_count.all                                                   
+     5.008081481      2,033,810,983      unc_m_cas_count.rd                                                    
+     5.008081481          2,081,519      unc_m_cas_count.wr                                                    
+     5.235262388         55,459,195      unc_m_cas_count.all                                                   
+     5.235262388         54,583,771      unc_m_cas_count.rd                                                    
+     5.235262388            870,330      unc_m_cas_count.wr                                                    
+START uniform test {
+{ set_cycles : 112, get_cycles : 48, set_mops : 1418.530, get_mops : 3331.095 }
+/opt/dramhit-fork/build/dramhit --perf_cnt_path ./perf_cnt.txt --perf_def_path ./perf-cpp/perf_list.csv --find_queue 64 --ht-fill 10 --ht-type 8 --insert-factor 1 --read-factor 100 --num-threads 64 --numa-split 4 --no-prefetch 0 --mode 11 --ht-size 536870912 --skew 0.01 --hw-pref 0 --batch-len 16 --relation_r_size 375809638
+} END uniform test
+} END dramhit23
+START folklore {
+#           time             counts unit events
+     1.000196304        180,784,814      unc_m_cas_count.all                                                   
+     1.000196304         91,552,499      unc_m_cas_count.rd                                                    
+     1.000196304         89,235,216      unc_m_cas_count.wr                                                    
+     2.002193239        208,066,816      unc_m_cas_count.all                                                   
+     2.002193239        104,842,895      unc_m_cas_count.rd                                                    
+     2.002193239        103,223,348      unc_m_cas_count.wr                                                    
+
+START Insert TEST {
+} END Insert TEST
+
+
+START FIND TEST {
+     3.003194433        321,093,871      unc_m_cas_count.all                                                   
+     3.003194433        170,727,516      unc_m_cas_count.rd                                                    
+     3.003194433        150,402,423      unc_m_cas_count.wr                                                    
+     4.006194461      1,898,005,068      unc_m_cas_count.all                                                   
+     4.006194461      1,895,385,738      unc_m_cas_count.rd                                                    
+     4.006194461          2,620,406      unc_m_cas_count.wr                                                    
+     5.008193460      1,897,211,374      unc_m_cas_count.all                                                   
+     5.008193460      1,895,599,836      unc_m_cas_count.rd                                                    
+     5.008193460          1,612,003      unc_m_cas_count.wr                                                    
+} END FIND TEST
+
+     6.010194671      1,696,697,420      unc_m_cas_count.all                                                   
+     6.010194671      1,695,058,223      unc_m_cas_count.rd                                                    
+     6.010194671          1,603,860      unc_m_cas_count.wr                                                    
+     6.469058811        116,164,119      unc_m_cas_count.all                                                   
+     6.469058811        114,957,052      unc_m_cas_count.rd                                                    
+     6.469058811          1,202,191      unc_m_cas_count.wr                                                    
+START uniform test {
+{ set_cycles : 179, get_cycles : 86, set_mops : 889.922, get_mops : 1854.106 }
+/opt/dramhit-fork/build/dramhit --perf_cnt_path ./perf_cnt.txt --perf_def_path ./perf-cpp/perf_list.csv --find_queue 64 --ht-fill 10 --ht-type 8 --insert-factor 1 --read-factor 100 --num-threads 64 --numa-split 4 --no-prefetch 1 --mode 11 --ht-size 536870912 --skew 0.01 --hw-pref 0 --batch-len 16 --relation_r_size 375809638
+} END uniform test
+} END folklore
+MLC {
+Intel(R) Memory Latency Checker - v3.11b
+Command line parameters: --bandwidth_matrix -U -h 
+
+Using buffer size of 100.000MiB/thread for reads and an additional 100.000MiB/thread for writes
+Measuring Memory Bandwidths between nodes within system 
+Bandwidths are in MB/sec (1 MB/sec = 1,000,000 Bytes/sec)
+Using all the threads from each core if Hyper-threading is enabled
+Using Read-only traffic type
+		Numa node
+Numa node	     0	     1	
+       0	247966.7	119705.5	
+       1	120291.4	247496.4	
+} MLC
+START dramblast_no_inline {
+#           time             counts unit events
+     1.000619771        155,700,494      unc_m_cas_count.all                                                   
+     1.000619771         77,872,994      unc_m_cas_count.rd                                                    
+     1.000619771         77,832,377      unc_m_cas_count.wr                                                    
+     2.002617742        211,012,616      unc_m_cas_count.all                                                   
+     2.002617742        104,881,640      unc_m_cas_count.rd                                                    
+     2.002617742        106,130,119      unc_m_cas_count.wr                                                    
+     3.003617432        210,785,018      unc_m_cas_count.all                                                   
+     3.003617432        104,750,234      unc_m_cas_count.rd                                                    
+     3.003617432        106,034,396      unc_m_cas_count.wr                                                    
+
+START Insert TEST {
+} END Insert TEST
+
+
+START FIND TEST {
+     4.004614304      3,481,480,405      unc_m_cas_count.all                                                   
+     4.004614304      3,415,927,507      unc_m_cas_count.rd                                                    
+     4.004614304         65,637,861      unc_m_cas_count.wr                                                    
+} END FIND TEST
+
+     5.008618267      1,948,869,907      unc_m_cas_count.all                                                   
+     5.008618267      1,946,632,222      unc_m_cas_count.rd                                                    
+     5.008618267          2,153,618      unc_m_cas_count.wr                                                    
+     5.244501234         58,104,887      unc_m_cas_count.all                                                   
+     5.244501234         57,212,648      unc_m_cas_count.rd                                                    
+     5.244501234            887,740      unc_m_cas_count.wr                                                    
+START uniform test {
+{ set_cycles : 101, get_cycles : 40, set_mops : 1573.491, get_mops : 3932.881 }
+/opt/dramhit-fork/build/dramhit --perf_cnt_path ./perf_cnt.txt --perf_def_path ./perf-cpp/perf_list.csv --find_queue 64 --ht-fill 10 --ht-type 3 --insert-factor 1 --read-factor 100 --num-threads 64 --numa-split 4 --no-prefetch 0 --mode 11 --ht-size 536870912 --skew 0.01 --hw-pref 0 --batch-len 16 --relation_r_size 375809638
+} END uniform test
+} END dramblast_no_inline
+START dramblast_no_double {
+#           time             counts unit events
+     1.000566713        157,367,527      unc_m_cas_count.all                                                   
+     1.000566713         79,649,646      unc_m_cas_count.rd                                                    
+     1.000566713         77,723,062      unc_m_cas_count.wr                                                    
+     2.002562019        209,780,113      unc_m_cas_count.all                                                   
+     2.002562019        105,397,336      unc_m_cas_count.rd                                                    
+     2.002562019        104,381,330      unc_m_cas_count.wr                                                    
+     3.003562712        209,668,816      unc_m_cas_count.all                                                   
+     3.003562712        105,358,604      unc_m_cas_count.rd                                                    
+     3.003562712        104,310,309      unc_m_cas_count.wr                                                    
+
+START Insert TEST {
+} END Insert TEST
+
+
+START FIND TEST {
+     4.004563305      3,101,190,387      unc_m_cas_count.all                                                   
+     4.004563305      3,038,646,572      unc_m_cas_count.rd                                                    
+     4.004563305         62,607,056      unc_m_cas_count.wr                                                    
+} END FIND TEST
+
+     5.007562050      2,375,358,299      unc_m_cas_count.all                                                   
+     5.007562050      2,373,230,594      unc_m_cas_count.rd                                                    
+     5.007562050          2,064,768      unc_m_cas_count.wr                                                    
+     5.389438389         96,157,035      unc_m_cas_count.all                                                   
+     5.389438389         95,060,347      unc_m_cas_count.rd                                                    
+     5.389438389          1,092,317      unc_m_cas_count.wr                                                    
+START uniform test {
+{ set_cycles : 112, get_cycles : 47, set_mops : 1424.979, get_mops : 3355.065 }
+/opt/dramhit-fork/build/dramhit --perf_cnt_path ./perf_cnt.txt --perf_def_path ./perf-cpp/perf_list.csv --find_queue 64 --ht-fill 10 --ht-type 3 --insert-factor 1 --read-factor 100 --num-threads 64 --numa-split 4 --no-prefetch 0 --mode 11 --ht-size 536870912 --skew 0.01 --hw-pref 0 --batch-len 16 --relation_r_size 375809638
+} END uniform test
+} END dramblast_no_double
+START dramblast_no_simd {
+#           time             counts unit events
+     1.000725920        157,981,545      unc_m_cas_count.all                                                   
+     1.000725920         79,994,775      unc_m_cas_count.rd                                                    
+     1.000725920         77,991,021      unc_m_cas_count.wr                                                    
+     2.002723561        209,754,832      unc_m_cas_count.all                                                   
+     2.002723561        105,453,886      unc_m_cas_count.rd                                                    
+     2.002723561        104,300,045      unc_m_cas_count.wr                                                    
+     3.003723659        209,631,174      unc_m_cas_count.all                                                   
+     3.003723659        105,367,177      unc_m_cas_count.rd                                                    
+     3.003723659        104,264,081      unc_m_cas_count.wr                                                    
+
+START Insert TEST {
+} END Insert TEST
+
+
+START FIND TEST {
+     4.004721600      3,155,528,492      unc_m_cas_count.all                                                   
+     4.004721600      3,093,636,265      unc_m_cas_count.rd                                                    
+     4.004721600         61,957,928      unc_m_cas_count.wr                                                    
+} END FIND TEST
+
+     5.007722600      2,395,786,733      unc_m_cas_count.all                                                   
+     5.007722600      2,393,663,828      unc_m_cas_count.rd                                                    
+     5.007722600          2,057,873      unc_m_cas_count.wr                                                    
+     5.349963258         85,707,499      unc_m_cas_count.all                                                   
+     5.349963258         84,654,624      unc_m_cas_count.rd                                                    
+     5.349963258          1,048,175      unc_m_cas_count.wr                                                    
+START uniform test {
+{ set_cycles : 112, get_cycles : 47, set_mops : 1423.242, get_mops : 3348.711 }
+/opt/dramhit-fork/build/dramhit --perf_cnt_path ./perf_cnt.txt --perf_def_path ./perf-cpp/perf_list.csv --find_queue 64 --ht-fill 10 --ht-type 3 --insert-factor 1 --read-factor 100 --num-threads 64 --numa-split 4 --no-prefetch 0 --mode 11 --ht-size 536870912 --skew 0.01 --hw-pref 0 --batch-len 16 --relation_r_size 375809638
+} END uniform test
+} END dramblast_no_simd

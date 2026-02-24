@@ -1,0 +1,324 @@
+
+START dramblast {
+#           time             counts unit events
+     1.000755225        153,917,192      unc_m_cas_count.all                                                   
+     1.000755225         77,832,727      unc_m_cas_count.rd                                                    
+     1.000755225         76,089,228      unc_m_cas_count.wr                                                    
+
+START Insert TEST {
+} END Insert TEST
+
+
+START FIND TEST {
+     2.002752481        975,540,127      unc_m_cas_count.all                                                   
+     2.002752481        709,606,033      unc_m_cas_count.rd                                                    
+     2.002752481        266,016,680      unc_m_cas_count.wr                                                    
+     3.005752962      3,786,923,242      unc_m_cas_count.all                                                   
+     3.005752962      3,784,184,699      unc_m_cas_count.rd                                                    
+     3.005752962          2,744,795      unc_m_cas_count.wr                                                    
+     4.007750889      3,787,508,415      unc_m_cas_count.all                                                   
+     4.007750889      3,784,925,910      unc_m_cas_count.rd                                                    
+     4.007750889          2,570,727      unc_m_cas_count.wr                                                    
+     5.009754012      3,787,550,719      unc_m_cas_count.all                                                   
+     5.009754012      3,784,838,313      unc_m_cas_count.rd                                                    
+     5.009754012          2,724,000      unc_m_cas_count.wr                                                    
+     6.011751041      3,765,658,619      unc_m_cas_count.all                                                   
+     6.011751041      3,763,102,946      unc_m_cas_count.rd                                                    
+     6.011751041          2,550,099      unc_m_cas_count.wr                                                    
+} END FIND TEST
+
+     7.013754402      3,763,853,236      unc_m_cas_count.all                                                   
+     7.013754402      3,761,301,904      unc_m_cas_count.rd                                                    
+     7.013754402          2,544,679      unc_m_cas_count.wr                                                    
+     8.015752196      1,549,002,163      unc_m_cas_count.all                                                   
+     8.015752196      1,547,186,667      unc_m_cas_count.rd                                                    
+     8.015752196          1,739,126      unc_m_cas_count.wr                                                    
+     8.055464368          7,122,928      unc_m_cas_count.all                                                   
+     8.055464368          6,518,160      unc_m_cas_count.rd                                                    
+     8.055464368            599,932      unc_m_cas_count.wr                                                    
+START uniform test {
+{ set_cycles : 107, get_cycles : 46, set_mops : 1487.436, get_mops : 3474.236 }
+/opt/dramhit-fork/build/dramhit --perf_cnt_path ./perf_cnt.txt --perf_def_path ./perf-cpp/perf_list.csv --find_queue 64 --ht-fill 70 --ht-type 3 --insert-factor 1 --read-factor 100 --num-threads 64 --numa-split 4 --no-prefetch 0 --mode 11 --ht-size 268435456 --skew 0.01 --hw-pref 0 --batch-len 16 --relation_r_size 375809638
+} END uniform test
+} END dramblast
+START dramhit23 {
+#           time             counts unit events
+     1.000134047        180,078,061      unc_m_cas_count.all                                                   
+     1.000134047         91,392,664      unc_m_cas_count.rd                                                    
+     1.000134047         88,689,161      unc_m_cas_count.wr                                                    
+
+START Insert TEST {
+} END Insert TEST
+
+
+START FIND TEST {
+     2.002128976      1,150,525,685      unc_m_cas_count.all                                                   
+     2.002128976        900,335,128      unc_m_cas_count.rd                                                    
+     2.002128976        250,239,018      unc_m_cas_count.wr                                                    
+     3.006130268      2,654,304,212      unc_m_cas_count.all                                                   
+     3.006130268      2,652,482,007      unc_m_cas_count.rd                                                    
+     3.006130268          1,830,798      unc_m_cas_count.wr                                                    
+     4.008127689      2,654,012,997      unc_m_cas_count.all                                                   
+     4.008127689      2,652,243,971      unc_m_cas_count.rd                                                    
+     4.008127689          1,761,164      unc_m_cas_count.wr                                                    
+     5.010129467      2,657,576,745      unc_m_cas_count.all                                                   
+     5.010129467      2,655,431,010      unc_m_cas_count.rd                                                    
+     5.010129467          2,144,841      unc_m_cas_count.wr                                                    
+     6.012128486      2,648,216,048      unc_m_cas_count.all                                                   
+     6.012128486      2,646,436,274      unc_m_cas_count.rd                                                    
+     6.012128486          1,782,611      unc_m_cas_count.wr                                                    
+     7.014128757      2,639,139,135      unc_m_cas_count.all                                                   
+     7.014128757      2,637,391,380      unc_m_cas_count.rd                                                    
+     7.014128757          1,747,461      unc_m_cas_count.wr                                                    
+     8.016127909      2,642,063,710      unc_m_cas_count.all                                                   
+     8.016127909      2,640,350,199      unc_m_cas_count.rd                                                    
+     8.016127909          1,710,656      unc_m_cas_count.wr                                                    
+     9.018128533      2,636,705,973      unc_m_cas_count.all                                                   
+     9.018128533      2,634,931,791      unc_m_cas_count.rd                                                    
+     9.018128533          1,773,910      unc_m_cas_count.wr                                                    
+    10.020129640      2,638,594,624      unc_m_cas_count.all                                                   
+    10.020129640      2,636,790,550      unc_m_cas_count.rd                                                    
+    10.020129640          1,803,618      unc_m_cas_count.wr                                                    
+    11.023130057      2,629,139,618      unc_m_cas_count.all                                                   
+    11.023130057      2,626,932,771      unc_m_cas_count.rd                                                    
+    11.023130057          2,206,381      unc_m_cas_count.wr                                                    
+} END FIND TEST
+
+    11.822632416        610,579,908      unc_m_cas_count.all                                                   
+    11.822632416        606,323,552      unc_m_cas_count.rd                                                    
+    11.822632416          4,206,939      unc_m_cas_count.wr                                                    
+START uniform test {
+{ set_cycles : 129, get_cycles : 80, set_mops : 1232.889, get_mops : 1996.249 }
+/opt/dramhit-fork/build/dramhit --perf_cnt_path ./perf_cnt.txt --perf_def_path ./perf-cpp/perf_list.csv --find_queue 64 --ht-fill 70 --ht-type 8 --insert-factor 1 --read-factor 100 --num-threads 64 --numa-split 4 --no-prefetch 0 --mode 11 --ht-size 268435456 --skew 0.01 --hw-pref 0 --batch-len 16 --relation_r_size 375809638
+} END uniform test
+} END dramhit23
+START folklore {
+#           time             counts unit events
+     1.000630250        164,544,511      unc_m_cas_count.all                                                   
+     1.000630250         83,625,166      unc_m_cas_count.rd                                                    
+     1.000630250         80,923,373      unc_m_cas_count.wr                                                    
+
+START Insert TEST {
+} END Insert TEST
+
+     2.002632238        687,812,568      unc_m_cas_count.all                                                   
+     2.002632238        429,108,188      unc_m_cas_count.rd                                                    
+     2.002632238        258,705,446      unc_m_cas_count.wr                                                    
+
+START FIND TEST {
+     3.004628155      2,095,083,215      unc_m_cas_count.all                                                   
+     3.004628155      2,092,726,743      unc_m_cas_count.rd                                                    
+     3.004628155          2,388,725      unc_m_cas_count.wr                                                    
+     4.006627347      2,100,684,672      unc_m_cas_count.all                                                   
+     4.006627347      2,099,012,358      unc_m_cas_count.rd                                                    
+     4.006627347          1,672,404      unc_m_cas_count.wr                                                    
+     5.010627862      2,109,831,280      unc_m_cas_count.all                                                   
+     5.010627862      2,108,180,527      unc_m_cas_count.rd                                                    
+     5.010627862          1,655,720      unc_m_cas_count.wr                                                    
+     6.012630915      2,118,778,124      unc_m_cas_count.all                                                   
+     6.012630915      2,114,403,384      unc_m_cas_count.rd                                                    
+     6.012630915          4,376,073      unc_m_cas_count.wr                                                    
+     7.014631305      2,118,074,350      unc_m_cas_count.all                                                   
+     7.014631305      2,113,309,561      unc_m_cas_count.rd                                                    
+     7.014631305          4,762,188      unc_m_cas_count.wr                                                    
+     8.016630567      2,113,753,215      unc_m_cas_count.all                                                   
+     8.016630567      2,110,886,584      unc_m_cas_count.rd                                                    
+     8.016630567          2,867,265      unc_m_cas_count.wr                                                    
+     9.018627831      2,111,339,892      unc_m_cas_count.all                                                   
+     9.018627831      2,109,695,135      unc_m_cas_count.rd                                                    
+     9.018627831          1,642,700      unc_m_cas_count.wr                                                    
+    10.020628735      2,111,528,773      unc_m_cas_count.all                                                   
+    10.020628735      2,109,905,417      unc_m_cas_count.rd                                                    
+    10.020628735          1,625,238      unc_m_cas_count.wr                                                    
+    11.022627958      2,111,650,327      unc_m_cas_count.all                                                   
+    11.022627958      2,110,069,714      unc_m_cas_count.rd                                                    
+    11.022627958          1,581,223      unc_m_cas_count.wr                                                    
+    12.024628052      2,112,943,611      unc_m_cas_count.all                                                   
+    12.024628052      2,111,361,122      unc_m_cas_count.rd                                                    
+    12.024628052          1,581,347      unc_m_cas_count.wr                                                    
+    13.026629529      2,111,313,046      unc_m_cas_count.all                                                   
+    13.026629529      2,109,713,593      unc_m_cas_count.rd                                                    
+    13.026629529          1,598,768      unc_m_cas_count.wr                                                    
+    14.028627741      2,112,838,615      unc_m_cas_count.all                                                   
+    14.028627741      2,111,148,308      unc_m_cas_count.rd                                                    
+    14.028627741          1,692,451      unc_m_cas_count.wr                                                    
+    15.030631471      2,115,584,664      unc_m_cas_count.all                                                   
+    15.030631471      2,113,559,676      unc_m_cas_count.rd                                                    
+    15.030631471          2,025,139      unc_m_cas_count.wr                                                    
+    16.032629779      2,113,442,224      unc_m_cas_count.all                                                   
+    16.032629779      2,111,648,335      unc_m_cas_count.rd                                                    
+    16.032629779          1,792,793      unc_m_cas_count.wr                                                    
+    17.034629667      2,111,523,589      unc_m_cas_count.all                                                   
+    17.034629667      2,109,825,802      unc_m_cas_count.rd                                                    
+    17.034629667          1,699,297      unc_m_cas_count.wr                                                    
+    18.036626769      2,111,131,464      unc_m_cas_count.all                                                   
+    18.036626769      2,109,541,756      unc_m_cas_count.rd                                                    
+    18.036626769          1,587,491      unc_m_cas_count.wr                                                    
+    19.038629892      2,111,135,164      unc_m_cas_count.all                                                   
+    19.038629892      2,109,583,587      unc_m_cas_count.rd                                                    
+    19.038629892          1,552,063      unc_m_cas_count.wr                                                    
+    20.040626672      2,110,746,619      unc_m_cas_count.all                                                   
+    20.040626672      2,109,201,935      unc_m_cas_count.rd                                                    
+    20.040626672          1,543,621      unc_m_cas_count.wr                                                    
+    21.043626527      1,998,346,737      unc_m_cas_count.all                                                   
+    21.043626527      1,996,749,031      unc_m_cas_count.rd                                                    
+    21.043626527          1,573,446      unc_m_cas_count.wr                                                    
+} END FIND TEST
+
+    21.898856957        230,557,559      unc_m_cas_count.all                                                   
+    21.898856957        228,759,055      unc_m_cas_count.rd                                                    
+    21.898856957          1,782,231      unc_m_cas_count.wr                                                    
+START uniform test {
+{ set_cycles : 249, get_cycles : 161, set_mops : 641.094, get_mops : 988.977 }
+/opt/dramhit-fork/build/dramhit --perf_cnt_path ./perf_cnt.txt --perf_def_path ./perf-cpp/perf_list.csv --find_queue 64 --ht-fill 70 --ht-type 8 --insert-factor 1 --read-factor 100 --num-threads 64 --numa-split 4 --no-prefetch 1 --mode 11 --ht-size 268435456 --skew 0.01 --hw-pref 0 --batch-len 16 --relation_r_size 375809638
+} END uniform test
+} END folklore
+MLC {
+Intel(R) Memory Latency Checker - v3.11b
+Command line parameters: --bandwidth_matrix -U -h 
+
+Using buffer size of 100.000MiB/thread for reads and an additional 100.000MiB/thread for writes
+Measuring Memory Bandwidths between nodes within system 
+Bandwidths are in MB/sec (1 MB/sec = 1,000,000 Bytes/sec)
+Using all the threads from each core if Hyper-threading is enabled
+Using Read-only traffic type
+		Numa node
+Numa node	     0	     1	
+       0	247791.5	119568.2	
+       1	120280.1	247201.2	
+} MLC
+START dramblast_no_inline {
+#           time             counts unit events
+     1.000925918        155,418,692      unc_m_cas_count.all                                                   
+     1.000925918         77,770,656      unc_m_cas_count.rd                                                    
+     1.000925918         77,653,254      unc_m_cas_count.wr                                                    
+
+START Insert TEST {
+} END Insert TEST
+
+
+START FIND TEST {
+     2.002925656        965,445,392      unc_m_cas_count.all                                                   
+     2.002925656        698,000,921      unc_m_cas_count.rd                                                    
+     2.002925656        267,520,419      unc_m_cas_count.wr                                                    
+     3.006923294      3,719,701,031      unc_m_cas_count.all                                                   
+     3.006923294      3,716,886,321      unc_m_cas_count.rd                                                    
+     3.006923294          2,814,688      unc_m_cas_count.wr                                                    
+     4.009922850      3,721,506,092      unc_m_cas_count.all                                                   
+     4.009922850      3,718,913,900      unc_m_cas_count.rd                                                    
+     4.009922850          2,589,198      unc_m_cas_count.wr                                                    
+     5.013925013      3,632,682,236      unc_m_cas_count.all                                                   
+     5.013925013      3,629,588,913      unc_m_cas_count.rd                                                    
+     5.013925013          3,100,038      unc_m_cas_count.wr                                                    
+     6.015924016      3,662,489,791      unc_m_cas_count.all                                                   
+     6.015924016      3,659,907,737      unc_m_cas_count.rd                                                    
+     6.015924016          2,574,136      unc_m_cas_count.wr                                                    
+     7.017924913      3,658,878,001      unc_m_cas_count.all                                                   
+     7.017924913      3,656,347,219      unc_m_cas_count.rd                                                    
+     7.017924913          2,529,987      unc_m_cas_count.wr                                                    
+} END FIND TEST
+
+     8.019923951      2,051,447,210      unc_m_cas_count.all                                                   
+     8.019923951      2,049,503,599      unc_m_cas_count.rd                                                    
+     8.019923951          1,870,777      unc_m_cas_count.wr                                                    
+     8.556593769         95,565,390      unc_m_cas_count.all                                                   
+     8.556593769         94,209,815      unc_m_cas_count.rd                                                    
+     8.556593769          1,352,026      unc_m_cas_count.wr                                                    
+START uniform test {
+{ set_cycles : 107, get_cycles : 47, set_mops : 1484.525, get_mops : 3341.520 }
+/opt/dramhit-fork/build/dramhit --perf_cnt_path ./perf_cnt.txt --perf_def_path ./perf-cpp/perf_list.csv --find_queue 64 --ht-fill 70 --ht-type 3 --insert-factor 1 --read-factor 100 --num-threads 64 --numa-split 4 --no-prefetch 0 --mode 11 --ht-size 268435456 --skew 0.01 --hw-pref 0 --batch-len 16 --relation_r_size 375809638
+} END uniform test
+} END dramblast_no_inline
+START dramblast_no_double {
+#           time             counts unit events
+     1.000569021        154,226,111      unc_m_cas_count.all                                                   
+     1.000569021         78,035,999      unc_m_cas_count.rd                                                    
+     1.000569021         76,194,813      unc_m_cas_count.wr                                                    
+
+START Insert TEST {
+} END Insert TEST
+
+
+START FIND TEST {
+     2.002565677        888,893,357      unc_m_cas_count.all                                                   
+     2.002565677        623,506,441      unc_m_cas_count.rd                                                    
+     2.002565677        265,449,204      unc_m_cas_count.wr                                                    
+     3.004567137      3,260,324,878      unc_m_cas_count.all                                                   
+     3.004567137      3,257,941,162      unc_m_cas_count.rd                                                    
+     3.004567137          2,380,699      unc_m_cas_count.wr                                                    
+     4.006567481      3,268,727,967      unc_m_cas_count.all                                                   
+     4.006567481      3,266,548,547      unc_m_cas_count.rd                                                    
+     4.006567481          2,180,785      unc_m_cas_count.wr                                                    
+     5.010571718      3,268,022,581      unc_m_cas_count.all                                                   
+     5.010571718      3,262,883,530      unc_m_cas_count.rd                                                    
+     5.010571718          5,138,671      unc_m_cas_count.wr                                                    
+     6.012567094      3,268,728,551      unc_m_cas_count.all                                                   
+     6.012567094      3,263,303,677      unc_m_cas_count.rd                                                    
+     6.012567094          5,425,086      unc_m_cas_count.wr                                                    
+     7.014569110      3,264,858,955      unc_m_cas_count.all                                                   
+     7.014569110      3,261,405,916      unc_m_cas_count.rd                                                    
+     7.014569110          3,455,844      unc_m_cas_count.wr                                                    
+     8.016567412      3,256,142,928      unc_m_cas_count.all                                                   
+     8.016567412      3,254,046,019      unc_m_cas_count.rd                                                    
+     8.016567412          2,094,565      unc_m_cas_count.wr                                                    
+} END FIND TEST
+
+     8.982556007      1,238,063,941      unc_m_cas_count.all                                                   
+     8.982556007      1,235,839,848      unc_m_cas_count.rd                                                    
+     8.982556007          2,158,488      unc_m_cas_count.wr                                                    
+START uniform test {
+{ set_cycles : 118, get_cycles : 54, set_mops : 1347.626, get_mops : 2930.705 }
+/opt/dramhit-fork/build/dramhit --perf_cnt_path ./perf_cnt.txt --perf_def_path ./perf-cpp/perf_list.csv --find_queue 64 --ht-fill 70 --ht-type 3 --insert-factor 1 --read-factor 100 --num-threads 64 --numa-split 4 --no-prefetch 0 --mode 11 --ht-size 268435456 --skew 0.01 --hw-pref 0 --batch-len 16 --relation_r_size 375809638
+} END uniform test
+} END dramblast_no_double
+START dramblast_no_simd {
+#           time             counts unit events
+     1.000216118        155,378,973      unc_m_cas_count.all                                                   
+     1.000216118         78,685,296      unc_m_cas_count.rd                                                    
+     1.000216118         76,698,635      unc_m_cas_count.wr                                                    
+
+START Insert TEST {
+} END Insert TEST
+
+
+START FIND TEST {
+     2.002219655        874,914,801      unc_m_cas_count.all                                                   
+     2.002219655        609,413,710      unc_m_cas_count.rd                                                    
+     2.002219655        265,574,462      unc_m_cas_count.wr                                                    
+     3.004211659      3,020,587,352      unc_m_cas_count.all                                                   
+     3.004211659      3,018,295,712      unc_m_cas_count.rd                                                    
+     3.004211659          2,272,955      unc_m_cas_count.wr                                                    
+     4.006212877      3,016,581,487      unc_m_cas_count.all                                                   
+     4.006212877      3,014,585,745      unc_m_cas_count.rd                                                    
+     4.006212877          1,995,351      unc_m_cas_count.wr                                                    
+     5.009210829      3,011,918,925      unc_m_cas_count.all                                                   
+     5.009210829      3,009,926,718      unc_m_cas_count.rd                                                    
+     5.009210829          1,993,942      unc_m_cas_count.wr                                                    
+     6.011211791      3,021,222,559      unc_m_cas_count.all                                                   
+     6.011211791      3,019,176,049      unc_m_cas_count.rd                                                    
+     6.011211791          2,047,927      unc_m_cas_count.wr                                                    
+     7.015209910      3,015,125,201      unc_m_cas_count.all                                                   
+     7.015209910      3,013,084,720      unc_m_cas_count.rd                                                    
+     7.015209910          2,037,075      unc_m_cas_count.wr                                                    
+     8.017209841      3,012,931,111      unc_m_cas_count.all                                                   
+     8.017209841      3,011,000,717      unc_m_cas_count.rd                                                    
+     8.017209841          1,931,869      unc_m_cas_count.wr                                                    
+     9.019210023      3,014,006,967      unc_m_cas_count.all                                                   
+     9.019210023      3,012,033,910      unc_m_cas_count.rd                                                    
+     9.019210023          1,977,681      unc_m_cas_count.wr                                                    
+    10.021209914      3,017,459,745      unc_m_cas_count.all                                                   
+    10.021209914      3,015,486,982      unc_m_cas_count.rd                                                    
+    10.021209914          1,967,696      unc_m_cas_count.wr                                                    
+} END FIND TEST
+
+    11.023210029      2,640,852,053      unc_m_cas_count.all                                                   
+    11.023210029      2,638,860,675      unc_m_cas_count.rd                                                    
+    11.023210029          1,942,325      unc_m_cas_count.wr                                                    
+    11.519562758        100,481,596      unc_m_cas_count.all                                                   
+    11.519562758         99,190,496      unc_m_cas_count.rd                                                    
+    11.519562758          1,279,867      unc_m_cas_count.wr                                                    
+START uniform test {
+{ set_cycles : 129, get_cycles : 76, set_mops : 1231.865, get_mops : 2092.118 }
+/opt/dramhit-fork/build/dramhit --perf_cnt_path ./perf_cnt.txt --perf_def_path ./perf-cpp/perf_list.csv --find_queue 64 --ht-fill 70 --ht-type 3 --insert-factor 1 --read-factor 100 --num-threads 64 --numa-split 4 --no-prefetch 0 --mode 11 --ht-size 268435456 --skew 0.01 --hw-pref 0 --batch-len 16 --relation_r_size 375809638
+} END uniform test
+} END dramblast_no_simd
