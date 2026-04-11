@@ -1,0 +1,133 @@
+
+START base {
+START uniform test {
+{ set_cycles : 107, get_cycles : 67, set_mops : 1940.229, get_mops : 3070.941 }
+/opt/dramhit-fork/build/dramhit --perf_cnt_path ./perf_cnt.txt --perf_def_path ./perf-cpp/perf_list.csv         --find_queue 64 --ht-fill 10 --ht-type 3 --insert-factor 1000 --read-factor 1000         --num-threads 64 --numa-split 6 --no-prefetch 0 --mode 11 --ht-size 536870912         --skew 0.01 --hw-pref 0 --batch-len 16 --relation_r_size 375809638
+{ set_cycles : 108, get_cycles : 69, set_mops : 1916.484, get_mops : 2998.755 }
+/opt/dramhit-fork/build/dramhit --perf_cnt_path ./perf_cnt.txt --perf_def_path ./perf-cpp/perf_list.csv         --find_queue 64 --ht-fill 20 --ht-type 3 --insert-factor 1000 --read-factor 1000         --num-threads 64 --numa-split 6 --no-prefetch 0 --mode 11 --ht-size 536870912         --skew 0.01 --hw-pref 0 --batch-len 16 --relation_r_size 375809638
+{ set_cycles : 109, get_cycles : 69, set_mops : 1902.706, get_mops : 2979.195 }
+/opt/dramhit-fork/build/dramhit --perf_cnt_path ./perf_cnt.txt --perf_def_path ./perf-cpp/perf_list.csv         --find_queue 64 --ht-fill 30 --ht-type 3 --insert-factor 1000 --read-factor 1000         --num-threads 64 --numa-split 6 --no-prefetch 0 --mode 11 --ht-size 536870912         --skew 0.01 --hw-pref 0 --batch-len 16 --relation_r_size 375809638
+{ set_cycles : 110, get_cycles : 69, set_mops : 1875.371, get_mops : 2981.838 }
+/opt/dramhit-fork/build/dramhit --perf_cnt_path ./perf_cnt.txt --perf_def_path ./perf-cpp/perf_list.csv         --find_queue 64 --ht-fill 40 --ht-type 3 --insert-factor 1000 --read-factor 1000         --num-threads 64 --numa-split 6 --no-prefetch 0 --mode 11 --ht-size 536870912         --skew 0.01 --hw-pref 0 --batch-len 16 --relation_r_size 375809638
+{ set_cycles : 114, get_cycles : 72, set_mops : 1822.935, get_mops : 2871.212 }
+/opt/dramhit-fork/build/dramhit --perf_cnt_path ./perf_cnt.txt --perf_def_path ./perf-cpp/perf_list.csv         --find_queue 64 --ht-fill 50 --ht-type 3 --insert-factor 1000 --read-factor 1000         --num-threads 64 --numa-split 6 --no-prefetch 0 --mode 11 --ht-size 536870912         --skew 0.01 --hw-pref 0 --batch-len 16 --relation_r_size 375809638
+{ set_cycles : 119, get_cycles : 76, set_mops : 1739.945, get_mops : 2703.959 }
+/opt/dramhit-fork/build/dramhit --perf_cnt_path ./perf_cnt.txt --perf_def_path ./perf-cpp/perf_list.csv         --find_queue 64 --ht-fill 60 --ht-type 3 --insert-factor 1000 --read-factor 1000         --num-threads 64 --numa-split 6 --no-prefetch 0 --mode 11 --ht-size 536870912         --skew 0.01 --hw-pref 0 --batch-len 16 --relation_r_size 375809638
+{ set_cycles : 127, get_cycles : 83, set_mops : 1626.124, get_mops : 2488.990 }
+/opt/dramhit-fork/build/dramhit --perf_cnt_path ./perf_cnt.txt --perf_def_path ./perf-cpp/perf_list.csv         --find_queue 64 --ht-fill 70 --ht-type 3 --insert-factor 1000 --read-factor 1000         --num-threads 64 --numa-split 6 --no-prefetch 0 --mode 11 --ht-size 536870912         --skew 0.01 --hw-pref 0 --batch-len 16 --relation_r_size 375809638
+{ set_cycles : 141, get_cycles : 94, set_mops : 1470.928, get_mops : 2200.505 }
+/opt/dramhit-fork/build/dramhit --perf_cnt_path ./perf_cnt.txt --perf_def_path ./perf-cpp/perf_list.csv         --find_queue 64 --ht-fill 80 --ht-type 3 --insert-factor 1000 --read-factor 1000         --num-threads 64 --numa-split 6 --no-prefetch 0 --mode 11 --ht-size 536870912         --skew 0.01 --hw-pref 0 --batch-len 16 --relation_r_size 375809638
+{ set_cycles : 176, get_cycles : 114, set_mops : 1178.615, get_mops : 1809.530 }
+/opt/dramhit-fork/build/dramhit --perf_cnt_path ./perf_cnt.txt --perf_def_path ./perf-cpp/perf_list.csv         --find_queue 64 --ht-fill 90 --ht-type 3 --insert-factor 1000 --read-factor 1000         --num-threads 64 --numa-split 6 --no-prefetch 0 --mode 11 --ht-size 536870912         --skew 0.01 --hw-pref 0 --batch-len 16 --relation_r_size 375809638
+} END uniform test
+} END base
+START base+bucket {
+START uniform test {
+{ set_cycles : 104, get_cycles : 65, set_mops : 1987.457, get_mops : 3157.391 }
+/opt/dramhit-fork/build/dramhit --perf_cnt_path ./perf_cnt.txt --perf_def_path ./perf-cpp/perf_list.csv         --find_queue 64 --ht-fill 10 --ht-type 3 --insert-factor 1000 --read-factor 1000         --num-threads 64 --numa-split 6 --no-prefetch 0 --mode 11 --ht-size 536870912         --skew 0.01 --hw-pref 0 --batch-len 16 --relation_r_size 375809638
+{ set_cycles : 104, get_cycles : 64, set_mops : 1985.984, get_mops : 3229.859 }
+/opt/dramhit-fork/build/dramhit --perf_cnt_path ./perf_cnt.txt --perf_def_path ./perf-cpp/perf_list.csv         --find_queue 64 --ht-fill 20 --ht-type 3 --insert-factor 1000 --read-factor 1000         --num-threads 64 --numa-split 6 --no-prefetch 0 --mode 11 --ht-size 536870912         --skew 0.01 --hw-pref 0 --batch-len 16 --relation_r_size 375809638
+{ set_cycles : 104, get_cycles : 65, set_mops : 1985.675, get_mops : 3170.613 }
+/opt/dramhit-fork/build/dramhit --perf_cnt_path ./perf_cnt.txt --perf_def_path ./perf-cpp/perf_list.csv         --find_queue 64 --ht-fill 30 --ht-type 3 --insert-factor 1000 --read-factor 1000         --num-threads 64 --numa-split 6 --no-prefetch 0 --mode 11 --ht-size 536870912         --skew 0.01 --hw-pref 0 --batch-len 16 --relation_r_size 375809638
+{ set_cycles : 105, get_cycles : 66, set_mops : 1972.580, get_mops : 3131.414 }
+/opt/dramhit-fork/build/dramhit --perf_cnt_path ./perf_cnt.txt --perf_def_path ./perf-cpp/perf_list.csv         --find_queue 64 --ht-fill 40 --ht-type 3 --insert-factor 1000 --read-factor 1000         --num-threads 64 --numa-split 6 --no-prefetch 0 --mode 11 --ht-size 536870912         --skew 0.01 --hw-pref 0 --batch-len 16 --relation_r_size 375809638
+{ set_cycles : 107, get_cycles : 67, set_mops : 1935.525, get_mops : 3070.034 }
+/opt/dramhit-fork/build/dramhit --perf_cnt_path ./perf_cnt.txt --perf_def_path ./perf-cpp/perf_list.csv         --find_queue 64 --ht-fill 50 --ht-type 3 --insert-factor 1000 --read-factor 1000         --num-threads 64 --numa-split 6 --no-prefetch 0 --mode 11 --ht-size 536870912         --skew 0.01 --hw-pref 0 --batch-len 16 --relation_r_size 375809638
+{ set_cycles : 111, get_cycles : 71, set_mops : 1859.593, get_mops : 2920.256 }
+/opt/dramhit-fork/build/dramhit --perf_cnt_path ./perf_cnt.txt --perf_def_path ./perf-cpp/perf_list.csv         --find_queue 64 --ht-fill 60 --ht-type 3 --insert-factor 1000 --read-factor 1000         --num-threads 64 --numa-split 6 --no-prefetch 0 --mode 11 --ht-size 536870912         --skew 0.01 --hw-pref 0 --batch-len 16 --relation_r_size 375809638
+{ set_cycles : 119, get_cycles : 77, set_mops : 1733.717, get_mops : 2676.080 }
+/opt/dramhit-fork/build/dramhit --perf_cnt_path ./perf_cnt.txt --perf_def_path ./perf-cpp/perf_list.csv         --find_queue 64 --ht-fill 70 --ht-type 3 --insert-factor 1000 --read-factor 1000         --num-threads 64 --numa-split 6 --no-prefetch 0 --mode 11 --ht-size 536870912         --skew 0.01 --hw-pref 0 --batch-len 16 --relation_r_size 375809638
+{ set_cycles : 134, get_cycles : 88, set_mops : 1547.769, get_mops : 2352.488 }
+/opt/dramhit-fork/build/dramhit --perf_cnt_path ./perf_cnt.txt --perf_def_path ./perf-cpp/perf_list.csv         --find_queue 64 --ht-fill 80 --ht-type 3 --insert-factor 1000 --read-factor 1000         --num-threads 64 --numa-split 6 --no-prefetch 0 --mode 11 --ht-size 536870912         --skew 0.01 --hw-pref 0 --batch-len 16 --relation_r_size 375809638
+{ set_cycles : 170, get_cycles : 108, set_mops : 1219.130, get_mops : 1912.778 }
+/opt/dramhit-fork/build/dramhit --perf_cnt_path ./perf_cnt.txt --perf_def_path ./perf-cpp/perf_list.csv         --find_queue 64 --ht-fill 90 --ht-type 3 --insert-factor 1000 --read-factor 1000         --num-threads 64 --numa-split 6 --no-prefetch 0 --mode 11 --ht-size 536870912         --skew 0.01 --hw-pref 0 --batch-len 16 --relation_r_size 375809638
+} END uniform test
+} END base+bucket
+START base+bucket+simd {
+START uniform test {
+{ set_cycles : 106, get_cycles : 65, set_mops : 1948.887, get_mops : 3162.089 }
+/opt/dramhit-fork/build/dramhit --perf_cnt_path ./perf_cnt.txt --perf_def_path ./perf-cpp/perf_list.csv         --find_queue 64 --ht-fill 10 --ht-type 3 --insert-factor 1000 --read-factor 1000         --num-threads 64 --numa-split 6 --no-prefetch 0 --mode 11 --ht-size 536870912         --skew 0.01 --hw-pref 0 --batch-len 16 --relation_r_size 375809638
+{ set_cycles : 107, get_cycles : 66, set_mops : 1930.819, get_mops : 3119.044 }
+/opt/dramhit-fork/build/dramhit --perf_cnt_path ./perf_cnt.txt --perf_def_path ./perf-cpp/perf_list.csv         --find_queue 64 --ht-fill 20 --ht-type 3 --insert-factor 1000 --read-factor 1000         --num-threads 64 --numa-split 6 --no-prefetch 0 --mode 11 --ht-size 536870912         --skew 0.01 --hw-pref 0 --batch-len 16 --relation_r_size 375809638
+{ set_cycles : 108, get_cycles : 67, set_mops : 1925.587, get_mops : 3098.420 }
+/opt/dramhit-fork/build/dramhit --perf_cnt_path ./perf_cnt.txt --perf_def_path ./perf-cpp/perf_list.csv         --find_queue 64 --ht-fill 30 --ht-type 3 --insert-factor 1000 --read-factor 1000         --num-threads 64 --numa-split 6 --no-prefetch 0 --mode 11 --ht-size 536870912         --skew 0.01 --hw-pref 0 --batch-len 16 --relation_r_size 375809638
+{ set_cycles : 108, get_cycles : 67, set_mops : 1910.326, get_mops : 3084.589 }
+/opt/dramhit-fork/build/dramhit --perf_cnt_path ./perf_cnt.txt --perf_def_path ./perf-cpp/perf_list.csv         --find_queue 64 --ht-fill 40 --ht-type 3 --insert-factor 1000 --read-factor 1000         --num-threads 64 --numa-split 6 --no-prefetch 0 --mode 11 --ht-size 536870912         --skew 0.01 --hw-pref 0 --batch-len 16 --relation_r_size 375809638
+{ set_cycles : 110, get_cycles : 68, set_mops : 1883.194, get_mops : 3037.389 }
+/opt/dramhit-fork/build/dramhit --perf_cnt_path ./perf_cnt.txt --perf_def_path ./perf-cpp/perf_list.csv         --find_queue 64 --ht-fill 50 --ht-type 3 --insert-factor 1000 --read-factor 1000         --num-threads 64 --numa-split 6 --no-prefetch 0 --mode 11 --ht-size 536870912         --skew 0.01 --hw-pref 0 --batch-len 16 --relation_r_size 375809638
+{ set_cycles : 113, get_cycles : 70, set_mops : 1832.598, get_mops : 2937.471 }
+/opt/dramhit-fork/build/dramhit --perf_cnt_path ./perf_cnt.txt --perf_def_path ./perf-cpp/perf_list.csv         --find_queue 64 --ht-fill 60 --ht-type 3 --insert-factor 1000 --read-factor 1000         --num-threads 64 --numa-split 6 --no-prefetch 0 --mode 11 --ht-size 536870912         --skew 0.01 --hw-pref 0 --batch-len 16 --relation_r_size 375809638
+{ set_cycles : 119, get_cycles : 74, set_mops : 1736.373, get_mops : 2773.786 }
+/opt/dramhit-fork/build/dramhit --perf_cnt_path ./perf_cnt.txt --perf_def_path ./perf-cpp/perf_list.csv         --find_queue 64 --ht-fill 70 --ht-type 3 --insert-factor 1000 --read-factor 1000         --num-threads 64 --numa-split 6 --no-prefetch 0 --mode 11 --ht-size 536870912         --skew 0.01 --hw-pref 0 --batch-len 16 --relation_r_size 375809638
+{ set_cycles : 133, get_cycles : 87, set_mops : 1555.072, get_mops : 2383.767 }
+/opt/dramhit-fork/build/dramhit --perf_cnt_path ./perf_cnt.txt --perf_def_path ./perf-cpp/perf_list.csv         --find_queue 64 --ht-fill 80 --ht-type 3 --insert-factor 1000 --read-factor 1000         --num-threads 64 --numa-split 6 --no-prefetch 0 --mode 11 --ht-size 536870912         --skew 0.01 --hw-pref 0 --batch-len 16 --relation_r_size 375809638
+{ set_cycles : 168, get_cycles : 109, set_mops : 1234.184, get_mops : 1897.971 }
+/opt/dramhit-fork/build/dramhit --perf_cnt_path ./perf_cnt.txt --perf_def_path ./perf-cpp/perf_list.csv         --find_queue 64 --ht-fill 90 --ht-type 3 --insert-factor 1000 --read-factor 1000         --num-threads 64 --numa-split 6 --no-prefetch 0 --mode 11 --ht-size 536870912         --skew 0.01 --hw-pref 0 --batch-len 16 --relation_r_size 375809638
+} END uniform test
+} END base+bucket+simd
+START base+bucket+simd+double {
+START uniform test {
+{ set_cycles : 104, get_cycles : 40, set_mops : 1986.807, get_mops : 5129.033 }
+/opt/dramhit-fork/build/dramhit --perf_cnt_path ./perf_cnt.txt --perf_def_path ./perf-cpp/perf_list.csv         --find_queue 64 --ht-fill 10 --ht-type 3 --insert-factor 1000 --read-factor 1000         --num-threads 64 --numa-split 6 --no-prefetch 0 --mode 11 --ht-size 536870912         --skew 0.01 --hw-pref 0 --batch-len 16 --relation_r_size 375809638
+{ set_cycles : 98, get_cycles : 45, set_mops : 2104.601, get_mops : 4620.058 }
+/opt/dramhit-fork/build/dramhit --perf_cnt_path ./perf_cnt.txt --perf_def_path ./perf-cpp/perf_list.csv         --find_queue 64 --ht-fill 20 --ht-type 3 --insert-factor 1000 --read-factor 1000         --num-threads 64 --numa-split 6 --no-prefetch 0 --mode 11 --ht-size 536870912         --skew 0.01 --hw-pref 0 --batch-len 16 --relation_r_size 375809638
+{ set_cycles : 102, get_cycles : 44, set_mops : 2025.440, get_mops : 4666.205 }
+/opt/dramhit-fork/build/dramhit --perf_cnt_path ./perf_cnt.txt --perf_def_path ./perf-cpp/perf_list.csv         --find_queue 64 --ht-fill 30 --ht-type 3 --insert-factor 1000 --read-factor 1000         --num-threads 64 --numa-split 6 --no-prefetch 0 --mode 11 --ht-size 536870912         --skew 0.01 --hw-pref 0 --batch-len 16 --relation_r_size 375809638
+{ set_cycles : 100, get_cycles : 45, set_mops : 2075.707, get_mops : 4595.340 }
+/opt/dramhit-fork/build/dramhit --perf_cnt_path ./perf_cnt.txt --perf_def_path ./perf-cpp/perf_list.csv         --find_queue 64 --ht-fill 40 --ht-type 3 --insert-factor 1000 --read-factor 1000         --num-threads 64 --numa-split 6 --no-prefetch 0 --mode 11 --ht-size 536870912         --skew 0.01 --hw-pref 0 --batch-len 16 --relation_r_size 375809638
+{ set_cycles : 100, get_cycles : 44, set_mops : 2063.444, get_mops : 4716.300 }
+/opt/dramhit-fork/build/dramhit --perf_cnt_path ./perf_cnt.txt --perf_def_path ./perf-cpp/perf_list.csv         --find_queue 64 --ht-fill 50 --ht-type 3 --insert-factor 1000 --read-factor 1000         --num-threads 64 --numa-split 6 --no-prefetch 0 --mode 11 --ht-size 536870912         --skew 0.01 --hw-pref 0 --batch-len 16 --relation_r_size 375809638
+{ set_cycles : 102, get_cycles : 44, set_mops : 2019.990, get_mops : 4624.864 }
+/opt/dramhit-fork/build/dramhit --perf_cnt_path ./perf_cnt.txt --perf_def_path ./perf-cpp/perf_list.csv         --find_queue 64 --ht-fill 60 --ht-type 3 --insert-factor 1000 --read-factor 1000         --num-threads 64 --numa-split 6 --no-prefetch 0 --mode 11 --ht-size 536870912         --skew 0.01 --hw-pref 0 --batch-len 16 --relation_r_size 375809638
+{ set_cycles : 104, get_cycles : 47, set_mops : 1986.409, get_mops : 4395.568 }
+/opt/dramhit-fork/build/dramhit --perf_cnt_path ./perf_cnt.txt --perf_def_path ./perf-cpp/perf_list.csv         --find_queue 64 --ht-fill 70 --ht-type 3 --insert-factor 1000 --read-factor 1000         --num-threads 64 --numa-split 6 --no-prefetch 0 --mode 11 --ht-size 536870912         --skew 0.01 --hw-pref 0 --batch-len 16 --relation_r_size 375809638
+{ set_cycles : 121, get_cycles : 56, set_mops : 1717.267, get_mops : 3709.927 }
+/opt/dramhit-fork/build/dramhit --perf_cnt_path ./perf_cnt.txt --perf_def_path ./perf-cpp/perf_list.csv         --find_queue 64 --ht-fill 80 --ht-type 3 --insert-factor 1000 --read-factor 1000         --num-threads 64 --numa-split 6 --no-prefetch 0 --mode 11 --ht-size 536870912         --skew 0.01 --hw-pref 0 --batch-len 16 --relation_r_size 375809638
+{ set_cycles : 156, get_cycles : 74, set_mops : 1324.850, get_mops : 2800.051 }
+/opt/dramhit-fork/build/dramhit --perf_cnt_path ./perf_cnt.txt --perf_def_path ./perf-cpp/perf_list.csv         --find_queue 64 --ht-fill 90 --ht-type 3 --insert-factor 1000 --read-factor 1000         --num-threads 64 --numa-split 6 --no-prefetch 0 --mode 11 --ht-size 536870912         --skew 0.01 --hw-pref 0 --batch-len 16 --relation_r_size 375809638
+} END uniform test
+} END base+bucket+simd+double
+START base+bucket+simd+double+inline {
+START uniform test {
+{ set_cycles : 109, get_cycles : 35, set_mops : 1892.723, get_mops : 5879.476 }
+/opt/dramhit-fork/build/dramhit --perf_cnt_path ./perf_cnt.txt --perf_def_path ./perf-cpp/perf_list.csv         --find_queue 64 --ht-fill 10 --ht-type 3 --insert-factor 1000 --read-factor 1000         --num-threads 64 --numa-split 6 --no-prefetch 0 --mode 11 --ht-size 536870912         --skew 0.01 --hw-pref 0 --batch-len 16 --relation_r_size 375809638
+{ set_cycles : 96, get_cycles : 41, set_mops : 2147.395, get_mops : 5017.015 }
+/opt/dramhit-fork/build/dramhit --perf_cnt_path ./perf_cnt.txt --perf_def_path ./perf-cpp/perf_list.csv         --find_queue 64 --ht-fill 20 --ht-type 3 --insert-factor 1000 --read-factor 1000         --num-threads 64 --numa-split 6 --no-prefetch 0 --mode 11 --ht-size 536870912         --skew 0.01 --hw-pref 0 --batch-len 16 --relation_r_size 375809638
+{ set_cycles : 98, get_cycles : 43, set_mops : 2110.651, get_mops : 4776.050 }
+/opt/dramhit-fork/build/dramhit --perf_cnt_path ./perf_cnt.txt --perf_def_path ./perf-cpp/perf_list.csv         --find_queue 64 --ht-fill 30 --ht-type 3 --insert-factor 1000 --read-factor 1000         --num-threads 64 --numa-split 6 --no-prefetch 0 --mode 11 --ht-size 536870912         --skew 0.01 --hw-pref 0 --batch-len 16 --relation_r_size 375809638
+{ set_cycles : 99, get_cycles : 42, set_mops : 2098.409, get_mops : 4860.999 }
+/opt/dramhit-fork/build/dramhit --perf_cnt_path ./perf_cnt.txt --perf_def_path ./perf-cpp/perf_list.csv         --find_queue 64 --ht-fill 40 --ht-type 3 --insert-factor 1000 --read-factor 1000         --num-threads 64 --numa-split 6 --no-prefetch 0 --mode 11 --ht-size 536870912         --skew 0.01 --hw-pref 0 --batch-len 16 --relation_r_size 375809638
+{ set_cycles : 104, get_cycles : 42, set_mops : 1994.999, get_mops : 4841.494 }
+/opt/dramhit-fork/build/dramhit --perf_cnt_path ./perf_cnt.txt --perf_def_path ./perf-cpp/perf_list.csv         --find_queue 64 --ht-fill 50 --ht-type 3 --insert-factor 1000 --read-factor 1000         --num-threads 64 --numa-split 6 --no-prefetch 0 --mode 11 --ht-size 536870912         --skew 0.01 --hw-pref 0 --batch-len 16 --relation_r_size 375809638
+{ set_cycles : 99, get_cycles : 42, set_mops : 2098.691, get_mops : 4867.198 }
+/opt/dramhit-fork/build/dramhit --perf_cnt_path ./perf_cnt.txt --perf_def_path ./perf-cpp/perf_list.csv         --find_queue 64 --ht-fill 60 --ht-type 3 --insert-factor 1000 --read-factor 1000         --num-threads 64 --numa-split 6 --no-prefetch 0 --mode 11 --ht-size 536870912         --skew 0.01 --hw-pref 0 --batch-len 16 --relation_r_size 375809638
+{ set_cycles : 103, get_cycles : 44, set_mops : 2005.511, get_mops : 4627.082 }
+/opt/dramhit-fork/build/dramhit --perf_cnt_path ./perf_cnt.txt --perf_def_path ./perf-cpp/perf_list.csv         --find_queue 64 --ht-fill 70 --ht-type 3 --insert-factor 1000 --read-factor 1000         --num-threads 64 --numa-split 6 --no-prefetch 0 --mode 11 --ht-size 536870912         --skew 0.01 --hw-pref 0 --batch-len 16 --relation_r_size 375809638
+{ set_cycles : 116, get_cycles : 53, set_mops : 1785.846, get_mops : 3880.020 }
+/opt/dramhit-fork/build/dramhit --perf_cnt_path ./perf_cnt.txt --perf_def_path ./perf-cpp/perf_list.csv         --find_queue 64 --ht-fill 80 --ht-type 3 --insert-factor 1000 --read-factor 1000         --num-threads 64 --numa-split 6 --no-prefetch 0 --mode 11 --ht-size 536870912         --skew 0.01 --hw-pref 0 --batch-len 16 --relation_r_size 375809638
+{ set_cycles : 146, get_cycles : 75, set_mops : 1415.473, get_mops : 2750.548 }
+/opt/dramhit-fork/build/dramhit --perf_cnt_path ./perf_cnt.txt --perf_def_path ./perf-cpp/perf_list.csv         --find_queue 64 --ht-fill 90 --ht-type 3 --insert-factor 1000 --read-factor 1000         --num-threads 64 --numa-split 6 --no-prefetch 0 --mode 11 --ht-size 536870912         --skew 0.01 --hw-pref 0 --batch-len 16 --relation_r_size 375809638
+} END uniform test
+} END base+bucket+simd+double+inline
+START all+uniform {
+START uniform test {
+{ set_cycles : 104, get_cycles : 35, set_mops : 1984.189, get_mops : 5805.259 }
+/opt/dramhit-fork/build/dramhit --perf_cnt_path ./perf_cnt.txt --perf_def_path ./perf-cpp/perf_list.csv         --find_queue 64 --ht-fill 10 --ht-type 3 --insert-factor 1000 --read-factor 1000         --num-threads 64 --numa-split 6 --no-prefetch 0 --mode 11 --ht-size 536870912         --skew 0.01 --hw-pref 0 --batch-len 16 --relation_r_size 375809638
+{ set_cycles : 97, get_cycles : 43, set_mops : 2135.035, get_mops : 4769.475 }
+/opt/dramhit-fork/build/dramhit --perf_cnt_path ./perf_cnt.txt --perf_def_path ./perf-cpp/perf_list.csv         --find_queue 64 --ht-fill 20 --ht-type 3 --insert-factor 1000 --read-factor 1000         --num-threads 64 --numa-split 6 --no-prefetch 0 --mode 11 --ht-size 536870912         --skew 0.01 --hw-pref 0 --batch-len 16 --relation_r_size 375809638
+{ set_cycles : 105, get_cycles : 43, set_mops : 1980.715, get_mops : 4778.405 }
+/opt/dramhit-fork/build/dramhit --perf_cnt_path ./perf_cnt.txt --perf_def_path ./perf-cpp/perf_list.csv         --find_queue 64 --ht-fill 30 --ht-type 3 --insert-factor 1000 --read-factor 1000         --num-threads 64 --numa-split 6 --no-prefetch 0 --mode 11 --ht-size 536870912         --skew 0.01 --hw-pref 0 --batch-len 16 --relation_r_size 375809638
+{ set_cycles : 102, get_cycles : 46, set_mops : 2027.542, get_mops : 4496.692 }
+/opt/dramhit-fork/build/dramhit --perf_cnt_path ./perf_cnt.txt --perf_def_path ./perf-cpp/perf_list.csv         --find_queue 64 --ht-fill 40 --ht-type 3 --insert-factor 1000 --read-factor 1000         --num-threads 64 --numa-split 6 --no-prefetch 0 --mode 11 --ht-size 536870912         --skew 0.01 --hw-pref 0 --batch-len 16 --relation_r_size 375809638
+{ set_cycles : 94, get_cycles : 45, set_mops : 2192.379, get_mops : 4584.066 }
+/opt/dramhit-fork/build/dramhit --perf_cnt_path ./perf_cnt.txt --perf_def_path ./perf-cpp/perf_list.csv         --find_queue 64 --ht-fill 50 --ht-type 3 --insert-factor 1000 --read-factor 1000         --num-threads 64 --numa-split 6 --no-prefetch 0 --mode 11 --ht-size 536870912         --skew 0.01 --hw-pref 0 --batch-len 16 --relation_r_size 375809638
+{ set_cycles : 105, get_cycles : 48, set_mops : 1970.152, get_mops : 4259.147 }
+/opt/dramhit-fork/build/dramhit --perf_cnt_path ./perf_cnt.txt --perf_def_path ./perf-cpp/perf_list.csv         --find_queue 64 --ht-fill 60 --ht-type 3 --insert-factor 1000 --read-factor 1000         --num-threads 64 --numa-split 6 --no-prefetch 0 --mode 11 --ht-size 536870912         --skew 0.01 --hw-pref 0 --batch-len 16 --relation_r_size 375809638
+{ set_cycles : 103, get_cycles : 51, set_mops : 2010.660, get_mops : 4074.004 }
+/opt/dramhit-fork/build/dramhit --perf_cnt_path ./perf_cnt.txt --perf_def_path ./perf-cpp/perf_list.csv         --find_queue 64 --ht-fill 70 --ht-type 3 --insert-factor 1000 --read-factor 1000         --num-threads 64 --numa-split 6 --no-prefetch 0 --mode 11 --ht-size 536870912         --skew 0.01 --hw-pref 0 --batch-len 16 --relation_r_size 375809638
+{ set_cycles : 116, get_cycles : 57, set_mops : 1793.044, get_mops : 3648.216 }
+/opt/dramhit-fork/build/dramhit --perf_cnt_path ./perf_cnt.txt --perf_def_path ./perf-cpp/perf_list.csv         --find_queue 64 --ht-fill 80 --ht-type 3 --insert-factor 1000 --read-factor 1000         --num-threads 64 --numa-split 6 --no-prefetch 0 --mode 11 --ht-size 536870912         --skew 0.01 --hw-pref 0 --batch-len 16 --relation_r_size 375809638
+{ set_cycles : 141, get_cycles : 67, set_mops : 1467.340, get_mops : 3079.026 }
+/opt/dramhit-fork/build/dramhit --perf_cnt_path ./perf_cnt.txt --perf_def_path ./perf-cpp/perf_list.csv         --find_queue 64 --ht-fill 90 --ht-type 3 --insert-factor 1000 --read-factor 1000         --num-threads 64 --numa-split 6 --no-prefetch 0 --mode 11 --ht-size 536870912         --skew 0.01 --hw-pref 0 --batch-len 16 --relation_r_size 375809638
+} END uniform test
+} END all+uniform
