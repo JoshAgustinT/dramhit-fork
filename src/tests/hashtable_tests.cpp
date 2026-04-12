@@ -222,7 +222,7 @@ OpTimings do_zipfian_inserts(
       for (int i = 0; i < config.batch_len; i++) {
 #if defined(INFLIGHT)
         // value = xorwow(&_xw_state);
-        value = hash_knuth((HT_TESTS_NUM_INSERTS * id + (n * 16) + i));
+        value =hash_knuth((id * HT_TESTS_NUM_INSERTS + n * config.batch_len + i));
         // value = hash_xorshift((HT_TESTS_NUM_INSERTS * id + (n*16)+ i));
 #elif defined(ZIPFIAN)
         if (!(zipf_idx & 7) && zipf_idx + 16 < zipf_set->size()) {
@@ -322,7 +322,7 @@ OpTimings do_zipfian_gets(
     for (uint64_t n = 0; n < batches; n++) {
       for (int i = 0; i < config.batch_len; i++) {
 #if defined(INFLIGHT)
-        value = hash_knuth((id * HT_TESTS_NUM_INSERTS + n * 16 + i));
+        value = hash_knuth((id * HT_TESTS_NUM_INSERTS + n * config.batch_len + i));
 #elif defined(ZIPFIAN)
         if (!(zipf_idx & 7) && zipf_idx + 16 < zipf_set->size()) {
           __builtin_prefetch(&zipf_set->at(zipf_idx + 16), false, 3);

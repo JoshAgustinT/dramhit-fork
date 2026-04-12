@@ -1,0 +1,26 @@
+
+START L1:
+2026-04-11 19:46:01.977 INFO  [162060] [kmercounter::ZipfianTest::run@586] get fill 0.100
+{ set_cycles : 135, get_cycles : 45, set_mops : 1534.653, get_mops : 4607.681 }
+/opt/dramhit-fork/build/dramhit --perf_cnt_path ./perf_cnt.txt --perf_def_path ./perf-cpp/perf_list.csv --find_queue 64 --ht-fill 10 --ht-type 3 --insert-factor 1 --read-factor 100 --num-threads 64 --numa-split 4 --no-prefetch 0 --mode 11 --ht-size 536870912 --skew 0.01 --hw-pref 0 --batch-len 64 --relation_r_size 375809638
+2026-04-11 19:46:06.114 INFO  [162168] [kmercounter::ZipfianTest::run@586] get fill 0.200
+{ set_cycles : 136, get_cycles : 49, set_mops : 1522.758, get_mops : 4191.598 }
+/opt/dramhit-fork/build/dramhit --perf_cnt_path ./perf_cnt.txt --perf_def_path ./perf-cpp/perf_list.csv --find_queue 64 --ht-fill 20 --ht-type 3 --insert-factor 1 --read-factor 100 --num-threads 64 --numa-split 4 --no-prefetch 0 --mode 11 --ht-size 536870912 --skew 0.01 --hw-pref 0 --batch-len 64 --relation_r_size 375809638
+2026-04-11 19:46:12.143 INFO  [162274] [kmercounter::ZipfianTest::run@586] get fill 0.300
+{ set_cycles : 140, get_cycles : 55, set_mops : 1477.829, get_mops : 3757.079 }
+/opt/dramhit-fork/build/dramhit --perf_cnt_path ./perf_cnt.txt --perf_def_path ./perf-cpp/perf_list.csv --find_queue 64 --ht-fill 30 --ht-type 3 --insert-factor 1 --read-factor 100 --num-threads 64 --numa-split 4 --no-prefetch 0 --mode 11 --ht-size 536870912 --skew 0.01 --hw-pref 0 --batch-len 64 --relation_r_size 375809638
+2026-04-11 19:46:20.459 INFO  [162403] [kmercounter::ZipfianTest::run@586] get fill 0.400
+{ set_cycles : 146, get_cycles : 63, set_mops : 1424.311, get_mops : 3263.769 }
+/opt/dramhit-fork/build/dramhit --perf_cnt_path ./perf_cnt.txt --perf_def_path ./perf-cpp/perf_list.csv --find_queue 64 --ht-fill 40 --ht-type 3 --insert-factor 1 --read-factor 100 --num-threads 64 --numa-split 4 --no-prefetch 0 --mode 11 --ht-size 536870912 --skew 0.01 --hw-pref 0 --batch-len 64 --relation_r_size 375809638
+2026-04-11 19:46:32.131 INFO  [162556] [kmercounter::ZipfianTest::run@586] get fill 0.500
+{ set_cycles : 159, get_cycles : 75, set_mops : 1300.844, get_mops : 2765.935 }
+/opt/dramhit-fork/build/dramhit --perf_cnt_path ./perf_cnt.txt --perf_def_path ./perf-cpp/perf_list.csv --find_queue 64 --ht-fill 50 --ht-type 3 --insert-factor 1 --read-factor 100 --num-threads 64 --numa-split 4 --no-prefetch 0 --mode 11 --ht-size 536870912 --skew 0.01 --hw-pref 0 --batch-len 64 --relation_r_size 375809638
+2026-04-11 19:46:48.629 INFO  [162723] [kmercounter::ZipfianTest::run@586] get fill 0.600
+{ set_cycles : 175, get_cycles : 92, set_mops : 1186.297, get_mops : 2246.968 }
+/opt/dramhit-fork/build/dramhit --perf_cnt_path ./perf_cnt.txt --perf_def_path ./perf-cpp/perf_list.csv --find_queue 64 --ht-fill 60 --ht-type 3 --insert-factor 1 --read-factor 100 --num-threads 64 --numa-split 4 --no-prefetch 0 --mode 11 --ht-size 536870912 --skew 0.01 --hw-pref 0 --batch-len 64 --relation_r_size 375809638
+2026-04-11 19:47:12.734 INFO  [162890] [kmercounter::ZipfianTest::run@586] get fill 0.700
+{ set_cycles : 197, get_cycles : 116, set_mops : 1050.897, get_mops : 1783.846 }
+/opt/dramhit-fork/build/dramhit --perf_cnt_path ./perf_cnt.txt --perf_def_path ./perf-cpp/perf_list.csv --find_queue 64 --ht-fill 70 --ht-type 3 --insert-factor 1 --read-factor 100 --num-threads 64 --numa-split 4 --no-prefetch 0 --mode 11 --ht-size 536870912 --skew 0.01 --hw-pref 0 --batch-len 64 --relation_r_size 375809638
+2026-04-11 19:47:47.229 INFO  [163018] [kmercounter::ZipfianTest::run@586] get fill 0.800
+{ set_cycles : 228, get_cycles : 150, set_mops : 911.194, get_mops : 1378.785 }
+/opt/dramhit-fork/build/dramhit --perf_cnt_path ./perf_cnt.txt --perf_def_path ./perf-cpp/perf_list.csv --find_queue 64 --ht-fill 80 --ht-type 3 --insert-factor 1 --read-factor 100 --num-threads 64 --numa-split 4 --no-prefetch 0 --mode 11 --ht-size 536870912 --skew 0.01 --hw-pref 0 --batch-len 64 --relation_r_size 375809638
