@@ -31,7 +31,8 @@
 #define INFLIGHT
 
 namespace kmercounter {
-
+//FIX ME!
+bool SINGLE_SOCKET = true;
 extern void get_ht_stats(Shard *, BaseHashTable *);
 
 extern uint64_t
@@ -61,7 +62,7 @@ extern ExecPhase cur_phase;
 
 extern std::vector<key_type, huge_page_allocator<key_type>> *g_zipf_values;
 
-static inline uint32_t hash_knuth(uint32_t x) { return x * 2654435761u; }
+static inline uint64_t hash_knuth(uint64_t x) { return x * 2654435761u +1; }
 
 static inline uint32_t hash_xorshift(uint32_t x) {
   x ^= x << 13;
@@ -96,7 +97,7 @@ OpTimings do_zipfian_inserts(
   sync_barrier->arrive_and_wait();
   cur_phase = ExecPhase::insertions;
   if (id == 0) std::cerr << "\nSTART Insert TEST {" << std::endl;
-
+  if (SINGLE_SOCKET) id = sched_getcpu() / 2;
   // printf("[JOSH] SIZE OF ZIPF_G[] %d, zipf_idx= %d, HT_NUM_TEST: %d\n",
   // g_zipf_values->size(), (id * HT_TESTS_NUM_INSERTS), HT_TESTS_NUM_INSERTS);
   start = RDTSC_START();
@@ -110,10 +111,11 @@ OpTimings do_zipfian_inserts(
     uint64_t batch_idx = 0;
 
     for (int i = 0; i < HT_TESTS_NUM_INSERTS; i++) {
-      if (!(zipf_idx & 7) && zipf_idx + 16 < g_zipf_values->size()) {
-        __builtin_prefetch(&g_zipf_values->at(zipf_idx + 16), false, 3);
+      if (!(zipf_idx & 7) && zipf_idx + 32 < g_zipf_values->size()) {
+        __builtin_prefetch(&g_zipf_values->at(zipf_idx + 32), false, 1);
       }
       value = g_zipf_values->at(zipf_idx++);
+      // value = hash_knuth(zipf_idx++);
       items[batch_idx].key = items[batch_idx].value = value;
       items[batch_idx].id = i;
 
@@ -225,6 +227,8 @@ OpTimings do_zipfian_gets(BaseHashTable *hashtable, unsigned int num_threads,
   // __itt_event vtune_evt;
   if (id == 0) std::cerr << "\nSTART FIND TEST {" << std::endl;
 
+  if (SINGLE_SOCKET) id = sched_getcpu() / 2;
+
   start = RDTSC_START();
 
   for (auto j = 0u; j < config.read_factor; j++) {
@@ -236,10 +240,11 @@ OpTimings do_zipfian_gets(BaseHashTable *hashtable, unsigned int num_threads,
     uint64_t batch_idx = 0;
 
     for (int i = 0; i < HT_TESTS_NUM_INSERTS; i++) {
-      if (!(zipf_idx & 7) && zipf_idx + 16 < g_zipf_values->size()) {
-        __builtin_prefetch(&g_zipf_values->at(zipf_idx + 16), false, 3);
+      if (!(zipf_idx & 7) && zipf_idx + 32 < g_zipf_values->size()) {
+        __builtin_prefetch(&g_zipf_values->at(zipf_idx + 32), false, 1);
       }
       value = g_zipf_values->at(zipf_idx++);
+      // value = hash_knuth(zipf_idx++);
       items[batch_idx].key = items[batch_idx].value = value;
       items[batch_idx].id = i;
 
@@ -381,8 +386,8 @@ void ZipfianTest::run(Shard *shard, BaseHashTable *hashtable, double skew,
   cur_phase = ExecPhase::finds;
 
   if (config.no_prefetch) {
-    find_timings = do_zipfian_gets_noprefetch(
-        hashtable, count, shard->shard_idx, sync_barrier);
+    find_timings = do_zipfian_gets_noprefetch(hashtable, count,
+                                              shard->shard_idx, sync_barrier);
   } else {
     find_timings =
         do_zipfian_gets(hashtable, count, shard->shard_idx, sync_barrier);

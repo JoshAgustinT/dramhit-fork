@@ -50,7 +50,7 @@ elif [ "$test" = "large" ]; then
     # size=268435456
     # size=524288
     insertFactor=1
-    readFactor=1
+    readFactor=300
 fi
 
 # size=134217728
@@ -80,13 +80,13 @@ echo "" > $OUTPUT_FILE
 # DRAMBLAST
     echo "START dramblast {" >> $OUTPUT_FILE
     cmd="--perf_cnt_path ./perf_cnt.txt --perf_def_path ./perf-cpp/perf_list.csv \
-    --find_queue 64 --ht-fill $fill --ht-type $DRAMHIT --insert-factor $insertFactor --read-factor $readFactor\
+    --find_queue 64 --ht-fill 70 --ht-type $DRAMHIT --insert-factor $insertFactor --read-factor $readFactor\
     --num-threads $numThreads --numa-split $numa_policy --no-prefetch 0 --mode $ZIPFIAN --ht-size $size --skew 0.01\
     --hw-pref 0 --batch-len 16 --relation_r_size $rsize"
 
     EVENTS="unc_m_cas_count.all,unc_m_cas_count.rd,unc_m_cas_count.wr"
     # Get bw info
-    # sudo perf stat -I 1000 -e $EVENTS -- $HOME_DIR/build/dramhit $cmd > /dev/null 2>> $OUTPUT_FILE
+    sudo perf stat -I 1000 -e $EVENTS -- $HOME_DIR/build/dramhit $cmd > /dev/null 2>> $OUTPUT_FILE
 
     echo "START uniform test {" >> $OUTPUT_FILE
     # 10-90 fill performance
@@ -96,9 +96,8 @@ echo "" > $OUTPUT_FILE
         --find_queue 64 --ht-fill $fill_loop --ht-type $DRAMHIT --insert-factor $insertFactor --read-factor $readFactor\
         --num-threads $numThreads --numa-split $numa_policy --no-prefetch 0 --mode $ZIPFIAN --ht-size $size --skew 0.01\
         --hw-pref 0 --batch-len 16 --relation_r_size $rsize"
-        sudo $HOME_DIR/build/dramhit $cmd >> $OUTPUT_FILE
-        # | grep -E "get_mops|fill" >> $OUTPUT_FILE
-         echo $HOME_DIR/build/dramhit $cmd >> $OUTPUT_FILE
+        #  sudo $HOME_DIR/build/dramhit $cmd | grep -E "get_mops|fill" >> $OUTPUT_FILE
+        #  echo $HOME_DIR/build/dramhit $cmd >> $OUTPUT_FILE
     done  
     
 
