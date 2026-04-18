@@ -1,0 +1,1427 @@
+
+START dramblast {
+START uniform test {
+2026-04-18 00:00:08.165 INFO  [55555] [initializeLogger@17] ------------------------
+2026-04-18 00:00:08.165 INFO  [55555] [initializeLogger@18] Plog library initialized
+2026-04-18 00:00:08.165 INFO  [55555] [initializeLogger@19] ------------------------
+2026-04-18 00:00:08.165 INFO  [55555] [main@27] Starting dramhit
+2026-04-18 00:00:08.165 INFO  [55555] [MsrHandler::msr_open@46] msr-safe loaded!
+2026-04-18 00:00:08.167 INFO  [55555] [kmercounter::Application::process@769] Hashtable type : Cas HT
+2026-04-18 00:00:08.167 INFO  [55555] [kmercounter::Application::process@810] Dropping the page cache
+2026-04-18 00:00:08.478 INFO  [55555] [kmercounter::init_zipfian_dist@76] HT_TESTS_NUM_INSERTS 53687091
+2026-04-18 00:00:08.478 INFO  [55555] [kmercounter::init_zipfian_dist@81] /opt/zipfian/0.01_536870912_10.bin 0
+2026-04-18 00:00:08.478 INFO  [55555] [kmercounter::init_zipfian_dist@88] Initializing global zipf with skew 0.010000, seed 1776492007896410575
+2026-04-18 00:00:11.771 INFO  [55555] [kmercounter::init_zipfian_dist@93] Zipfian dist generated. size 53687091
+2026-04-18 00:00:11.771 INFO  [55555] [kmercounter::Application::spawn_shard_threads@413] total kv 53687091, num_threads 128, op per thread (per run) 419430
+2026-04-18 00:00:11.771 INFO  [55629] [kmercounter::calloc_ht@132] opened file /mnt/huge/hugepagefile
+2026-04-18 00:00:11.771 INFO  [55629] [kmercounter::calloc_ht@148] allocating 8 1gb pages bytes 8589934592
+2026-04-18 00:00:11.771 INFO  [55629] [kmercounter::calloc_ht@161] mmap returns 0x79b180000000
+2026-04-18 00:00:11.771 INFO  [55629] [kmercounter::distribute_mem_to_nodes@122] addr 0x79b180000000, alloc_sz 8589934592
+2026-04-18 00:00:15.169 INFO  [55629] [KVQ>::CASHashTable@82] Hashtable base: 0x79b180000000 Hashtable size: 536870912
+2026-04-18 00:00:15.169 INFO  [55629] [KVQ>::CASHashTable@84] queue item sz: 32
+2026-04-18 00:00:16.397 INFO  [55640] [kmercounter::do_zipfian_gets@264] DEBUG: thread 6 | actual found 41936100 | cycles per get: 64
+2026-04-18 00:00:16.397 INFO  [55694] [kmercounter::do_zipfian_gets@264] DEBUG: thread 60 | actual found 41936100 | cycles per get: 68
+2026-04-18 00:00:16.397 INFO  [55733] [kmercounter::do_zipfian_gets@264] DEBUG: thread 99 | actual found 41936100 | cycles per get: 66
+2026-04-18 00:00:16.397 INFO  [55652] [kmercounter::do_zipfian_gets@264] DEBUG: thread 18 | actual found 41936100 | cycles per get: 64
+2026-04-18 00:00:16.397 INFO  [55724] [kmercounter::do_zipfian_gets@264] DEBUG: thread 90 | actual found 41936100 | cycles per get: 64
+2026-04-18 00:00:16.397 INFO  [55751] [kmercounter::do_zipfian_gets@264] DEBUG: thread 117 | actual found 41936100 | cycles per get: 64
+2026-04-18 00:00:16.397 INFO  [55704] [kmercounter::do_zipfian_gets@264] DEBUG: thread 70 | actual found 41936100 | cycles per get: 64
+2026-04-18 00:00:16.397 INFO  [55713] [kmercounter::do_zipfian_gets@264] DEBUG: thread 79 | actual found 41936100 | cycles per get: 64
+2026-04-18 00:00:16.397 INFO  [55659] [kmercounter::do_zipfian_gets@264] DEBUG: thread 25 | actual found 41936100 | cycles per get: 64
+2026-04-18 00:00:16.397 INFO  [55643] [kmercounter::do_zipfian_gets@264] DEBUG: thread 9 | actual found 41936100 | cycles per get: 61
+2026-04-18 00:00:16.397 INFO  [55651] [kmercounter::do_zipfian_gets@264] DEBUG: thread 17 | actual found 41936100 | cycles per get: 64
+2026-04-18 00:00:16.397 INFO  [55684] [kmercounter::do_zipfian_gets@264] DEBUG: thread 50 | actual found 41936100 | cycles per get: 64
+2026-04-18 00:00:16.397 INFO  [55739] [kmercounter::do_zipfian_gets@264] DEBUG: thread 105 | actual found 41936100 | cycles per get: 64
+2026-04-18 00:00:16.397 INFO  [55631] [kmercounter::do_zipfian_gets@264] DEBUG: thread 2 | actual found 41936100 | cycles per get: 61
+2026-04-18 00:00:16.397 INFO  [55708] [kmercounter::do_zipfian_gets@264] DEBUG: thread 74 | actual found 41936100 | cycles per get: 64
+2026-04-18 00:00:16.397 INFO  [55649] [kmercounter::do_zipfian_gets@264] DEBUG: thread 15 | actual found 41936100 | cycles per get: 61
+2026-04-18 00:00:16.397 INFO  [55661] [kmercounter::do_zipfian_gets@264] DEBUG: thread 27 | actual found 41936100 | cycles per get: 64
+2026-04-18 00:00:16.397 INFO  [55748] [kmercounter::do_zipfian_gets@264] DEBUG: thread 114 | actual found 41936100 | cycles per get: 65
+2026-04-18 00:00:16.397 INFO  [55660] [kmercounter::do_zipfian_gets@264] DEBUG: thread 26 | actual found 41936100 | cycles per get: 64
+2026-04-18 00:00:16.397 INFO  [55692] [kmercounter::do_zipfian_gets@264] DEBUG: thread 58 | actual found 41936100 | cycles per get: 64
+2026-04-18 00:00:16.397 INFO  [55672] [kmercounter::do_zipfian_gets@264] DEBUG: thread 38 | actual found 41936100 | cycles per get: 64
+2026-04-18 00:00:16.397 INFO  [55753] [kmercounter::do_zipfian_gets@264] DEBUG: thread 119 | actual found 41936100 | cycles per get: 64
+2026-04-18 00:00:16.397 INFO  [55712] [kmercounter::do_zipfian_gets@264] DEBUG: thread 78 | actual found 41936100 | cycles per get: 64
+2026-04-18 00:00:16.397 INFO  [55728] [kmercounter::do_zipfian_gets@264] DEBUG: thread 94 | actual found 41936100 | cycles per get: 64
+2026-04-18 00:00:16.397 INFO  [55653] [kmercounter::do_zipfian_gets@264] DEBUG: thread 19 | actual found 41936100 | cycles per get: 64
+2026-04-18 00:00:16.397 INFO  [55736] [kmercounter::do_zipfian_gets@264] DEBUG: thread 102 | actual found 41936100 | cycles per get: 64
+2026-04-18 00:00:16.397 INFO  [55743] [kmercounter::do_zipfian_gets@264] DEBUG: thread 109 | actual found 41936100 | cycles per get: 62
+2026-04-18 00:00:16.397 INFO  [55729] [kmercounter::do_zipfian_gets@264] DEBUG: thread 95 | actual found 41936100 | cycles per get: 62
+2026-04-18 00:00:16.397 INFO  [55749] [kmercounter::do_zipfian_gets@264] DEBUG: thread 115 | actual found 41936100 | cycles per get: 65
+2026-04-18 00:00:16.397 INFO  [55721] [kmercounter::do_zipfian_gets@264] DEBUG: thread 87 | actual found 41936100 | cycles per get: 64
+2026-04-18 00:00:16.397 INFO  [55688] [kmercounter::do_zipfian_gets@264] DEBUG: thread 54 | actual found 41936100 | cycles per get: 65
+2026-04-18 00:00:16.397 INFO  [55656] [kmercounter::do_zipfian_gets@264] DEBUG: thread 22 | actual found 41936100 | cycles per get: 65
+2026-04-18 00:00:16.397 INFO  [55701] [kmercounter::do_zipfian_gets@264] DEBUG: thread 67 | actual found 41936100 | cycles per get: 63
+2026-04-18 00:00:16.397 INFO  [55716] [kmercounter::do_zipfian_gets@264] DEBUG: thread 82 | actual found 41936100 | cycles per get: 64
+2026-04-18 00:00:16.397 INFO  [55664] [kmercounter::do_zipfian_gets@264] DEBUG: thread 30 | actual found 41936100 | cycles per get: 64
+2026-04-18 00:00:16.397 INFO  [55648] [kmercounter::do_zipfian_gets@264] DEBUG: thread 14 | actual found 41936100 | cycles per get: 65
+2026-04-18 00:00:16.397 INFO  [55680] [kmercounter::do_zipfian_gets@264] DEBUG: thread 46 | actual found 41936100 | cycles per get: 65
+2026-04-18 00:00:16.397 INFO  [55747] [kmercounter::do_zipfian_gets@264] DEBUG: thread 113 | actual found 41936100 | cycles per get: 57
+2026-04-18 00:00:16.397 INFO  [55647] [kmercounter::do_zipfian_gets@264] DEBUG: thread 13 | actual found 41936100 | cycles per get: 65
+2026-04-18 00:00:16.397 INFO  [55632] [kmercounter::do_zipfian_gets@264] DEBUG: thread 3 | actual found 41936100 | cycles per get: 65
+2026-04-18 00:00:16.397 INFO  [55689] [kmercounter::do_zipfian_gets@264] DEBUG: thread 55 | actual found 41936100 | cycles per get: 65
+2026-04-18 00:00:16.397 INFO  [55657] [kmercounter::do_zipfian_gets@264] DEBUG: thread 23 | actual found 41936100 | cycles per get: 65
+2026-04-18 00:00:16.397 INFO  [55679] [kmercounter::do_zipfian_gets@264] DEBUG: thread 45 | actual found 41936100 | cycles per get: 65
+2026-04-18 00:00:16.397 INFO  [55669] [kmercounter::do_zipfian_gets@264] DEBUG: thread 35 | actual found 41936100 | cycles per get: 65
+2026-04-18 00:00:16.397 INFO  [55635] [kmercounter::do_zipfian_gets@264] DEBUG: thread 5 | actual found 41936100 | cycles per get: 65
+2026-04-18 00:00:16.397 INFO  [55671] [kmercounter::do_zipfian_gets@264] DEBUG: thread 37 | actual found 41936100 | cycles per get: 65
+2026-04-18 00:00:16.397 INFO  [55673] [kmercounter::do_zipfian_gets@264] DEBUG: thread 39 | actual found 41936100 | cycles per get: 65
+2026-04-18 00:00:16.397 INFO  [55757] [kmercounter::do_zipfian_gets@264] DEBUG: thread 123 | actual found 41936100 | cycles per get: 65
+2026-04-18 00:00:16.397 INFO  [55693] [kmercounter::do_zipfian_gets@264] DEBUG: thread 59 | actual found 41936100 | cycles per get: 64
+2026-04-18 00:00:16.397 INFO  [55691] [kmercounter::do_zipfian_gets@264] DEBUG: thread 57 | actual found 41936100 | cycles per get: 64
+2026-04-18 00:00:16.397 INFO  [55735] [kmercounter::do_zipfian_gets@264] DEBUG: thread 101 | actual found 41936100 | cycles per get: 60
+2026-04-18 00:00:16.397 INFO  [55725] [kmercounter::do_zipfian_gets@264] DEBUG: thread 91 | actual found 41936100 | cycles per get: 64
+2026-04-18 00:00:16.397 INFO  [55741] [kmercounter::do_zipfian_gets@264] DEBUG: thread 107 | actual found 41936100 | cycles per get: 65
+2026-04-18 00:00:16.397 INFO  [55700] [kmercounter::do_zipfian_gets@264] DEBUG: thread 66 | actual found 41936100 | cycles per get: 65
+2026-04-18 00:00:16.397 INFO  [55719] [kmercounter::do_zipfian_gets@264] DEBUG: thread 85 | actual found 41936100 | cycles per get: 65
+2026-04-18 00:00:16.397 INFO  [55732] [kmercounter::do_zipfian_gets@264] DEBUG: thread 98 | actual found 41936100 | cycles per get: 65
+2026-04-18 00:00:16.397 INFO  [55685] [kmercounter::do_zipfian_gets@264] DEBUG: thread 51 | actual found 41936100 | cycles per get: 64
+2026-04-18 00:00:16.397 INFO  [55630] [kmercounter::do_zipfian_gets@264] DEBUG: thread 1 | actual found 41936100 | cycles per get: 65
+2026-04-18 00:00:16.397 INFO  [55705] [kmercounter::do_zipfian_gets@264] DEBUG: thread 71 | actual found 41936100 | cycles per get: 65
+2026-04-18 00:00:16.397 INFO  [55756] [kmercounter::do_zipfian_gets@264] DEBUG: thread 122 | actual found 41936100 | cycles per get: 65
+2026-04-18 00:00:16.397 INFO  [55699] [kmercounter::do_zipfian_gets@264] DEBUG: thread 65 | actual found 41936100 | cycles per get: 65
+2026-04-18 00:00:16.397 INFO  [55731] [kmercounter::do_zipfian_gets@264] DEBUG: thread 97 | actual found 41936100 | cycles per get: 65
+2026-04-18 00:00:16.397 INFO  [55677] [kmercounter::do_zipfian_gets@264] DEBUG: thread 43 | actual found 41936100 | cycles per get: 65
+2026-04-18 00:00:16.397 INFO  [55709] [kmercounter::do_zipfian_gets@264] DEBUG: thread 75 | actual found 41936100 | cycles per get: 65
+2026-04-18 00:00:16.397 INFO  [55667] [kmercounter::do_zipfian_gets@264] DEBUG: thread 33 | actual found 41936100 | cycles per get: 65
+2026-04-18 00:00:16.397 INFO  [55641] [kmercounter::do_zipfian_gets@264] DEBUG: thread 7 | actual found 41936100 | cycles per get: 65
+2026-04-18 00:00:16.397 INFO  [55717] [kmercounter::do_zipfian_gets@264] DEBUG: thread 83 | actual found 41936100 | cycles per get: 65
+2026-04-18 00:00:16.397 INFO  [55696] [kmercounter::do_zipfian_gets@264] DEBUG: thread 62 | actual found 41936100 | cycles per get: 66
+2026-04-18 00:00:16.397 INFO  [55707] [kmercounter::do_zipfian_gets@264] DEBUG: thread 73 | actual found 41936100 | cycles per get: 64
+2026-04-18 00:00:16.397 INFO  [55695] [kmercounter::do_zipfian_gets@264] DEBUG: thread 61 | actual found 41936100 | cycles per get: 66
+2026-04-18 00:00:16.397 INFO  [55745] [kmercounter::do_zipfian_gets@264] DEBUG: thread 111 | actual found 41936100 | cycles per get: 64
+2026-04-18 00:00:16.397 INFO  [55723] [kmercounter::do_zipfian_gets@264] DEBUG: thread 89 | actual found 41936100 | cycles per get: 66
+2026-04-18 00:00:16.397 INFO  [55744] [kmercounter::do_zipfian_gets@264] DEBUG: thread 110 | actual found 41936100 | cycles per get: 64
+2026-04-18 00:00:16.397 INFO  [55655] [kmercounter::do_zipfian_gets@264] DEBUG: thread 21 | actual found 41936100 | cycles per get: 67
+2026-04-18 00:00:16.397 INFO  [55755] [kmercounter::do_zipfian_gets@264] DEBUG: thread 121 | actual found 41936100 | cycles per get: 66
+2026-04-18 00:00:16.397 INFO  [55760] [kmercounter::do_zipfian_gets@264] DEBUG: thread 126 | actual found 41936100 | cycles per get: 68
+2026-04-18 00:00:16.397 INFO  [55644] [kmercounter::do_zipfian_gets@264] DEBUG: thread 10 | actual found 41936100 | cycles per get: 66
+2026-04-18 00:00:16.397 INFO  [55727] [kmercounter::do_zipfian_gets@264] DEBUG: thread 93 | actual found 41936100 | cycles per get: 58
+2026-04-18 00:00:16.397 INFO  [55665] [kmercounter::do_zipfian_gets@264] DEBUG: thread 31 | actual found 41936100 | cycles per get: 68
+2026-04-18 00:00:16.397 INFO  [55663] [kmercounter::do_zipfian_gets@264] DEBUG: thread 29 | actual found 41936100 | cycles per get: 66
+2026-04-18 00:00:16.397 INFO  [55668] [kmercounter::do_zipfian_gets@264] DEBUG: thread 34 | actual found 41936100 | cycles per get: 68
+2026-04-18 00:00:16.397 INFO  [55683] [kmercounter::do_zipfian_gets@264] DEBUG: thread 49 | actual found 41936100 | cycles per get: 64
+2026-04-18 00:00:16.397 INFO  [55690] [kmercounter::do_zipfian_gets@264] DEBUG: thread 56 | actual found 41936100 | cycles per get: 67
+2026-04-18 00:00:16.397 INFO  [55740] [kmercounter::do_zipfian_gets@264] DEBUG: thread 106 | actual found 41936100 | cycles per get: 68
+2026-04-18 00:00:16.397 INFO  [55737] [kmercounter::do_zipfian_gets@264] DEBUG: thread 103 | actual found 41936100 | cycles per get: 65
+2026-04-18 00:00:16.397 INFO  [55720] [kmercounter::do_zipfian_gets@264] DEBUG: thread 86 | actual found 41936100 | cycles per get: 66
+2026-04-18 00:00:16.397 INFO  [55752] [kmercounter::do_zipfian_gets@264] DEBUG: thread 118 | actual found 41936100 | cycles per get: 66
+2026-04-18 00:00:16.397 INFO  [55650] [kmercounter::do_zipfian_gets@264] DEBUG: thread 16 | actual found 41936100 | cycles per get: 68
+2026-04-18 00:00:16.397 INFO  [55697] [kmercounter::do_zipfian_gets@264] DEBUG: thread 63 | actual found 41936100 | cycles per get: 68
+2026-04-18 00:00:16.397 INFO  [55711] [kmercounter::do_zipfian_gets@264] DEBUG: thread 77 | actual found 41936100 | cycles per get: 65
+2026-04-18 00:00:16.397 INFO  [55702] [kmercounter::do_zipfian_gets@264] DEBUG: thread 68 | actual found 41936100 | cycles per get: 68
+2026-04-18 00:00:16.397 INFO  [55674] [kmercounter::do_zipfian_gets@264] DEBUG: thread 40 | actual found 41936100 | cycles per get: 68
+2026-04-18 00:00:16.397 INFO  [55682] [kmercounter::do_zipfian_gets@264] DEBUG: thread 48 | actual found 41936100 | cycles per get: 68
+2026-04-18 00:00:16.397 INFO  [55722] [kmercounter::do_zipfian_gets@264] DEBUG: thread 88 | actual found 41936100 | cycles per get: 68
+2026-04-18 00:00:16.397 INFO  [55754] [kmercounter::do_zipfian_gets@264] DEBUG: thread 120 | actual found 41936100 | cycles per get: 68
+2026-04-18 00:00:16.397 INFO  [55675] [kmercounter::do_zipfian_gets@264] DEBUG: thread 41 | actual found 41936100 | cycles per get: 66
+2026-04-18 00:00:16.397 INFO  [55758] [kmercounter::do_zipfian_gets@264] DEBUG: thread 124 | actual found 41936100 | cycles per get: 68
+2026-04-18 00:00:16.397 INFO  [55726] [kmercounter::do_zipfian_gets@264] DEBUG: thread 92 | actual found 41936100 | cycles per get: 68
+2026-04-18 00:00:16.397 INFO  [55734] [kmercounter::do_zipfian_gets@264] DEBUG: thread 100 | actual found 41936100 | cycles per get: 68
+2026-04-18 00:00:16.397 INFO  [55634] [kmercounter::do_zipfian_gets@264] DEBUG: thread 4 | actual found 41936100 | cycles per get: 68
+2026-04-18 00:00:16.397 INFO  [55710] [kmercounter::do_zipfian_gets@264] DEBUG: thread 76 | actual found 41936100 | cycles per get: 68
+2026-04-18 00:00:16.397 INFO  [55681] [kmercounter::do_zipfian_gets@264] DEBUG: thread 47 | actual found 41936100 | cycles per get: 67
+2026-04-18 00:00:16.397 INFO  [55676] [kmercounter::do_zipfian_gets@264] DEBUG: thread 42 | actual found 41936100 | cycles per get: 66
+2026-04-18 00:00:16.397 INFO  [55718] [kmercounter::do_zipfian_gets@264] DEBUG: thread 84 | actual found 41936100 | cycles per get: 68
+2026-04-18 00:00:16.397 INFO  [55662] [kmercounter::do_zipfian_gets@264] DEBUG: thread 28 | actual found 41936100 | cycles per get: 68
+2026-04-18 00:00:16.397 INFO  [55642] [kmercounter::do_zipfian_gets@264] DEBUG: thread 8 | actual found 41936100 | cycles per get: 70
+2026-04-18 00:00:16.397 INFO  [55670] [kmercounter::do_zipfian_gets@264] DEBUG: thread 36 | actual found 41936100 | cycles per get: 68
+2026-04-18 00:00:16.397 INFO  [55645] [kmercounter::do_zipfian_gets@264] DEBUG: thread 11 | actual found 41936100 | cycles per get: 65
+2026-04-18 00:00:16.397 INFO  [55730] [kmercounter::do_zipfian_gets@264] DEBUG: thread 96 | actual found 41936100 | cycles per get: 68
+2026-04-18 00:00:16.397 INFO  [55654] [kmercounter::do_zipfian_gets@264] DEBUG: thread 20 | actual found 41936100 | cycles per get: 68
+2026-04-18 00:00:16.397 INFO  [55666] [kmercounter::do_zipfian_gets@264] DEBUG: thread 32 | actual found 41936100 | cycles per get: 69
+2026-04-18 00:00:16.397 INFO  [55715] [kmercounter::do_zipfian_gets@264] DEBUG: thread 81 | actual found 41936100 | cycles per get: 70
+2026-04-18 00:00:16.397 INFO  [55629] [kmercounter::do_zipfian_gets@264] DEBUG: thread 0 | actual found 41936100 | cycles per get: 68
+2026-04-18 00:00:16.397 INFO  [55646] [kmercounter::do_zipfian_gets@264] DEBUG: thread 12 | actual found 41936100 | cycles per get: 68
+2026-04-18 00:00:16.397 INFO  [55746] [kmercounter::do_zipfian_gets@264] DEBUG: thread 112 | actual found 41936100 | cycles per get: 69
+2026-04-18 00:00:16.397 INFO  [55706] [kmercounter::do_zipfian_gets@264] DEBUG: thread 72 | actual found 41936100 | cycles per get: 69
+2026-04-18 00:00:16.397 INFO  [55738] [kmercounter::do_zipfian_gets@264] DEBUG: thread 104 | actual found 41936100 | cycles per get: 69
+2026-04-18 00:00:16.397 INFO  [55714] [kmercounter::do_zipfian_gets@264] DEBUG: thread 80 | actual found 41936100 | cycles per get: 69
+2026-04-18 00:00:16.397 INFO  [55678] [kmercounter::do_zipfian_gets@264] DEBUG: thread 44 | actual found 41936100 | cycles per get: 69
+2026-04-18 00:00:16.397 INFO  [55742] [kmercounter::do_zipfian_gets@264] DEBUG: thread 108 | actual found 41936100 | cycles per get: 68
+2026-04-18 00:00:16.397 INFO  [55658] [kmercounter::do_zipfian_gets@264] DEBUG: thread 24 | actual found 41936100 | cycles per get: 69
+2026-04-18 00:00:16.397 INFO  [55750] [kmercounter::do_zipfian_gets@264] DEBUG: thread 116 | actual found 41936100 | cycles per get: 68
+2026-04-18 00:00:16.397 INFO  [55698] [kmercounter::do_zipfian_gets@264] DEBUG: thread 64 | actual found 41936100 | cycles per get: 70
+2026-04-18 00:00:16.397 INFO  [55686] [kmercounter::do_zipfian_gets@264] DEBUG: thread 52 | actual found 41936100 | cycles per get: 69
+2026-04-18 00:00:16.397 INFO  [55759] [kmercounter::do_zipfian_gets@264] DEBUG: thread 125 | actual found 41936100 | cycles per get: 71
+2026-04-18 00:00:16.397 INFO  [55703] [kmercounter::do_zipfian_gets@264] DEBUG: thread 69 | actual found 41936100 | cycles per get: 67
+2026-04-18 00:00:16.397 INFO  [55687] [kmercounter::do_zipfian_gets@264] DEBUG: thread 53 | actual found 41936100 | cycles per get: 62
+2026-04-18 00:00:16.397 INFO  [55555] [kmercounter::do_zipfian_gets@264] DEBUG: thread 127 | actual found 41936100 | cycles per get: 63
+2026-04-18 00:00:16.404 INFO  [55629] [kmercounter::ZipfianTest::run@398] get fill 0.100
+2026-04-18 00:00:17.085 INFO  [55629] [kmercounter::free_mem@184] 0x79b180000000 with sz 8589934592 unmapped
+{total_reprobes : 891097, total_finds : 5368704000, avg_cachelines_accessed : 1.0002}
+{reprobe_factor : 1.0002}
+===============================================================
+average_insert_task_duration : 77975714, total_insert_tas_duration : 77975714
+insert_ops : 53687040, insert_ops_per_run : 53687040
+average_find_task_duration : 30073587, total_find_duration : 3007358778
+find_ops : 5368704000, find_ops_per_run : 53687040
+{ set_cycles : 155, get_cycles : 66, set_mops : 2056.221, get_mops : 4843.585 }
+===============================================================
+/opt/dramhit-fork/build/dramhit --perf_cnt_path ./perf_cnt.txt --perf_def_path ./perf-cpp/perf_list.csv --find_queue 64 --ht-fill 10 --ht-type 3 --insert-factor 1 --read-factor 100 --num-threads 128 --numa-split 1 --no-prefetch 0 --mode 11 --ht-size 536870912 --skew 0.01 --hw-pref 0 --batch-len 16 --relation_r_size 375809638
+2026-04-18 00:00:17.390 INFO  [55790] [initializeLogger@17] ------------------------
+2026-04-18 00:00:17.390 INFO  [55790] [initializeLogger@18] Plog library initialized
+2026-04-18 00:00:17.390 INFO  [55790] [initializeLogger@19] ------------------------
+2026-04-18 00:00:17.390 INFO  [55790] [main@27] Starting dramhit
+2026-04-18 00:00:17.391 INFO  [55790] [MsrHandler::msr_open@46] msr-safe loaded!
+2026-04-18 00:00:17.392 INFO  [55790] [kmercounter::Application::process@769] Hashtable type : Cas HT
+2026-04-18 00:00:17.392 INFO  [55790] [kmercounter::Application::process@810] Dropping the page cache
+2026-04-18 00:00:17.751 INFO  [55790] [kmercounter::init_zipfian_dist@76] HT_TESTS_NUM_INSERTS 107374182
+2026-04-18 00:00:17.751 INFO  [55790] [kmercounter::init_zipfian_dist@81] /opt/zipfian/0.01_536870912_20.bin 0
+2026-04-18 00:00:17.752 INFO  [55790] [kmercounter::init_zipfian_dist@88] Initializing global zipf with skew 0.010000, seed 1776492017122586018
+2026-04-18 00:00:24.314 INFO  [55790] [kmercounter::init_zipfian_dist@93] Zipfian dist generated. size 107374182
+2026-04-18 00:00:24.314 INFO  [55790] [kmercounter::Application::spawn_shard_threads@413] total kv 107374182, num_threads 128, op per thread (per run) 838860
+2026-04-18 00:00:24.315 INFO  [55887] [kmercounter::calloc_ht@132] opened file /mnt/huge/hugepagefile
+2026-04-18 00:00:24.315 INFO  [55887] [kmercounter::calloc_ht@148] allocating 8 1gb pages bytes 8589934592
+2026-04-18 00:00:24.315 INFO  [55887] [kmercounter::calloc_ht@161] mmap returns 0x774e00000000
+2026-04-18 00:00:24.315 INFO  [55887] [kmercounter::distribute_mem_to_nodes@122] addr 0x774e00000000, alloc_sz 8589934592
+2026-04-18 00:00:27.644 INFO  [55887] [KVQ>::CASHashTable@82] Hashtable base: 0x774e00000000 Hashtable size: 536870912
+2026-04-18 00:00:27.644 INFO  [55887] [KVQ>::CASHashTable@84] queue item sz: 32
+2026-04-18 00:00:30.339 INFO  [55972] [kmercounter::do_zipfian_gets@264] DEBUG: thread 79 | actual found 83878500 | cycles per get: 66
+2026-04-18 00:00:30.339 INFO  [56003] [kmercounter::do_zipfian_gets@264] DEBUG: thread 110 | actual found 83878500 | cycles per get: 76
+2026-04-18 00:00:30.339 INFO  [55913] [kmercounter::do_zipfian_gets@264] DEBUG: thread 20 | actual found 83878500 | cycles per get: 74
+2026-04-18 00:00:30.339 INFO  [55992] [kmercounter::do_zipfian_gets@264] DEBUG: thread 99 | actual found 83878500 | cycles per get: 67
+2026-04-18 00:00:30.339 INFO  [56004] [kmercounter::do_zipfian_gets@264] DEBUG: thread 111 | actual found 83878500 | cycles per get: 67
+2026-04-18 00:00:30.339 INFO  [56006] [kmercounter::do_zipfian_gets@264] DEBUG: thread 113 | actual found 83878500 | cycles per get: 67
+2026-04-18 00:00:30.339 INFO  [56002] [kmercounter::do_zipfian_gets@264] DEBUG: thread 109 | actual found 83878500 | cycles per get: 67
+2026-04-18 00:00:30.339 INFO  [55980] [kmercounter::do_zipfian_gets@264] DEBUG: thread 87 | actual found 83878500 | cycles per get: 67
+2026-04-18 00:00:30.339 INFO  [56012] [kmercounter::do_zipfian_gets@264] DEBUG: thread 119 | actual found 83878500 | cycles per get: 67
+2026-04-18 00:00:30.339 INFO  [55998] [kmercounter::do_zipfian_gets@264] DEBUG: thread 105 | actual found 83878500 | cycles per get: 67
+2026-04-18 00:00:30.339 INFO  [55959] [kmercounter::do_zipfian_gets@264] DEBUG: thread 66 | actual found 83878500 | cycles per get: 66
+2026-04-18 00:00:30.339 INFO  [55918] [kmercounter::do_zipfian_gets@264] DEBUG: thread 25 | actual found 83878500 | cycles per get: 70
+2026-04-18 00:00:30.339 INFO  [55976] [kmercounter::do_zipfian_gets@264] DEBUG: thread 83 | actual found 83878500 | cycles per get: 67
+2026-04-18 00:00:30.339 INFO  [56018] [kmercounter::do_zipfian_gets@264] DEBUG: thread 125 | actual found 83878500 | cycles per get: 67
+2026-04-18 00:00:30.339 INFO  [55960] [kmercounter::do_zipfian_gets@264] DEBUG: thread 67 | actual found 83878500 | cycles per get: 62
+2026-04-18 00:00:30.339 INFO  [55986] [kmercounter::do_zipfian_gets@264] DEBUG: thread 93 | actual found 83878500 | cycles per get: 67
+2026-04-18 00:00:30.339 INFO  [55966] [kmercounter::do_zipfian_gets@264] DEBUG: thread 73 | actual found 83878500 | cycles per get: 67
+2026-04-18 00:00:30.339 INFO  [55906] [kmercounter::do_zipfian_gets@264] DEBUG: thread 13 | actual found 83878500 | cycles per get: 71
+2026-04-18 00:00:30.339 INFO  [55988] [kmercounter::do_zipfian_gets@264] DEBUG: thread 95 | actual found 83878500 | cycles per get: 68
+2026-04-18 00:00:30.339 INFO  [56016] [kmercounter::do_zipfian_gets@264] DEBUG: thread 123 | actual found 83878500 | cycles per get: 67
+2026-04-18 00:00:30.339 INFO  [55978] [kmercounter::do_zipfian_gets@264] DEBUG: thread 85 | actual found 83878500 | cycles per get: 67
+2026-04-18 00:00:30.339 INFO  [56010] [kmercounter::do_zipfian_gets@264] DEBUG: thread 117 | actual found 83878500 | cycles per get: 67
+2026-04-18 00:00:30.339 INFO  [55958] [kmercounter::do_zipfian_gets@264] DEBUG: thread 65 | actual found 83878500 | cycles per get: 57
+2026-04-18 00:00:30.339 INFO  [55946] [kmercounter::do_zipfian_gets@264] DEBUG: thread 53 | actual found 83878500 | cycles per get: 71
+2026-04-18 00:00:30.339 INFO  [55912] [kmercounter::do_zipfian_gets@264] DEBUG: thread 19 | actual found 83878500 | cycles per get: 71
+2026-04-18 00:00:30.339 INFO  [55914] [kmercounter::do_zipfian_gets@264] DEBUG: thread 21 | actual found 83878500 | cycles per get: 71
+2026-04-18 00:00:30.339 INFO  [55890] [kmercounter::do_zipfian_gets@264] DEBUG: thread 3 | actual found 83878500 | cycles per get: 71
+2026-04-18 00:00:30.339 INFO  [55928] [kmercounter::do_zipfian_gets@264] DEBUG: thread 35 | actual found 83878500 | cycles per get: 70
+2026-04-18 00:00:30.339 INFO  [55984] [kmercounter::do_zipfian_gets@264] DEBUG: thread 91 | actual found 83878500 | cycles per get: 67
+2026-04-18 00:00:30.339 INFO  [56008] [kmercounter::do_zipfian_gets@264] DEBUG: thread 115 | actual found 83878500 | cycles per get: 68
+2026-04-18 00:00:30.339 INFO  [55982] [kmercounter::do_zipfian_gets@264] DEBUG: thread 89 | actual found 83878500 | cycles per get: 68
+2026-04-18 00:00:30.339 INFO  [55962] [kmercounter::do_zipfian_gets@264] DEBUG: thread 69 | actual found 83878500 | cycles per get: 66
+2026-04-18 00:00:30.339 INFO  [55994] [kmercounter::do_zipfian_gets@264] DEBUG: thread 101 | actual found 83878500 | cycles per get: 67
+2026-04-18 00:00:30.339 INFO  [55920] [kmercounter::do_zipfian_gets@264] DEBUG: thread 27 | actual found 83878500 | cycles per get: 66
+2026-04-18 00:00:30.339 INFO  [55961] [kmercounter::do_zipfian_gets@264] DEBUG: thread 68 | actual found 83878500 | cycles per get: 65
+2026-04-18 00:00:30.339 INFO  [55934] [kmercounter::do_zipfian_gets@264] DEBUG: thread 41 | actual found 83878500 | cycles per get: 71
+2026-04-18 00:00:30.339 INFO  [55904] [kmercounter::do_zipfian_gets@264] DEBUG: thread 11 | actual found 83878500 | cycles per get: 71
+2026-04-18 00:00:30.339 INFO  [55936] [kmercounter::do_zipfian_gets@264] DEBUG: thread 43 | actual found 83878500 | cycles per get: 71
+2026-04-18 00:00:30.339 INFO  [55968] [kmercounter::do_zipfian_gets@264] DEBUG: thread 75 | actual found 83878500 | cycles per get: 67
+2026-04-18 00:00:30.339 INFO  [55930] [kmercounter::do_zipfian_gets@264] DEBUG: thread 37 | actual found 83878500 | cycles per get: 62
+2026-04-18 00:00:30.339 INFO  [55910] [kmercounter::do_zipfian_gets@264] DEBUG: thread 17 | actual found 83878500 | cycles per get: 72
+2026-04-18 00:00:30.339 INFO  [55944] [kmercounter::do_zipfian_gets@264] DEBUG: thread 51 | actual found 83878500 | cycles per get: 70
+2026-04-18 00:00:30.339 INFO  [56014] [kmercounter::do_zipfian_gets@264] DEBUG: thread 121 | actual found 83878500 | cycles per get: 68
+2026-04-18 00:00:30.339 INFO  [55996] [kmercounter::do_zipfian_gets@264] DEBUG: thread 103 | actual found 83878500 | cycles per get: 68
+2026-04-18 00:00:30.339 INFO  [55926] [kmercounter::do_zipfian_gets@264] DEBUG: thread 33 | actual found 83878500 | cycles per get: 71
+2026-04-18 00:00:30.339 INFO  [55940] [kmercounter::do_zipfian_gets@264] DEBUG: thread 47 | actual found 83878500 | cycles per get: 71
+2026-04-18 00:00:30.339 INFO  [55970] [kmercounter::do_zipfian_gets@264] DEBUG: thread 77 | actual found 83878500 | cycles per get: 66
+2026-04-18 00:00:30.339 INFO  [55952] [kmercounter::do_zipfian_gets@264] DEBUG: thread 59 | actual found 83878500 | cycles per get: 72
+2026-04-18 00:00:30.339 INFO  [55902] [kmercounter::do_zipfian_gets@264] DEBUG: thread 9 | actual found 83878500 | cycles per get: 69
+2026-04-18 00:00:30.339 INFO  [55922] [kmercounter::do_zipfian_gets@264] DEBUG: thread 29 | actual found 83878500 | cycles per get: 72
+2026-04-18 00:00:30.339 INFO  [55908] [kmercounter::do_zipfian_gets@264] DEBUG: thread 15 | actual found 83878500 | cycles per get: 69
+2026-04-18 00:00:30.339 INFO  [55974] [kmercounter::do_zipfian_gets@264] DEBUG: thread 81 | actual found 83878500 | cycles per get: 67
+2026-04-18 00:00:30.339 INFO  [55957] [kmercounter::do_zipfian_gets@264] DEBUG: thread 64 | actual found 83878500 | cycles per get: 66
+2026-04-18 00:00:30.339 INFO  [55924] [kmercounter::do_zipfian_gets@264] DEBUG: thread 31 | actual found 83878500 | cycles per get: 72
+2026-04-18 00:00:30.339 INFO  [55911] [kmercounter::do_zipfian_gets@264] DEBUG: thread 18 | actual found 83878500 | cycles per get: 73
+2026-04-18 00:00:30.339 INFO  [55941] [kmercounter::do_zipfian_gets@264] DEBUG: thread 48 | actual found 83878500 | cycles per get: 73
+2026-04-18 00:00:30.339 INFO  [55964] [kmercounter::do_zipfian_gets@264] DEBUG: thread 71 | actual found 83878500 | cycles per get: 67
+2026-04-18 00:00:30.339 INFO  [55950] [kmercounter::do_zipfian_gets@264] DEBUG: thread 57 | actual found 83878500 | cycles per get: 70
+2026-04-18 00:00:30.339 INFO  [55948] [kmercounter::do_zipfian_gets@264] DEBUG: thread 55 | actual found 83878500 | cycles per get: 70
+2026-04-18 00:00:30.339 INFO  [55916] [kmercounter::do_zipfian_gets@264] DEBUG: thread 23 | actual found 83878500 | cycles per get: 74
+2026-04-18 00:00:30.339 INFO  [55956] [kmercounter::do_zipfian_gets@264] DEBUG: thread 63 | actual found 83878500 | cycles per get: 63
+2026-04-18 00:00:30.339 INFO  [55954] [kmercounter::do_zipfian_gets@264] DEBUG: thread 61 | actual found 83878500 | cycles per get: 72
+2026-04-18 00:00:30.339 INFO  [55909] [kmercounter::do_zipfian_gets@264] DEBUG: thread 16 | actual found 83878500 | cycles per get: 74
+2026-04-18 00:00:30.339 INFO  [55790] [kmercounter::do_zipfian_gets@264] DEBUG: thread 127 | actual found 83878500 | cycles per get: 72
+2026-04-18 00:00:30.339 INFO  [55942] [kmercounter::do_zipfian_gets@264] DEBUG: thread 49 | actual found 83878500 | cycles per get: 73
+2026-04-18 00:00:30.339 INFO  [55963] [kmercounter::do_zipfian_gets@264] DEBUG: thread 70 | actual found 83878500 | cycles per get: 74
+2026-04-18 00:00:30.339 INFO  [55947] [kmercounter::do_zipfian_gets@264] DEBUG: thread 54 | actual found 83878500 | cycles per get: 74
+2026-04-18 00:00:30.339 INFO  [55937] [kmercounter::do_zipfian_gets@264] DEBUG: thread 44 | actual found 83878500 | cycles per get: 74
+2026-04-18 00:00:30.339 INFO  [55921] [kmercounter::do_zipfian_gets@264] DEBUG: thread 28 | actual found 83878500 | cycles per get: 74
+2026-04-18 00:00:30.339 INFO  [55965] [kmercounter::do_zipfian_gets@264] DEBUG: thread 72 | actual found 83878500 | cycles per get: 74
+2026-04-18 00:00:30.339 INFO  [55917] [kmercounter::do_zipfian_gets@264] DEBUG: thread 24 | actual found 83878500 | cycles per get: 73
+2026-04-18 00:00:30.339 INFO  [55907] [kmercounter::do_zipfian_gets@264] DEBUG: thread 14 | actual found 83878500 | cycles per get: 74
+2026-04-18 00:00:30.339 INFO  [55929] [kmercounter::do_zipfian_gets@264] DEBUG: thread 36 | actual found 83878500 | cycles per get: 74
+2026-04-18 00:00:30.339 INFO  [55955] [kmercounter::do_zipfian_gets@264] DEBUG: thread 62 | actual found 83878500 | cycles per get: 74
+2026-04-18 00:00:30.339 INFO  [55915] [kmercounter::do_zipfian_gets@264] DEBUG: thread 22 | actual found 83878500 | cycles per get: 74
+2026-04-18 00:00:30.339 INFO  [55951] [kmercounter::do_zipfian_gets@264] DEBUG: thread 58 | actual found 83878500 | cycles per get: 74
+2026-04-18 00:00:30.339 INFO  [55919] [kmercounter::do_zipfian_gets@264] DEBUG: thread 26 | actual found 83878500 | cycles per get: 74
+2026-04-18 00:00:30.339 INFO  [55925] [kmercounter::do_zipfian_gets@264] DEBUG: thread 32 | actual found 83878500 | cycles per get: 74
+2026-04-18 00:00:30.339 INFO  [55887] [kmercounter::do_zipfian_gets@264] DEBUG: thread 0 | actual found 83878500 | cycles per get: 74
+2026-04-18 00:00:30.339 INFO  [55953] [kmercounter::do_zipfian_gets@264] DEBUG: thread 60 | actual found 83878500 | cycles per get: 74
+2026-04-18 00:00:30.339 INFO  [55938] [kmercounter::do_zipfian_gets@264] DEBUG: thread 45 | actual found 83878500 | cycles per get: 71
+2026-04-18 00:00:30.339 INFO  [55891] [kmercounter::do_zipfian_gets@264] DEBUG: thread 4 | actual found 83878500 | cycles per get: 74
+2026-04-18 00:00:30.339 INFO  [55969] [kmercounter::do_zipfian_gets@264] DEBUG: thread 76 | actual found 83878500 | cycles per get: 74
+2026-04-18 00:00:30.339 INFO  [55945] [kmercounter::do_zipfian_gets@264] DEBUG: thread 52 | actual found 83878500 | cycles per get: 75
+2026-04-18 00:00:30.339 INFO  [55905] [kmercounter::do_zipfian_gets@264] DEBUG: thread 12 | actual found 83878500 | cycles per get: 74
+2026-04-18 00:00:30.339 INFO  [55889] [kmercounter::do_zipfian_gets@264] DEBUG: thread 2 | actual found 83878500 | cycles per get: 76
+2026-04-18 00:00:30.339 INFO  [55927] [kmercounter::do_zipfian_gets@264] DEBUG: thread 34 | actual found 83878500 | cycles per get: 74
+2026-04-18 00:00:30.339 INFO  [55990] [kmercounter::do_zipfian_gets@264] DEBUG: thread 97 | actual found 83878500 | cycles per get: 76
+2026-04-18 00:00:30.339 INFO  [55899] [kmercounter::do_zipfian_gets@264] DEBUG: thread 6 | actual found 83878500 | cycles per get: 74
+2026-04-18 00:00:30.339 INFO  [55991] [kmercounter::do_zipfian_gets@264] DEBUG: thread 98 | actual found 83878500 | cycles per get: 76
+2026-04-18 00:00:30.339 INFO  [55971] [kmercounter::do_zipfian_gets@264] DEBUG: thread 78 | actual found 83878500 | cycles per get: 75
+2026-04-18 00:00:30.339 INFO  [55939] [kmercounter::do_zipfian_gets@264] DEBUG: thread 46 | actual found 83878500 | cycles per get: 74
+2026-04-18 00:00:30.339 INFO  [55923] [kmercounter::do_zipfian_gets@264] DEBUG: thread 30 | actual found 83878500 | cycles per get: 74
+2026-04-18 00:00:30.339 INFO  [55935] [kmercounter::do_zipfian_gets@264] DEBUG: thread 42 | actual found 83878500 | cycles per get: 76
+2026-04-18 00:00:30.339 INFO  [55993] [kmercounter::do_zipfian_gets@264] DEBUG: thread 100 | actual found 83878500 | cycles per get: 75
+2026-04-18 00:00:30.339 INFO  [55933] [kmercounter::do_zipfian_gets@264] DEBUG: thread 40 | actual found 83878500 | cycles per get: 75
+2026-04-18 00:00:30.339 INFO  [55903] [kmercounter::do_zipfian_gets@264] DEBUG: thread 10 | actual found 83878500 | cycles per get: 76
+2026-04-18 00:00:30.339 INFO  [56001] [kmercounter::do_zipfian_gets@264] DEBUG: thread 108 | actual found 83878500 | cycles per get: 76
+2026-04-18 00:00:30.339 INFO  [55892] [kmercounter::do_zipfian_gets@264] DEBUG: thread 5 | actual found 83878500 | cycles per get: 75
+2026-04-18 00:00:30.339 INFO  [55932] [kmercounter::do_zipfian_gets@264] DEBUG: thread 39 | actual found 83878500 | cycles per get: 76
+2026-04-18 00:00:30.339 INFO  [55973] [kmercounter::do_zipfian_gets@264] DEBUG: thread 80 | actual found 83878500 | cycles per get: 76
+2026-04-18 00:00:30.339 INFO  [56005] [kmercounter::do_zipfian_gets@264] DEBUG: thread 112 | actual found 83878500 | cycles per get: 76
+2026-04-18 00:00:30.339 INFO  [55989] [kmercounter::do_zipfian_gets@264] DEBUG: thread 96 | actual found 83878500 | cycles per get: 78
+2026-04-18 00:00:30.339 INFO  [55999] [kmercounter::do_zipfian_gets@264] DEBUG: thread 106 | actual found 83878500 | cycles per get: 77
+2026-04-18 00:00:30.339 INFO  [55997] [kmercounter::do_zipfian_gets@264] DEBUG: thread 104 | actual found 83878500 | cycles per get: 78
+2026-04-18 00:00:30.339 INFO  [55967] [kmercounter::do_zipfian_gets@264] DEBUG: thread 74 | actual found 83878500 | cycles per get: 75
+2026-04-18 00:00:30.339 INFO  [55888] [kmercounter::do_zipfian_gets@264] DEBUG: thread 1 | actual found 83878500 | cycles per get: 71
+2026-04-18 00:00:30.339 INFO  [55977] [kmercounter::do_zipfian_gets@264] DEBUG: thread 84 | actual found 83878500 | cycles per get: 77
+2026-04-18 00:00:30.339 INFO  [55949] [kmercounter::do_zipfian_gets@264] DEBUG: thread 56 | actual found 83878500 | cycles per get: 75
+2026-04-18 00:00:30.339 INFO  [56013] [kmercounter::do_zipfian_gets@264] DEBUG: thread 120 | actual found 83878500 | cycles per get: 77
+2026-04-18 00:00:30.339 INFO  [55943] [kmercounter::do_zipfian_gets@264] DEBUG: thread 50 | actual found 83878500 | cycles per get: 73
+2026-04-18 00:00:30.339 INFO  [55985] [kmercounter::do_zipfian_gets@264] DEBUG: thread 92 | actual found 83878500 | cycles per get: 77
+2026-04-18 00:00:30.339 INFO  [56019] [kmercounter::do_zipfian_gets@264] DEBUG: thread 126 | actual found 83878500 | cycles per get: 77
+2026-04-18 00:00:30.339 INFO  [55987] [kmercounter::do_zipfian_gets@264] DEBUG: thread 94 | actual found 83878500 | cycles per get: 77
+2026-04-18 00:00:30.339 INFO  [55975] [kmercounter::do_zipfian_gets@264] DEBUG: thread 82 | actual found 83878500 | cycles per get: 77
+2026-04-18 00:00:30.339 INFO  [56015] [kmercounter::do_zipfian_gets@264] DEBUG: thread 122 | actual found 83878500 | cycles per get: 77
+2026-04-18 00:00:30.339 INFO  [56007] [kmercounter::do_zipfian_gets@264] DEBUG: thread 114 | actual found 83878500 | cycles per get: 77
+2026-04-18 00:00:30.339 INFO  [55931] [kmercounter::do_zipfian_gets@264] DEBUG: thread 38 | actual found 83878500 | cycles per get: 75
+2026-04-18 00:00:30.339 INFO  [55983] [kmercounter::do_zipfian_gets@264] DEBUG: thread 90 | actual found 83878500 | cycles per get: 77
+2026-04-18 00:00:30.339 INFO  [56017] [kmercounter::do_zipfian_gets@264] DEBUG: thread 124 | actual found 83878500 | cycles per get: 77
+2026-04-18 00:00:30.339 INFO  [55979] [kmercounter::do_zipfian_gets@264] DEBUG: thread 86 | actual found 83878500 | cycles per get: 78
+2026-04-18 00:00:30.339 INFO  [56011] [kmercounter::do_zipfian_gets@264] DEBUG: thread 118 | actual found 83878500 | cycles per get: 78
+2026-04-18 00:00:30.339 INFO  [55995] [kmercounter::do_zipfian_gets@264] DEBUG: thread 102 | actual found 83878500 | cycles per get: 77
+2026-04-18 00:00:30.339 INFO  [55901] [kmercounter::do_zipfian_gets@264] DEBUG: thread 8 | actual found 83878500 | cycles per get: 75
+2026-04-18 00:00:30.339 INFO  [56009] [kmercounter::do_zipfian_gets@264] DEBUG: thread 116 | actual found 83878500 | cycles per get: 77
+2026-04-18 00:00:30.339 INFO  [55981] [kmercounter::do_zipfian_gets@264] DEBUG: thread 88 | actual found 83878500 | cycles per get: 77
+2026-04-18 00:00:30.339 INFO  [56000] [kmercounter::do_zipfian_gets@264] DEBUG: thread 107 | actual found 83878500 | cycles per get: 68
+2026-04-18 00:00:30.339 INFO  [55900] [kmercounter::do_zipfian_gets@264] DEBUG: thread 7 | actual found 83878500 | cycles per get: 65
+2026-04-18 00:00:30.343 INFO  [55887] [kmercounter::ZipfianTest::run@398] get fill 0.200
+2026-04-18 00:00:31.030 INFO  [55887] [kmercounter::free_mem@184] 0x774e00000000 with sz 8589934592 unmapped
+{total_reprobes : 22058019, total_finds : 10737408000, avg_cachelines_accessed : 1.0021}
+{reprobe_factor : 1.0021}
+===============================================================
+average_insert_task_duration : 142769588, total_insert_tas_duration : 142769588
+insert_ops : 107374080, insert_ops_per_run : 107374080
+average_find_task_duration : 65980513, total_find_duration : 6598051368
+find_ops : 10737408000, find_ops_per_run : 107374080
+{ set_cycles : 152, get_cycles : 72, set_mops : 2102.433, get_mops : 4428.391 }
+===============================================================
+/opt/dramhit-fork/build/dramhit --perf_cnt_path ./perf_cnt.txt --perf_def_path ./perf-cpp/perf_list.csv --find_queue 64 --ht-fill 20 --ht-type 3 --insert-factor 1 --read-factor 100 --num-threads 128 --numa-split 1 --no-prefetch 0 --mode 11 --ht-size 536870912 --skew 0.01 --hw-pref 0 --batch-len 16 --relation_r_size 375809638
+2026-04-18 00:00:31.348 INFO  [56091] [initializeLogger@17] ------------------------
+2026-04-18 00:00:31.348 INFO  [56091] [initializeLogger@18] Plog library initialized
+2026-04-18 00:00:31.348 INFO  [56091] [initializeLogger@19] ------------------------
+2026-04-18 00:00:31.348 INFO  [56091] [main@27] Starting dramhit
+2026-04-18 00:00:31.349 INFO  [56091] [MsrHandler::msr_open@46] msr-safe loaded!
+2026-04-18 00:00:31.350 INFO  [56091] [kmercounter::Application::process@769] Hashtable type : Cas HT
+2026-04-18 00:00:31.350 INFO  [56091] [kmercounter::Application::process@810] Dropping the page cache
+2026-04-18 00:00:31.798 INFO  [56091] [kmercounter::init_zipfian_dist@76] HT_TESTS_NUM_INSERTS 161061273
+2026-04-18 00:00:31.798 INFO  [56091] [kmercounter::init_zipfian_dist@81] /opt/zipfian/0.01_536870912_30.bin 0
+2026-04-18 00:00:31.798 INFO  [56091] [kmercounter::init_zipfian_dist@88] Initializing global zipf with skew 0.010000, seed 1776492031070374647
+2026-04-18 00:00:41.638 INFO  [56091] [kmercounter::init_zipfian_dist@93] Zipfian dist generated. size 161061273
+2026-04-18 00:00:41.638 INFO  [56091] [kmercounter::Application::spawn_shard_threads@413] total kv 161061273, num_threads 128, op per thread (per run) 1258291
+2026-04-18 00:00:41.638 INFO  [56213] [kmercounter::calloc_ht@132] opened file /mnt/huge/hugepagefile
+2026-04-18 00:00:41.638 INFO  [56213] [kmercounter::calloc_ht@148] allocating 8 1gb pages bytes 8589934592
+2026-04-18 00:00:41.638 INFO  [56213] [kmercounter::calloc_ht@161] mmap returns 0x7a21c0000000
+2026-04-18 00:00:41.638 INFO  [56213] [kmercounter::distribute_mem_to_nodes@122] addr 0x7a21c0000000, alloc_sz 8589934592
+2026-04-18 00:00:44.979 INFO  [56213] [KVQ>::CASHashTable@82] Hashtable base: 0x7a21c0000000 Hashtable size: 536870912
+2026-04-18 00:00:44.979 INFO  [56213] [KVQ>::CASHashTable@84] queue item sz: 32
+2026-04-18 00:00:49.262 INFO  [56231] [kmercounter::do_zipfian_gets@264] DEBUG: thread 18 | actual found 125822500 | cycles per get: 74
+2026-04-18 00:00:49.262 INFO  [56247] [kmercounter::do_zipfian_gets@264] DEBUG: thread 34 | actual found 125822500 | cycles per get: 71
+2026-04-18 00:00:49.262 INFO  [56267] [kmercounter::do_zipfian_gets@264] DEBUG: thread 54 | actual found 125822500 | cycles per get: 74
+2026-04-18 00:00:49.262 INFO  [56272] [kmercounter::do_zipfian_gets@264] DEBUG: thread 59 | actual found 125822500 | cycles per get: 68
+2026-04-18 00:00:49.262 INFO  [56259] [kmercounter::do_zipfian_gets@264] DEBUG: thread 46 | actual found 125822500 | cycles per get: 75
+2026-04-18 00:00:49.262 INFO  [56292] [kmercounter::do_zipfian_gets@264] DEBUG: thread 79 | actual found 125822500 | cycles per get: 74
+2026-04-18 00:00:49.262 INFO  [56271] [kmercounter::do_zipfian_gets@264] DEBUG: thread 58 | actual found 125822500 | cycles per get: 75
+2026-04-18 00:00:49.262 INFO  [56256] [kmercounter::do_zipfian_gets@264] DEBUG: thread 43 | actual found 125822500 | cycles per get: 75
+2026-04-18 00:00:49.262 INFO  [56222] [kmercounter::do_zipfian_gets@264] DEBUG: thread 9 | actual found 125822500 | cycles per get: 74
+2026-04-18 00:00:49.262 INFO  [56241] [kmercounter::do_zipfian_gets@264] DEBUG: thread 28 | actual found 125822500 | cycles per get: 75
+2026-04-18 00:00:49.262 INFO  [56265] [kmercounter::do_zipfian_gets@264] DEBUG: thread 52 | actual found 125822500 | cycles per get: 71
+2026-04-18 00:00:49.262 INFO  [56324] [kmercounter::do_zipfian_gets@264] DEBUG: thread 111 | actual found 125822500 | cycles per get: 75
+2026-04-18 00:00:49.262 INFO  [56305] [kmercounter::do_zipfian_gets@264] DEBUG: thread 92 | actual found 125822500 | cycles per get: 75
+2026-04-18 00:00:49.262 INFO  [56280] [kmercounter::do_zipfian_gets@264] DEBUG: thread 67 | actual found 125822500 | cycles per get: 75
+2026-04-18 00:00:49.262 INFO  [56300] [kmercounter::do_zipfian_gets@264] DEBUG: thread 87 | actual found 125822500 | cycles per get: 74
+2026-04-18 00:00:49.262 INFO  [56310] [kmercounter::do_zipfian_gets@264] DEBUG: thread 97 | actual found 125822500 | cycles per get: 71
+2026-04-18 00:00:49.262 INFO  [56335] [kmercounter::do_zipfian_gets@264] DEBUG: thread 122 | actual found 125822500 | cycles per get: 75
+2026-04-18 00:00:49.262 INFO  [56220] [kmercounter::do_zipfian_gets@264] DEBUG: thread 7 | actual found 125822500 | cycles per get: 75
+2026-04-18 00:00:49.262 INFO  [56252] [kmercounter::do_zipfian_gets@264] DEBUG: thread 39 | actual found 125822500 | cycles per get: 75
+2026-04-18 00:00:49.262 INFO  [56263] [kmercounter::do_zipfian_gets@264] DEBUG: thread 50 | actual found 125822500 | cycles per get: 74
+2026-04-18 00:00:49.262 INFO  [56236] [kmercounter::do_zipfian_gets@264] DEBUG: thread 23 | actual found 125822500 | cycles per get: 75
+2026-04-18 00:00:49.262 INFO  [56257] [kmercounter::do_zipfian_gets@264] DEBUG: thread 44 | actual found 125822500 | cycles per get: 71
+2026-04-18 00:00:49.262 INFO  [56262] [kmercounter::do_zipfian_gets@264] DEBUG: thread 49 | actual found 125822500 | cycles per get: 75
+2026-04-18 00:00:49.262 INFO  [56227] [kmercounter::do_zipfian_gets@264] DEBUG: thread 14 | actual found 125822500 | cycles per get: 75
+2026-04-18 00:00:49.262 INFO  [56228] [kmercounter::do_zipfian_gets@264] DEBUG: thread 15 | actual found 125822500 | cycles per get: 74
+2026-04-18 00:00:49.262 INFO  [56313] [kmercounter::do_zipfian_gets@264] DEBUG: thread 100 | actual found 125822500 | cycles per get: 74
+2026-04-18 00:00:49.262 INFO  [56339] [kmercounter::do_zipfian_gets@264] DEBUG: thread 126 | actual found 125822500 | cycles per get: 76
+2026-04-18 00:00:49.262 INFO  [56268] [kmercounter::do_zipfian_gets@264] DEBUG: thread 55 | actual found 125822500 | cycles per get: 76
+2026-04-18 00:00:49.262 INFO  [56281] [kmercounter::do_zipfian_gets@264] DEBUG: thread 68 | actual found 125822500 | cycles per get: 74
+2026-04-18 00:00:49.262 INFO  [56321] [kmercounter::do_zipfian_gets@264] DEBUG: thread 108 | actual found 125822500 | cycles per get: 75
+2026-04-18 00:00:49.262 INFO  [56288] [kmercounter::do_zipfian_gets@264] DEBUG: thread 75 | actual found 125822500 | cycles per get: 74
+2026-04-18 00:00:49.262 INFO  [56304] [kmercounter::do_zipfian_gets@264] DEBUG: thread 91 | actual found 125822500 | cycles per get: 74
+2026-04-18 00:00:49.262 INFO  [56261] [kmercounter::do_zipfian_gets@264] DEBUG: thread 48 | actual found 125822500 | cycles per get: 75
+2026-04-18 00:00:49.262 INFO  [56091] [kmercounter::do_zipfian_gets@264] DEBUG: thread 127 | actual found 125822500 | cycles per get: 75
+2026-04-18 00:00:49.262 INFO  [56225] [kmercounter::do_zipfian_gets@264] DEBUG: thread 12 | actual found 125822500 | cycles per get: 76
+2026-04-18 00:00:49.262 INFO  [56318] [kmercounter::do_zipfian_gets@264] DEBUG: thread 105 | actual found 125822500 | cycles per get: 74
+2026-04-18 00:00:49.262 INFO  [56270] [kmercounter::do_zipfian_gets@264] DEBUG: thread 57 | actual found 125822500 | cycles per get: 66
+2026-04-18 00:00:49.262 INFO  [56242] [kmercounter::do_zipfian_gets@264] DEBUG: thread 29 | actual found 125822500 | cycles per get: 76
+2026-04-18 00:00:49.262 INFO  [56303] [kmercounter::do_zipfian_gets@264] DEBUG: thread 90 | actual found 125822500 | cycles per get: 74
+2026-04-18 00:00:49.262 INFO  [56260] [kmercounter::do_zipfian_gets@264] DEBUG: thread 47 | actual found 125822500 | cycles per get: 74
+2026-04-18 00:00:49.262 INFO  [56230] [kmercounter::do_zipfian_gets@264] DEBUG: thread 17 | actual found 125822500 | cycles per get: 75
+2026-04-18 00:00:49.262 INFO  [56328] [kmercounter::do_zipfian_gets@264] DEBUG: thread 115 | actual found 125822500 | cycles per get: 75
+2026-04-18 00:00:49.262 INFO  [56334] [kmercounter::do_zipfian_gets@264] DEBUG: thread 121 | actual found 125822500 | cycles per get: 76
+2026-04-18 00:00:49.262 INFO  [56214] [kmercounter::do_zipfian_gets@264] DEBUG: thread 1 | actual found 125822500 | cycles per get: 70
+2026-04-18 00:00:49.262 INFO  [56282] [kmercounter::do_zipfian_gets@264] DEBUG: thread 69 | actual found 125822500 | cycles per get: 76
+2026-04-18 00:00:49.262 INFO  [56223] [kmercounter::do_zipfian_gets@264] DEBUG: thread 10 | actual found 125822500 | cycles per get: 76
+2026-04-18 00:00:49.262 INFO  [56255] [kmercounter::do_zipfian_gets@264] DEBUG: thread 42 | actual found 125822500 | cycles per get: 77
+2026-04-18 00:00:49.262 INFO  [56273] [kmercounter::do_zipfian_gets@264] DEBUG: thread 60 | actual found 125822500 | cycles per get: 75
+2026-04-18 00:00:49.262 INFO  [56331] [kmercounter::do_zipfian_gets@264] DEBUG: thread 118 | actual found 125822500 | cycles per get: 77
+2026-04-18 00:00:49.262 INFO  [56249] [kmercounter::do_zipfian_gets@264] DEBUG: thread 36 | actual found 125822500 | cycles per get: 75
+2026-04-18 00:00:49.262 INFO  [56254] [kmercounter::do_zipfian_gets@264] DEBUG: thread 41 | actual found 125822500 | cycles per get: 74
+2026-04-18 00:00:49.262 INFO  [56302] [kmercounter::do_zipfian_gets@264] DEBUG: thread 89 | actual found 125822500 | cycles per get: 76
+2026-04-18 00:00:49.262 INFO  [56298] [kmercounter::do_zipfian_gets@264] DEBUG: thread 85 | actual found 125822500 | cycles per get: 77
+2026-04-18 00:00:49.262 INFO  [56287] [kmercounter::do_zipfian_gets@264] DEBUG: thread 74 | actual found 125822500 | cycles per get: 76
+2026-04-18 00:00:49.262 INFO  [56320] [kmercounter::do_zipfian_gets@264] DEBUG: thread 107 | actual found 125822500 | cycles per get: 75
+2026-04-18 00:00:49.262 INFO  [56243] [kmercounter::do_zipfian_gets@264] DEBUG: thread 30 | actual found 125822500 | cycles per get: 74
+2026-04-18 00:00:49.262 INFO  [56240] [kmercounter::do_zipfian_gets@264] DEBUG: thread 27 | actual found 125822500 | cycles per get: 77
+2026-04-18 00:00:49.262 INFO  [56296] [kmercounter::do_zipfian_gets@264] DEBUG: thread 83 | actual found 125822500 | cycles per get: 75
+2026-04-18 00:00:49.262 INFO  [56284] [kmercounter::do_zipfian_gets@264] DEBUG: thread 71 | actual found 125822500 | cycles per get: 77
+2026-04-18 00:00:49.262 INFO  [56316] [kmercounter::do_zipfian_gets@264] DEBUG: thread 103 | actual found 125822500 | cycles per get: 72
+2026-04-18 00:00:49.262 INFO  [56269] [kmercounter::do_zipfian_gets@264] DEBUG: thread 56 | actual found 125822500 | cycles per get: 77
+2026-04-18 00:00:49.262 INFO  [56293] [kmercounter::do_zipfian_gets@264] DEBUG: thread 80 | actual found 125822500 | cycles per get: 77
+2026-04-18 00:00:49.262 INFO  [56290] [kmercounter::do_zipfian_gets@264] DEBUG: thread 77 | actual found 125822500 | cycles per get: 77
+2026-04-18 00:00:49.262 INFO  [56319] [kmercounter::do_zipfian_gets@264] DEBUG: thread 106 | actual found 125822500 | cycles per get: 78
+2026-04-18 00:00:49.262 INFO  [56301] [kmercounter::do_zipfian_gets@264] DEBUG: thread 88 | actual found 125822500 | cycles per get: 77
+2026-04-18 00:00:49.262 INFO  [56258] [kmercounter::do_zipfian_gets@264] DEBUG: thread 45 | actual found 125822500 | cycles per get: 78
+2026-04-18 00:00:49.262 INFO  [56213] [kmercounter::do_zipfian_gets@264] DEBUG: thread 0 | actual found 125822500 | cycles per get: 78
+2026-04-18 00:00:49.262 INFO  [56237] [kmercounter::do_zipfian_gets@264] DEBUG: thread 24 | actual found 125822500 | cycles per get: 78
+2026-04-18 00:00:49.262 INFO  [56218] [kmercounter::do_zipfian_gets@264] DEBUG: thread 5 | actual found 125822500 | cycles per get: 78
+2026-04-18 00:00:49.262 INFO  [56251] [kmercounter::do_zipfian_gets@264] DEBUG: thread 38 | actual found 125822500 | cycles per get: 67
+2026-04-18 00:00:49.262 INFO  [56226] [kmercounter::do_zipfian_gets@264] DEBUG: thread 13 | actual found 125822500 | cycles per get: 78
+2026-04-18 00:00:49.262 INFO  [56245] [kmercounter::do_zipfian_gets@264] DEBUG: thread 32 | actual found 125822500 | cycles per get: 78
+2026-04-18 00:00:49.262 INFO  [56232] [kmercounter::do_zipfian_gets@264] DEBUG: thread 19 | actual found 125822500 | cycles per get: 74
+2026-04-18 00:00:49.262 INFO  [56306] [kmercounter::do_zipfian_gets@264] DEBUG: thread 93 | actual found 125822500 | cycles per get: 77
+2026-04-18 00:00:49.262 INFO  [56317] [kmercounter::do_zipfian_gets@264] DEBUG: thread 104 | actual found 125822500 | cycles per get: 78
+2026-04-18 00:00:49.262 INFO  [56338] [kmercounter::do_zipfian_gets@264] DEBUG: thread 125 | actual found 125822500 | cycles per get: 78
+2026-04-18 00:00:49.262 INFO  [56333] [kmercounter::do_zipfian_gets@264] DEBUG: thread 120 | actual found 125822500 | cycles per get: 78
+2026-04-18 00:00:49.262 INFO  [56283] [kmercounter::do_zipfian_gets@264] DEBUG: thread 70 | actual found 125822500 | cycles per get: 78
+2026-04-18 00:00:49.262 INFO  [56279] [kmercounter::do_zipfian_gets@264] DEBUG: thread 66 | actual found 125822500 | cycles per get: 75
+2026-04-18 00:00:49.262 INFO  [56219] [kmercounter::do_zipfian_gets@264] DEBUG: thread 6 | actual found 125822500 | cycles per get: 79
+2026-04-18 00:00:49.262 INFO  [56235] [kmercounter::do_zipfian_gets@264] DEBUG: thread 22 | actual found 125822500 | cycles per get: 74
+2026-04-18 00:00:49.262 INFO  [56285] [kmercounter::do_zipfian_gets@264] DEBUG: thread 72 | actual found 125822500 | cycles per get: 79
+2026-04-18 00:00:49.262 INFO  [56315] [kmercounter::do_zipfian_gets@264] DEBUG: thread 102 | actual found 125822500 | cycles per get: 69
+2026-04-18 00:00:49.262 INFO  [56278] [kmercounter::do_zipfian_gets@264] DEBUG: thread 65 | actual found 125822500 | cycles per get: 78
+2026-04-18 00:00:49.262 INFO  [56274] [kmercounter::do_zipfian_gets@264] DEBUG: thread 61 | actual found 125822500 | cycles per get: 83
+2026-04-18 00:00:49.262 INFO  [56286] [kmercounter::do_zipfian_gets@264] DEBUG: thread 73 | actual found 125822500 | cycles per get: 74
+2026-04-18 00:00:49.262 INFO  [56233] [kmercounter::do_zipfian_gets@264] DEBUG: thread 20 | actual found 125822500 | cycles per get: 79
+2026-04-18 00:00:49.262 INFO  [56297] [kmercounter::do_zipfian_gets@264] DEBUG: thread 84 | actual found 125822500 | cycles per get: 66
+2026-04-18 00:00:49.262 INFO  [56309] [kmercounter::do_zipfian_gets@264] DEBUG: thread 96 | actual found 125822500 | cycles per get: 79
+2026-04-18 00:00:49.262 INFO  [56332] [kmercounter::do_zipfian_gets@264] DEBUG: thread 119 | actual found 125822500 | cycles per get: 75
+2026-04-18 00:00:49.262 INFO  [56246] [kmercounter::do_zipfian_gets@264] DEBUG: thread 33 | actual found 125822500 | cycles per get: 82
+2026-04-18 00:00:49.262 INFO  [56275] [kmercounter::do_zipfian_gets@264] DEBUG: thread 62 | actual found 125822500 | cycles per get: 74
+2026-04-18 00:00:49.262 INFO  [56336] [kmercounter::do_zipfian_gets@264] DEBUG: thread 123 | actual found 125822500 | cycles per get: 75
+2026-04-18 00:00:49.262 INFO  [56327] [kmercounter::do_zipfian_gets@264] DEBUG: thread 114 | actual found 125822500 | cycles per get: 80
+2026-04-18 00:00:49.262 INFO  [56329] [kmercounter::do_zipfian_gets@264] DEBUG: thread 116 | actual found 125822500 | cycles per get: 81
+2026-04-18 00:00:49.262 INFO  [56325] [kmercounter::do_zipfian_gets@264] DEBUG: thread 112 | actual found 125822500 | cycles per get: 78
+2026-04-18 00:00:49.262 INFO  [56312] [kmercounter::do_zipfian_gets@264] DEBUG: thread 99 | actual found 125822500 | cycles per get: 75
+2026-04-18 00:00:49.262 INFO  [56291] [kmercounter::do_zipfian_gets@264] DEBUG: thread 78 | actual found 125822500 | cycles per get: 74
+2026-04-18 00:00:49.262 INFO  [56276] [kmercounter::do_zipfian_gets@264] DEBUG: thread 63 | actual found 125822500 | cycles per get: 81
+2026-04-18 00:00:49.262 INFO  [56337] [kmercounter::do_zipfian_gets@264] DEBUG: thread 124 | actual found 125822500 | cycles per get: 76
+2026-04-18 00:00:49.262 INFO  [56307] [kmercounter::do_zipfian_gets@264] DEBUG: thread 94 | actual found 125822500 | cycles per get: 75
+2026-04-18 00:00:49.262 INFO  [56294] [kmercounter::do_zipfian_gets@264] DEBUG: thread 81 | actual found 125822500 | cycles per get: 75
+2026-04-18 00:00:49.262 INFO  [56289] [kmercounter::do_zipfian_gets@264] DEBUG: thread 76 | actual found 125822500 | cycles per get: 75
+2026-04-18 00:00:49.262 INFO  [56326] [kmercounter::do_zipfian_gets@264] DEBUG: thread 113 | actual found 125822500 | cycles per get: 75
+2026-04-18 00:00:49.262 INFO  [56308] [kmercounter::do_zipfian_gets@264] DEBUG: thread 95 | actual found 125822500 | cycles per get: 67
+2026-04-18 00:00:49.262 INFO  [56215] [kmercounter::do_zipfian_gets@264] DEBUG: thread 2 | actual found 125822500 | cycles per get: 77
+2026-04-18 00:00:49.262 INFO  [56217] [kmercounter::do_zipfian_gets@264] DEBUG: thread 4 | actual found 125822500 | cycles per get: 75
+2026-04-18 00:00:49.262 INFO  [56239] [kmercounter::do_zipfian_gets@264] DEBUG: thread 26 | actual found 125822500 | cycles per get: 75
+2026-04-18 00:00:49.262 INFO  [56234] [kmercounter::do_zipfian_gets@264] DEBUG: thread 21 | actual found 125822500 | cycles per get: 77
+2026-04-18 00:00:49.262 INFO  [56299] [kmercounter::do_zipfian_gets@264] DEBUG: thread 86 | actual found 125822500 | cycles per get: 76
+2026-04-18 00:00:49.262 INFO  [56330] [kmercounter::do_zipfian_gets@264] DEBUG: thread 117 | actual found 125822500 | cycles per get: 78
+2026-04-18 00:00:49.262 INFO  [56311] [kmercounter::do_zipfian_gets@264] DEBUG: thread 98 | actual found 125822500 | cycles per get: 75
+2026-04-18 00:00:49.262 INFO  [56266] [kmercounter::do_zipfian_gets@264] DEBUG: thread 53 | actual found 125822500 | cycles per get: 77
+2026-04-18 00:00:49.262 INFO  [56216] [kmercounter::do_zipfian_gets@264] DEBUG: thread 3 | actual found 125822500 | cycles per get: 74
+2026-04-18 00:00:49.262 INFO  [56224] [kmercounter::do_zipfian_gets@264] DEBUG: thread 11 | actual found 125822500 | cycles per get: 75
+2026-04-18 00:00:49.262 INFO  [56248] [kmercounter::do_zipfian_gets@264] DEBUG: thread 35 | actual found 125822500 | cycles per get: 75
+2026-04-18 00:00:49.262 INFO  [56253] [kmercounter::do_zipfian_gets@264] DEBUG: thread 40 | actual found 125822500 | cycles per get: 78
+2026-04-18 00:00:49.262 INFO  [56244] [kmercounter::do_zipfian_gets@264] DEBUG: thread 31 | actual found 125822500 | cycles per get: 78
+2026-04-18 00:00:49.262 INFO  [56295] [kmercounter::do_zipfian_gets@264] DEBUG: thread 82 | actual found 125822500 | cycles per get: 67
+2026-04-18 00:00:49.262 INFO  [56314] [kmercounter::do_zipfian_gets@264] DEBUG: thread 101 | actual found 125822500 | cycles per get: 79
+2026-04-18 00:00:49.262 INFO  [56238] [kmercounter::do_zipfian_gets@264] DEBUG: thread 25 | actual found 125822500 | cycles per get: 79
+2026-04-18 00:00:49.262 INFO  [56221] [kmercounter::do_zipfian_gets@264] DEBUG: thread 8 | actual found 125822500 | cycles per get: 78
+2026-04-18 00:00:49.262 INFO  [56322] [kmercounter::do_zipfian_gets@264] DEBUG: thread 109 | actual found 125822500 | cycles per get: 78
+2026-04-18 00:00:49.262 INFO  [56323] [kmercounter::do_zipfian_gets@264] DEBUG: thread 110 | actual found 125822500 | cycles per get: 75
+2026-04-18 00:00:49.262 INFO  [56250] [kmercounter::do_zipfian_gets@264] DEBUG: thread 37 | actual found 125822500 | cycles per get: 78
+2026-04-18 00:00:49.262 INFO  [56277] [kmercounter::do_zipfian_gets@264] DEBUG: thread 64 | actual found 125822500 | cycles per get: 79
+2026-04-18 00:00:49.262 INFO  [56229] [kmercounter::do_zipfian_gets@264] DEBUG: thread 16 | actual found 125822500 | cycles per get: 80
+2026-04-18 00:00:49.264 INFO  [56264] [kmercounter::do_zipfian_gets@264] DEBUG: thread 51 | actual found 125822500 | cycles per get: 74
+2026-04-18 00:00:49.266 INFO  [56213] [kmercounter::ZipfianTest::run@398] get fill 0.300
+2026-04-18 00:00:49.958 INFO  [56213] [kmercounter::free_mem@184] 0x7a21c0000000 with sz 8589934592 unmapped
+{total_reprobes : 133100779, total_finds : 16106124800, avg_cachelines_accessed : 1.0083}
+{reprobe_factor : 1.0083}
+===============================================================
+average_insert_task_duration : 221715116, total_insert_tas_duration : 221715116
+insert_ops : 161061248, insert_ops_per_run : 161061248
+average_find_task_duration : 104928544, total_find_duration : 10492854442
+find_ops : 16106124800, find_ops_per_run : 161061248
+{ set_cycles : 156, get_cycles : 75, set_mops : 2050.498, get_mops : 4212.055 }
+===============================================================
+/opt/dramhit-fork/build/dramhit --perf_cnt_path ./perf_cnt.txt --perf_def_path ./perf-cpp/perf_list.csv --find_queue 64 --ht-fill 30 --ht-type 3 --insert-factor 1 --read-factor 100 --num-threads 128 --numa-split 1 --no-prefetch 0 --mode 11 --ht-size 536870912 --skew 0.01 --hw-pref 0 --batch-len 16 --relation_r_size 375809638
+2026-04-18 00:00:50.273 INFO  [56406] [initializeLogger@17] ------------------------
+2026-04-18 00:00:50.273 INFO  [56406] [initializeLogger@18] Plog library initialized
+2026-04-18 00:00:50.273 INFO  [56406] [initializeLogger@19] ------------------------
+2026-04-18 00:00:50.273 INFO  [56406] [main@27] Starting dramhit
+2026-04-18 00:00:50.274 INFO  [56406] [MsrHandler::msr_open@46] msr-safe loaded!
+2026-04-18 00:00:50.275 INFO  [56406] [kmercounter::Application::process@769] Hashtable type : Cas HT
+2026-04-18 00:00:50.275 INFO  [56406] [kmercounter::Application::process@810] Dropping the page cache
+2026-04-18 00:00:50.833 INFO  [56406] [kmercounter::init_zipfian_dist@76] HT_TESTS_NUM_INSERTS 214748364
+2026-04-18 00:00:50.833 INFO  [56406] [kmercounter::init_zipfian_dist@81] /opt/zipfian/0.01_536870912_40.bin 0
+2026-04-18 00:00:50.833 INFO  [56406] [kmercounter::init_zipfian_dist@88] Initializing global zipf with skew 0.010000, seed 1776492050003907964
+2026-04-18 00:01:03.988 INFO  [56406] [kmercounter::init_zipfian_dist@93] Zipfian dist generated. size 214748364
+2026-04-18 00:01:03.988 INFO  [56406] [kmercounter::Application::spawn_shard_threads@413] total kv 214748364, num_threads 128, op per thread (per run) 1677721
+2026-04-18 00:01:03.988 INFO  [56479] [kmercounter::calloc_ht@132] opened file /mnt/huge/hugepagefile
+2026-04-18 00:01:03.988 INFO  [56479] [kmercounter::calloc_ht@148] allocating 8 1gb pages bytes 8589934592
+2026-04-18 00:01:03.988 INFO  [56479] [kmercounter::calloc_ht@161] mmap returns 0x735e80000000
+2026-04-18 00:01:03.988 INFO  [56479] [kmercounter::distribute_mem_to_nodes@122] addr 0x735e80000000, alloc_sz 8589934592
+2026-04-18 00:01:07.338 INFO  [56479] [KVQ>::CASHashTable@82] Hashtable base: 0x735e80000000 Hashtable size: 536870912
+2026-04-18 00:01:07.338 INFO  [56479] [KVQ>::CASHashTable@84] queue item sz: 32
+2026-04-18 00:01:13.554 INFO  [56497] [kmercounter::do_zipfian_gets@264] DEBUG: thread 18 | actual found 167764900 | cycles per get: 74
+2026-04-18 00:01:13.554 INFO  [56557] [kmercounter::do_zipfian_gets@264] DEBUG: thread 78 | actual found 167764900 | cycles per get: 73
+2026-04-18 00:01:13.554 INFO  [56571] [kmercounter::do_zipfian_gets@264] DEBUG: thread 92 | actual found 167764900 | cycles per get: 74
+2026-04-18 00:01:13.554 INFO  [56549] [kmercounter::do_zipfian_gets@264] DEBUG: thread 70 | actual found 167764900 | cycles per get: 75
+2026-04-18 00:01:13.554 INFO  [56524] [kmercounter::do_zipfian_gets@264] DEBUG: thread 45 | actual found 167764900 | cycles per get: 78
+2026-04-18 00:01:13.554 INFO  [56569] [kmercounter::do_zipfian_gets@264] DEBUG: thread 90 | actual found 167764900 | cycles per get: 77
+2026-04-18 00:01:13.554 INFO  [56505] [kmercounter::do_zipfian_gets@264] DEBUG: thread 26 | actual found 167764900 | cycles per get: 76
+2026-04-18 00:01:13.554 INFO  [56508] [kmercounter::do_zipfian_gets@264] DEBUG: thread 29 | actual found 167764900 | cycles per get: 74
+2026-04-18 00:01:13.554 INFO  [56572] [kmercounter::do_zipfian_gets@264] DEBUG: thread 93 | actual found 167764900 | cycles per get: 77
+2026-04-18 00:01:13.554 INFO  [56556] [kmercounter::do_zipfian_gets@264] DEBUG: thread 77 | actual found 167764900 | cycles per get: 67
+2026-04-18 00:01:13.554 INFO  [56601] [kmercounter::do_zipfian_gets@264] DEBUG: thread 122 | actual found 167764900 | cycles per get: 79
+2026-04-18 00:01:13.554 INFO  [56576] [kmercounter::do_zipfian_gets@264] DEBUG: thread 97 | actual found 167764900 | cycles per get: 80
+2026-04-18 00:01:13.554 INFO  [56555] [kmercounter::do_zipfian_gets@264] DEBUG: thread 76 | actual found 167764900 | cycles per get: 74
+2026-04-18 00:01:13.554 INFO  [56562] [kmercounter::do_zipfian_gets@264] DEBUG: thread 83 | actual found 167764900 | cycles per get: 78
+2026-04-18 00:01:13.554 INFO  [56548] [kmercounter::do_zipfian_gets@264] DEBUG: thread 69 | actual found 167764900 | cycles per get: 71
+2026-04-18 00:01:13.554 INFO  [56561] [kmercounter::do_zipfian_gets@264] DEBUG: thread 82 | actual found 167764900 | cycles per get: 77
+2026-04-18 00:01:13.554 INFO  [56563] [kmercounter::do_zipfian_gets@264] DEBUG: thread 84 | actual found 167764900 | cycles per get: 78
+2026-04-18 00:01:13.554 INFO  [56546] [kmercounter::do_zipfian_gets@264] DEBUG: thread 67 | actual found 167764900 | cycles per get: 79
+2026-04-18 00:01:13.554 INFO  [56568] [kmercounter::do_zipfian_gets@264] DEBUG: thread 89 | actual found 167764900 | cycles per get: 79
+2026-04-18 00:01:13.554 INFO  [56605] [kmercounter::do_zipfian_gets@264] DEBUG: thread 126 | actual found 167764900 | cycles per get: 80
+2026-04-18 00:01:13.554 INFO  [56488] [kmercounter::do_zipfian_gets@264] DEBUG: thread 9 | actual found 167764900 | cycles per get: 78
+2026-04-18 00:01:13.554 INFO  [56566] [kmercounter::do_zipfian_gets@264] DEBUG: thread 87 | actual found 167764900 | cycles per get: 79
+2026-04-18 00:01:13.554 INFO  [56547] [kmercounter::do_zipfian_gets@264] DEBUG: thread 68 | actual found 167764900 | cycles per get: 75
+2026-04-18 00:01:13.554 INFO  [56587] [kmercounter::do_zipfian_gets@264] DEBUG: thread 108 | actual found 167764900 | cycles per get: 80
+2026-04-18 00:01:13.554 INFO  [56589] [kmercounter::do_zipfian_gets@264] DEBUG: thread 110 | actual found 167764900 | cycles per get: 80
+2026-04-18 00:01:13.554 INFO  [56579] [kmercounter::do_zipfian_gets@264] DEBUG: thread 100 | actual found 167764900 | cycles per get: 78
+2026-04-18 00:01:13.554 INFO  [56573] [kmercounter::do_zipfian_gets@264] DEBUG: thread 94 | actual found 167764900 | cycles per get: 78
+2026-04-18 00:01:13.554 INFO  [56565] [kmercounter::do_zipfian_gets@264] DEBUG: thread 86 | actual found 167764900 | cycles per get: 80
+2026-04-18 00:01:13.554 INFO  [56553] [kmercounter::do_zipfian_gets@264] DEBUG: thread 74 | actual found 167764900 | cycles per get: 79
+2026-04-18 00:01:13.554 INFO  [56514] [kmercounter::do_zipfian_gets@264] DEBUG: thread 35 | actual found 167764900 | cycles per get: 75
+2026-04-18 00:01:13.554 INFO  [56504] [kmercounter::do_zipfian_gets@264] DEBUG: thread 25 | actual found 167764900 | cycles per get: 80
+2026-04-18 00:01:13.554 INFO  [56544] [kmercounter::do_zipfian_gets@264] DEBUG: thread 65 | actual found 167764900 | cycles per get: 79
+2026-04-18 00:01:13.554 INFO  [56536] [kmercounter::do_zipfian_gets@264] DEBUG: thread 57 | actual found 167764900 | cycles per get: 80
+2026-04-18 00:01:13.554 INFO  [56494] [kmercounter::do_zipfian_gets@264] DEBUG: thread 15 | actual found 167764900 | cycles per get: 80
+2026-04-18 00:01:13.554 INFO  [56595] [kmercounter::do_zipfian_gets@264] DEBUG: thread 116 | actual found 167764900 | cycles per get: 79
+2026-04-18 00:01:13.554 INFO  [56584] [kmercounter::do_zipfian_gets@264] DEBUG: thread 105 | actual found 167764900 | cycles per get: 73
+2026-04-18 00:01:13.554 INFO  [56570] [kmercounter::do_zipfian_gets@264] DEBUG: thread 91 | actual found 167764900 | cycles per get: 78
+2026-04-18 00:01:13.554 INFO  [56506] [kmercounter::do_zipfian_gets@264] DEBUG: thread 27 | actual found 167764900 | cycles per get: 80
+2026-04-18 00:01:13.554 INFO  [56538] [kmercounter::do_zipfian_gets@264] DEBUG: thread 59 | actual found 167764900 | cycles per get: 80
+2026-04-18 00:01:13.554 INFO  [56491] [kmercounter::do_zipfian_gets@264] DEBUG: thread 12 | actual found 167764900 | cycles per get: 80
+2026-04-18 00:01:13.554 INFO  [56592] [kmercounter::do_zipfian_gets@264] DEBUG: thread 113 | actual found 167764900 | cycles per get: 78
+2026-04-18 00:01:13.554 INFO  [56594] [kmercounter::do_zipfian_gets@264] DEBUG: thread 115 | actual found 167764900 | cycles per get: 79
+2026-04-18 00:01:13.554 INFO  [56596] [kmercounter::do_zipfian_gets@264] DEBUG: thread 117 | actual found 167764900 | cycles per get: 80
+2026-04-18 00:01:13.554 INFO  [56564] [kmercounter::do_zipfian_gets@264] DEBUG: thread 85 | actual found 167764900 | cycles per get: 74
+2026-04-18 00:01:13.554 INFO  [56523] [kmercounter::do_zipfian_gets@264] DEBUG: thread 44 | actual found 167764900 | cycles per get: 80
+2026-04-18 00:01:13.554 INFO  [56554] [kmercounter::do_zipfian_gets@264] DEBUG: thread 75 | actual found 167764900 | cycles per get: 70
+2026-04-18 00:01:13.554 INFO  [56580] [kmercounter::do_zipfian_gets@264] DEBUG: thread 101 | actual found 167764900 | cycles per get: 80
+2026-04-18 00:01:13.554 INFO  [56507] [kmercounter::do_zipfian_gets@264] DEBUG: thread 28 | actual found 167764900 | cycles per get: 80
+2026-04-18 00:01:13.554 INFO  [56578] [kmercounter::do_zipfian_gets@264] DEBUG: thread 99 | actual found 167764900 | cycles per get: 76
+2026-04-18 00:01:13.554 INFO  [56539] [kmercounter::do_zipfian_gets@264] DEBUG: thread 60 | actual found 167764900 | cycles per get: 80
+2026-04-18 00:01:13.554 INFO  [56602] [kmercounter::do_zipfian_gets@264] DEBUG: thread 123 | actual found 167764900 | cycles per get: 79
+2026-04-18 00:01:13.554 INFO  [56543] [kmercounter::do_zipfian_gets@264] DEBUG: thread 64 | actual found 167764900 | cycles per get: 80
+2026-04-18 00:01:13.554 INFO  [56500] [kmercounter::do_zipfian_gets@264] DEBUG: thread 21 | actual found 167764900 | cycles per get: 71
+2026-04-18 00:01:13.554 INFO  [56522] [kmercounter::do_zipfian_gets@264] DEBUG: thread 43 | actual found 167764900 | cycles per get: 80
+2026-04-18 00:01:13.554 INFO  [56496] [kmercounter::do_zipfian_gets@264] DEBUG: thread 17 | actual found 167764900 | cycles per get: 80
+2026-04-18 00:01:13.554 INFO  [56528] [kmercounter::do_zipfian_gets@264] DEBUG: thread 49 | actual found 167764900 | cycles per get: 80
+2026-04-18 00:01:13.554 INFO  [56597] [kmercounter::do_zipfian_gets@264] DEBUG: thread 118 | actual found 167764900 | cycles per get: 81
+2026-04-18 00:01:13.554 INFO  [56493] [kmercounter::do_zipfian_gets@264] DEBUG: thread 14 | actual found 167764900 | cycles per get: 81
+2026-04-18 00:01:13.554 INFO  [56600] [kmercounter::do_zipfian_gets@264] DEBUG: thread 121 | actual found 167764900 | cycles per get: 81
+2026-04-18 00:01:13.554 INFO  [56525] [kmercounter::do_zipfian_gets@264] DEBUG: thread 46 | actual found 167764900 | cycles per get: 80
+2026-04-18 00:01:13.554 INFO  [56515] [kmercounter::do_zipfian_gets@264] DEBUG: thread 36 | actual found 167764900 | cycles per get: 81
+2026-04-18 00:01:13.554 INFO  [56545] [kmercounter::do_zipfian_gets@264] DEBUG: thread 66 | actual found 167764900 | cycles per get: 76
+2026-04-18 00:01:13.554 INFO  [56501] [kmercounter::do_zipfian_gets@264] DEBUG: thread 22 | actual found 167764900 | cycles per get: 81
+2026-04-18 00:01:13.554 INFO  [56550] [kmercounter::do_zipfian_gets@264] DEBUG: thread 71 | actual found 167764900 | cycles per get: 79
+2026-04-18 00:01:13.554 INFO  [56490] [kmercounter::do_zipfian_gets@264] DEBUG: thread 11 | actual found 167764900 | cycles per get: 81
+2026-04-18 00:01:13.554 INFO  [56480] [kmercounter::do_zipfian_gets@264] DEBUG: thread 1 | actual found 167764900 | cycles per get: 80
+2026-04-18 00:01:13.554 INFO  [56533] [kmercounter::do_zipfian_gets@264] DEBUG: thread 54 | actual found 167764900 | cycles per get: 81
+2026-04-18 00:01:13.554 INFO  [56531] [kmercounter::do_zipfian_gets@264] DEBUG: thread 52 | actual found 167764900 | cycles per get: 81
+2026-04-18 00:01:13.554 INFO  [56492] [kmercounter::do_zipfian_gets@264] DEBUG: thread 13 | actual found 167764900 | cycles per get: 81
+2026-04-18 00:01:13.554 INFO  [56529] [kmercounter::do_zipfian_gets@264] DEBUG: thread 50 | actual found 167764900 | cycles per get: 81
+2026-04-18 00:01:13.554 INFO  [56513] [kmercounter::do_zipfian_gets@264] DEBUG: thread 34 | actual found 167764900 | cycles per get: 81
+2026-04-18 00:01:13.556 INFO  [56560] [kmercounter::do_zipfian_gets@264] DEBUG: thread 81 | actual found 167764900 | cycles per get: 78
+2026-04-18 00:01:13.554 INFO  [56537] [kmercounter::do_zipfian_gets@264] DEBUG: thread 58 | actual found 167764900 | cycles per get: 82
+2026-04-18 00:01:13.554 INFO  [56483] [kmercounter::do_zipfian_gets@264] DEBUG: thread 4 | actual found 167764900 | cycles per get: 81
+2026-04-18 00:01:13.554 INFO  [56567] [kmercounter::do_zipfian_gets@264] DEBUG: thread 88 | actual found 167764900 | cycles per get: 81
+2026-04-18 00:01:13.554 INFO  [56586] [kmercounter::do_zipfian_gets@264] DEBUG: thread 107 | actual found 167764900 | cycles per get: 81
+2026-04-18 00:01:13.554 INFO  [56604] [kmercounter::do_zipfian_gets@264] DEBUG: thread 125 | actual found 167764900 | cycles per get: 79
+2026-04-18 00:01:13.554 INFO  [56588] [kmercounter::do_zipfian_gets@264] DEBUG: thread 109 | actual found 167764900 | cycles per get: 82
+2026-04-18 00:01:13.554 INFO  [56482] [kmercounter::do_zipfian_gets@264] DEBUG: thread 3 | actual found 167764900 | cycles per get: 82
+2026-04-18 00:01:13.554 INFO  [56517] [kmercounter::do_zipfian_gets@264] DEBUG: thread 38 | actual found 167764900 | cycles per get: 73
+2026-04-18 00:01:13.554 INFO  [56583] [kmercounter::do_zipfian_gets@264] DEBUG: thread 104 | actual found 167764900 | cycles per get: 82
+2026-04-18 00:01:13.554 INFO  [56575] [kmercounter::do_zipfian_gets@264] DEBUG: thread 96 | actual found 167764900 | cycles per get: 83
+2026-04-18 00:01:13.554 INFO  [56530] [kmercounter::do_zipfian_gets@264] DEBUG: thread 51 | actual found 167764900 | cycles per get: 82
+2026-04-18 00:01:13.554 INFO  [56541] [kmercounter::do_zipfian_gets@264] DEBUG: thread 62 | actual found 167764900 | cycles per get: 81
+2026-04-18 00:01:13.554 INFO  [56593] [kmercounter::do_zipfian_gets@264] DEBUG: thread 114 | actual found 167764900 | cycles per get: 79
+2026-04-18 00:01:13.554 INFO  [56499] [kmercounter::do_zipfian_gets@264] DEBUG: thread 20 | actual found 167764900 | cycles per get: 81
+2026-04-18 00:01:13.554 INFO  [56512] [kmercounter::do_zipfian_gets@264] DEBUG: thread 33 | actual found 167764900 | cycles per get: 82
+2026-04-18 00:01:13.554 INFO  [56495] [kmercounter::do_zipfian_gets@264] DEBUG: thread 16 | actual found 167764900 | cycles per get: 83
+2026-04-18 00:01:13.554 INFO  [56527] [kmercounter::do_zipfian_gets@264] DEBUG: thread 48 | actual found 167764900 | cycles per get: 83
+2026-04-18 00:01:13.554 INFO  [56577] [kmercounter::do_zipfian_gets@264] DEBUG: thread 98 | actual found 167764900 | cycles per get: 78
+2026-04-18 00:01:13.554 INFO  [56521] [kmercounter::do_zipfian_gets@264] DEBUG: thread 42 | actual found 167764900 | cycles per get: 82
+2026-04-18 00:01:13.554 INFO  [56489] [kmercounter::do_zipfian_gets@264] DEBUG: thread 10 | actual found 167764900 | cycles per get: 83
+2026-04-18 00:01:13.554 INFO  [56542] [kmercounter::do_zipfian_gets@264] DEBUG: thread 63 | actual found 167764900 | cycles per get: 81
+2026-04-18 00:01:13.554 INFO  [56534] [kmercounter::do_zipfian_gets@264] DEBUG: thread 55 | actual found 167764900 | cycles per get: 83
+2026-04-18 00:01:13.554 INFO  [56502] [kmercounter::do_zipfian_gets@264] DEBUG: thread 23 | actual found 167764900 | cycles per get: 83
+2026-04-18 00:01:13.554 INFO  [56509] [kmercounter::do_zipfian_gets@264] DEBUG: thread 30 | actual found 167764900 | cycles per get: 80
+2026-04-18 00:01:13.554 INFO  [56590] [kmercounter::do_zipfian_gets@264] DEBUG: thread 111 | actual found 167764900 | cycles per get: 83
+2026-04-18 00:01:13.554 INFO  [56518] [kmercounter::do_zipfian_gets@264] DEBUG: thread 39 | actual found 167764900 | cycles per get: 83
+2026-04-18 00:01:13.554 INFO  [56486] [kmercounter::do_zipfian_gets@264] DEBUG: thread 7 | actual found 167764900 | cycles per get: 83
+2026-04-18 00:01:13.554 INFO  [56574] [kmercounter::do_zipfian_gets@264] DEBUG: thread 95 | actual found 167764900 | cycles per get: 83
+2026-04-18 00:01:13.554 INFO  [56520] [kmercounter::do_zipfian_gets@264] DEBUG: thread 41 | actual found 167764900 | cycles per get: 81
+2026-04-18 00:01:13.554 INFO  [56485] [kmercounter::do_zipfian_gets@264] DEBUG: thread 6 | actual found 167764900 | cycles per get: 84
+2026-04-18 00:01:13.554 INFO  [56503] [kmercounter::do_zipfian_gets@264] DEBUG: thread 24 | actual found 167764900 | cycles per get: 83
+2026-04-18 00:01:13.554 INFO  [56535] [kmercounter::do_zipfian_gets@264] DEBUG: thread 56 | actual found 167764900 | cycles per get: 83
+2026-04-18 00:01:13.554 INFO  [56498] [kmercounter::do_zipfian_gets@264] DEBUG: thread 19 | actual found 167764900 | cycles per get: 76
+2026-04-18 00:01:13.554 INFO  [56581] [kmercounter::do_zipfian_gets@264] DEBUG: thread 102 | actual found 167764900 | cycles per get: 78
+2026-04-18 00:01:13.554 INFO  [56591] [kmercounter::do_zipfian_gets@264] DEBUG: thread 112 | actual found 167764900 | cycles per get: 83
+2026-04-18 00:01:13.554 INFO  [56481] [kmercounter::do_zipfian_gets@264] DEBUG: thread 2 | actual found 167764900 | cycles per get: 81
+2026-04-18 00:01:13.554 INFO  [56516] [kmercounter::do_zipfian_gets@264] DEBUG: thread 37 | actual found 167764900 | cycles per get: 79
+2026-04-18 00:01:13.554 INFO  [56519] [kmercounter::do_zipfian_gets@264] DEBUG: thread 40 | actual found 167764900 | cycles per get: 84
+2026-04-18 00:01:13.554 INFO  [56487] [kmercounter::do_zipfian_gets@264] DEBUG: thread 8 | actual found 167764900 | cycles per get: 84
+2026-04-18 00:01:13.554 INFO  [56558] [kmercounter::do_zipfian_gets@264] DEBUG: thread 79 | actual found 167764900 | cycles per get: 86
+2026-04-18 00:01:13.554 INFO  [56599] [kmercounter::do_zipfian_gets@264] DEBUG: thread 120 | actual found 167764900 | cycles per get: 86
+2026-04-18 00:01:13.554 INFO  [56532] [kmercounter::do_zipfian_gets@264] DEBUG: thread 53 | actual found 167764900 | cycles per get: 86
+2026-04-18 00:01:13.554 INFO  [56582] [kmercounter::do_zipfian_gets@264] DEBUG: thread 103 | actual found 167764900 | cycles per get: 85
+2026-04-18 00:01:13.554 INFO  [56484] [kmercounter::do_zipfian_gets@264] DEBUG: thread 5 | actual found 167764900 | cycles per get: 81
+2026-04-18 00:01:13.554 INFO  [56598] [kmercounter::do_zipfian_gets@264] DEBUG: thread 119 | actual found 167764900 | cycles per get: 90
+2026-04-18 00:01:13.554 INFO  [56551] [kmercounter::do_zipfian_gets@264] DEBUG: thread 72 | actual found 167764900 | cycles per get: 88
+2026-04-18 00:01:13.554 INFO  [56552] [kmercounter::do_zipfian_gets@264] DEBUG: thread 73 | actual found 167764900 | cycles per get: 84
+2026-04-18 00:01:13.554 INFO  [56526] [kmercounter::do_zipfian_gets@264] DEBUG: thread 47 | actual found 167764900 | cycles per get: 89
+2026-04-18 00:01:13.554 INFO  [56406] [kmercounter::do_zipfian_gets@264] DEBUG: thread 127 | actual found 167764900 | cycles per get: 85
+2026-04-18 00:01:13.554 INFO  [56511] [kmercounter::do_zipfian_gets@264] DEBUG: thread 32 | actual found 167764900 | cycles per get: 84
+2026-04-18 00:01:13.554 INFO  [56510] [kmercounter::do_zipfian_gets@264] DEBUG: thread 31 | actual found 167764900 | cycles per get: 84
+2026-04-18 00:01:13.554 INFO  [56479] [kmercounter::do_zipfian_gets@264] DEBUG: thread 0 | actual found 167764900 | cycles per get: 84
+2026-04-18 00:01:13.554 INFO  [56540] [kmercounter::do_zipfian_gets@264] DEBUG: thread 61 | actual found 167764900 | cycles per get: 87
+2026-04-18 00:01:13.554 INFO  [56585] [kmercounter::do_zipfian_gets@264] DEBUG: thread 106 | actual found 167764900 | cycles per get: 81
+2026-04-18 00:01:13.554 INFO  [56559] [kmercounter::do_zipfian_gets@264] DEBUG: thread 80 | actual found 167764900 | cycles per get: 87
+2026-04-18 00:01:13.554 INFO  [56603] [kmercounter::do_zipfian_gets@264] DEBUG: thread 124 | actual found 167764900 | cycles per get: 82
+2026-04-18 00:01:13.559 INFO  [56479] [kmercounter::ZipfianTest::run@398] get fill 0.400
+2026-04-18 00:01:14.253 INFO  [56479] [kmercounter::free_mem@184] 0x735e80000000 with sz 8589934592 unmapped
+{total_reprobes : 459209347, total_finds : 21474828800, avg_cachelines_accessed : 1.0214}
+{reprobe_factor : 1.0214}
+===============================================================
+average_insert_task_duration : 292050326, total_insert_tas_duration : 292050326
+insert_ops : 214748288, insert_ops_per_run : 214748288
+average_find_task_duration : 152576696, total_find_duration : 15257669614
+find_ops : 21474828800, find_ops_per_run : 214748288
+{ set_cycles : 155, get_cycles : 80, set_mops : 2052.330, get_mops : 3970.148 }
+===============================================================
+/opt/dramhit-fork/build/dramhit --perf_cnt_path ./perf_cnt.txt --perf_def_path ./perf-cpp/perf_list.csv --find_queue 64 --ht-fill 40 --ht-type 3 --insert-factor 1 --read-factor 100 --num-threads 128 --numa-split 1 --no-prefetch 0 --mode 11 --ht-size 536870912 --skew 0.01 --hw-pref 0 --batch-len 16 --relation_r_size 375809638
+2026-04-18 00:01:14.579 INFO  [56722] [initializeLogger@17] ------------------------
+2026-04-18 00:01:14.579 INFO  [56722] [initializeLogger@18] Plog library initialized
+2026-04-18 00:01:14.579 INFO  [56722] [initializeLogger@19] ------------------------
+2026-04-18 00:01:14.579 INFO  [56722] [main@27] Starting dramhit
+2026-04-18 00:01:14.580 INFO  [56722] [MsrHandler::msr_open@46] msr-safe loaded!
+2026-04-18 00:01:14.581 INFO  [56722] [kmercounter::Application::process@769] Hashtable type : Cas HT
+2026-04-18 00:01:14.581 INFO  [56722] [kmercounter::Application::process@810] Dropping the page cache
+2026-04-18 00:01:15.271 INFO  [56722] [kmercounter::init_zipfian_dist@76] HT_TESTS_NUM_INSERTS 268435456
+2026-04-18 00:01:15.271 INFO  [56722] [kmercounter::init_zipfian_dist@81] /opt/zipfian/0.01_536870912_50.bin 0
+2026-04-18 00:01:15.271 INFO  [56722] [kmercounter::init_zipfian_dist@88] Initializing global zipf with skew 0.010000, seed 1776492074307057237
+2026-04-18 00:01:31.648 INFO  [56722] [kmercounter::init_zipfian_dist@93] Zipfian dist generated. size 268435456
+2026-04-18 00:01:31.648 INFO  [56722] [kmercounter::Application::spawn_shard_threads@413] total kv 268435456, num_threads 128, op per thread (per run) 2097152
+2026-04-18 00:01:31.648 INFO  [56766] [kmercounter::calloc_ht@132] opened file /mnt/huge/hugepagefile
+2026-04-18 00:01:31.648 INFO  [56766] [kmercounter::calloc_ht@148] allocating 8 1gb pages bytes 8589934592
+2026-04-18 00:01:31.649 INFO  [56766] [kmercounter::calloc_ht@161] mmap returns 0x7d5500000000
+2026-04-18 00:01:31.649 INFO  [56766] [kmercounter::distribute_mem_to_nodes@122] addr 0x7d5500000000, alloc_sz 8589934592
+2026-04-18 00:01:35.008 INFO  [56766] [KVQ>::CASHashTable@82] Hashtable base: 0x7d5500000000 Hashtable size: 536870912
+2026-04-18 00:01:35.008 INFO  [56766] [KVQ>::CASHashTable@84] queue item sz: 32
+2026-04-18 00:01:42.624 INFO  [56766] [kmercounter::do_zipfian_gets@264] DEBUG: thread 0 | actual found 209708900 | cycles per get: 84
+2026-04-18 00:01:42.624 INFO  [56841] [kmercounter::do_zipfian_gets@264] DEBUG: thread 75 | actual found 209708900 | cycles per get: 85
+2026-04-18 00:01:42.624 INFO  [56769] [kmercounter::do_zipfian_gets@264] DEBUG: thread 3 | actual found 209708900 | cycles per get: 84
+2026-04-18 00:01:42.624 INFO  [56817] [kmercounter::do_zipfian_gets@264] DEBUG: thread 51 | actual found 209708900 | cycles per get: 84
+2026-04-18 00:01:42.624 INFO  [56785] [kmercounter::do_zipfian_gets@264] DEBUG: thread 19 | actual found 209708900 | cycles per get: 84
+2026-04-18 00:01:42.624 INFO  [56775] [kmercounter::do_zipfian_gets@264] DEBUG: thread 9 | actual found 209708900 | cycles per get: 84
+2026-04-18 00:01:42.624 INFO  [56836] [kmercounter::do_zipfian_gets@264] DEBUG: thread 70 | actual found 209708900 | cycles per get: 83
+2026-04-18 00:01:42.624 INFO  [56784] [kmercounter::do_zipfian_gets@264] DEBUG: thread 18 | actual found 209708900 | cycles per get: 84
+2026-04-18 00:01:42.624 INFO  [56779] [kmercounter::do_zipfian_gets@264] DEBUG: thread 13 | actual found 209708900 | cycles per get: 83
+2026-04-18 00:01:42.624 INFO  [56807] [kmercounter::do_zipfian_gets@264] DEBUG: thread 41 | actual found 209708900 | cycles per get: 84
+2026-04-18 00:01:42.624 INFO  [56821] [kmercounter::do_zipfian_gets@264] DEBUG: thread 55 | actual found 209708900 | cycles per get: 84
+2026-04-18 00:01:42.624 INFO  [56853] [kmercounter::do_zipfian_gets@264] DEBUG: thread 87 | actual found 209708900 | cycles per get: 83
+2026-04-18 00:01:42.624 INFO  [56793] [kmercounter::do_zipfian_gets@264] DEBUG: thread 27 | actual found 209708900 | cycles per get: 83
+2026-04-18 00:01:42.624 INFO  [56796] [kmercounter::do_zipfian_gets@264] DEBUG: thread 30 | actual found 209708900 | cycles per get: 84
+2026-04-18 00:01:42.624 INFO  [56771] [kmercounter::do_zipfian_gets@264] DEBUG: thread 5 | actual found 209708900 | cycles per get: 82
+2026-04-18 00:01:42.624 INFO  [56864] [kmercounter::do_zipfian_gets@264] DEBUG: thread 98 | actual found 209708900 | cycles per get: 84
+2026-04-18 00:01:42.624 INFO  [56819] [kmercounter::do_zipfian_gets@264] DEBUG: thread 53 | actual found 209708900 | cycles per get: 84
+2026-04-18 00:01:42.624 INFO  [56794] [kmercounter::do_zipfian_gets@264] DEBUG: thread 28 | actual found 209708900 | cycles per get: 82
+2026-04-18 00:01:42.624 INFO  [56814] [kmercounter::do_zipfian_gets@264] DEBUG: thread 48 | actual found 209708900 | cycles per get: 84
+2026-04-18 00:01:42.624 INFO  [56780] [kmercounter::do_zipfian_gets@264] DEBUG: thread 14 | actual found 209708900 | cycles per get: 83
+2026-04-18 00:01:42.624 INFO  [56801] [kmercounter::do_zipfian_gets@264] DEBUG: thread 35 | actual found 209708900 | cycles per get: 84
+2026-04-18 00:01:42.624 INFO  [56867] [kmercounter::do_zipfian_gets@264] DEBUG: thread 101 | actual found 209708900 | cycles per get: 83
+2026-04-18 00:01:42.624 INFO  [56787] [kmercounter::do_zipfian_gets@264] DEBUG: thread 21 | actual found 209708900 | cycles per get: 84
+2026-04-18 00:01:42.624 INFO  [56789] [kmercounter::do_zipfian_gets@264] DEBUG: thread 23 | actual found 209708900 | cycles per get: 84
+2026-04-18 00:01:42.624 INFO  [56812] [kmercounter::do_zipfian_gets@264] DEBUG: thread 46 | actual found 209708900 | cycles per get: 86
+2026-04-18 00:01:42.624 INFO  [56825] [kmercounter::do_zipfian_gets@264] DEBUG: thread 59 | actual found 209708900 | cycles per get: 84
+2026-04-18 00:01:42.624 INFO  [56823] [kmercounter::do_zipfian_gets@264] DEBUG: thread 57 | actual found 209708900 | cycles per get: 82
+2026-04-18 00:01:42.624 INFO  [56889] [kmercounter::do_zipfian_gets@264] DEBUG: thread 123 | actual found 209708900 | cycles per get: 85
+2026-04-18 00:01:42.624 INFO  [56842] [kmercounter::do_zipfian_gets@264] DEBUG: thread 76 | actual found 209708900 | cycles per get: 85
+2026-04-18 00:01:42.624 INFO  [56870] [kmercounter::do_zipfian_gets@264] DEBUG: thread 104 | actual found 209708900 | cycles per get: 86
+2026-04-18 00:01:42.624 INFO  [56834] [kmercounter::do_zipfian_gets@264] DEBUG: thread 68 | actual found 209708900 | cycles per get: 83
+2026-04-18 00:01:42.624 INFO  [56862] [kmercounter::do_zipfian_gets@264] DEBUG: thread 96 | actual found 209708900 | cycles per get: 85
+2026-04-18 00:01:42.624 INFO  [56882] [kmercounter::do_zipfian_gets@264] DEBUG: thread 116 | actual found 209708900 | cycles per get: 86
+2026-04-18 00:01:42.624 INFO  [56722] [kmercounter::do_zipfian_gets@264] DEBUG: thread 127 | actual found 209708900 | cycles per get: 86
+2026-04-18 00:01:42.624 INFO  [56852] [kmercounter::do_zipfian_gets@264] DEBUG: thread 86 | actual found 209708900 | cycles per get: 86
+2026-04-18 00:01:42.624 INFO  [56839] [kmercounter::do_zipfian_gets@264] DEBUG: thread 73 | actual found 209708900 | cycles per get: 83
+2026-04-18 00:01:42.624 INFO  [56891] [kmercounter::do_zipfian_gets@264] DEBUG: thread 125 | actual found 209708900 | cycles per get: 86
+2026-04-18 00:01:42.624 INFO  [56797] [kmercounter::do_zipfian_gets@264] DEBUG: thread 31 | actual found 209708900 | cycles per get: 86
+2026-04-18 00:01:42.624 INFO  [56806] [kmercounter::do_zipfian_gets@264] DEBUG: thread 40 | actual found 209708900 | cycles per get: 85
+2026-04-18 00:01:42.624 INFO  [56811] [kmercounter::do_zipfian_gets@264] DEBUG: thread 45 | actual found 209708900 | cycles per get: 86
+2026-04-18 00:01:42.624 INFO  [56822] [kmercounter::do_zipfian_gets@264] DEBUG: thread 56 | actual found 209708900 | cycles per get: 84
+2026-04-18 00:01:42.624 INFO  [56881] [kmercounter::do_zipfian_gets@264] DEBUG: thread 115 | actual found 209708900 | cycles per get: 86
+2026-04-18 00:01:42.624 INFO  [56770] [kmercounter::do_zipfian_gets@264] DEBUG: thread 4 | actual found 209708900 | cycles per get: 86
+2026-04-18 00:01:42.624 INFO  [56883] [kmercounter::do_zipfian_gets@264] DEBUG: thread 117 | actual found 209708900 | cycles per get: 86
+2026-04-18 00:01:42.624 INFO  [56783] [kmercounter::do_zipfian_gets@264] DEBUG: thread 17 | actual found 209708900 | cycles per get: 84
+2026-04-18 00:01:42.624 INFO  [56815] [kmercounter::do_zipfian_gets@264] DEBUG: thread 49 | actual found 209708900 | cycles per get: 84
+2026-04-18 00:01:42.624 INFO  [56799] [kmercounter::do_zipfian_gets@264] DEBUG: thread 33 | actual found 209708900 | cycles per get: 85
+2026-04-18 00:01:42.624 INFO  [56874] [kmercounter::do_zipfian_gets@264] DEBUG: thread 108 | actual found 209708900 | cycles per get: 85
+2026-04-18 00:01:42.624 INFO  [56827] [kmercounter::do_zipfian_gets@264] DEBUG: thread 61 | actual found 209708900 | cycles per get: 86
+2026-04-18 00:01:42.624 INFO  [56790] [kmercounter::do_zipfian_gets@264] DEBUG: thread 24 | actual found 209708900 | cycles per get: 84
+2026-04-18 00:01:42.624 INFO  [56838] [kmercounter::do_zipfian_gets@264] DEBUG: thread 72 | actual found 209708900 | cycles per get: 85
+2026-04-18 00:01:42.624 INFO  [56833] [kmercounter::do_zipfian_gets@264] DEBUG: thread 67 | actual found 209708900 | cycles per get: 86
+2026-04-18 00:01:42.624 INFO  [56772] [kmercounter::do_zipfian_gets@264] DEBUG: thread 6 | actual found 209708900 | cycles per get: 84
+2026-04-18 00:01:42.624 INFO  [56767] [kmercounter::do_zipfian_gets@264] DEBUG: thread 1 | actual found 209708900 | cycles per get: 86
+2026-04-18 00:01:42.624 INFO  [56816] [kmercounter::do_zipfian_gets@264] DEBUG: thread 50 | actual found 209708900 | cycles per get: 84
+2026-04-18 00:01:42.624 INFO  [56795] [kmercounter::do_zipfian_gets@264] DEBUG: thread 29 | actual found 209708900 | cycles per get: 86
+2026-04-18 00:01:42.624 INFO  [56863] [kmercounter::do_zipfian_gets@264] DEBUG: thread 97 | actual found 209708900 | cycles per get: 86
+2026-04-18 00:01:42.624 INFO  [56776] [kmercounter::do_zipfian_gets@264] DEBUG: thread 10 | actual found 209708900 | cycles per get: 86
+2026-04-18 00:01:42.624 INFO  [56820] [kmercounter::do_zipfian_gets@264] DEBUG: thread 54 | actual found 209708900 | cycles per get: 84
+2026-04-18 00:01:42.624 INFO  [56778] [kmercounter::do_zipfian_gets@264] DEBUG: thread 12 | actual found 209708900 | cycles per get: 84
+2026-04-18 00:01:42.624 INFO  [56865] [kmercounter::do_zipfian_gets@264] DEBUG: thread 99 | actual found 209708900 | cycles per get: 86
+2026-04-18 00:01:42.624 INFO  [56803] [kmercounter::do_zipfian_gets@264] DEBUG: thread 37 | actual found 209708900 | cycles per get: 86
+2026-04-18 00:01:42.624 INFO  [56832] [kmercounter::do_zipfian_gets@264] DEBUG: thread 66 | actual found 209708900 | cycles per get: 86
+2026-04-18 00:01:42.624 INFO  [56804] [kmercounter::do_zipfian_gets@264] DEBUG: thread 38 | actual found 209708900 | cycles per get: 86
+2026-04-18 00:01:42.624 INFO  [56777] [kmercounter::do_zipfian_gets@264] DEBUG: thread 11 | actual found 209708900 | cycles per get: 85
+2026-04-18 00:01:42.624 INFO  [56773] [kmercounter::do_zipfian_gets@264] DEBUG: thread 7 | actual found 209708900 | cycles per get: 85
+2026-04-18 00:01:42.624 INFO  [56792] [kmercounter::do_zipfian_gets@264] DEBUG: thread 26 | actual found 209708900 | cycles per get: 84
+2026-04-18 00:01:42.624 INFO  [56831] [kmercounter::do_zipfian_gets@264] DEBUG: thread 65 | actual found 209708900 | cycles per get: 86
+2026-04-18 00:01:42.624 INFO  [56788] [kmercounter::do_zipfian_gets@264] DEBUG: thread 22 | actual found 209708900 | cycles per get: 84
+2026-04-18 00:01:42.624 INFO  [56808] [kmercounter::do_zipfian_gets@264] DEBUG: thread 42 | actual found 209708900 | cycles per get: 86
+2026-04-18 00:01:42.624 INFO  [56892] [kmercounter::do_zipfian_gets@264] DEBUG: thread 126 | actual found 209708900 | cycles per get: 86
+2026-04-18 00:01:42.624 INFO  [56781] [kmercounter::do_zipfian_gets@264] DEBUG: thread 15 | actual found 209708900 | cycles per get: 84
+2026-04-18 00:01:42.624 INFO  [56843] [kmercounter::do_zipfian_gets@264] DEBUG: thread 77 | actual found 209708900 | cycles per get: 84
+2026-04-18 00:01:42.624 INFO  [56875] [kmercounter::do_zipfian_gets@264] DEBUG: thread 109 | actual found 209708900 | cycles per get: 84
+2026-04-18 00:01:42.624 INFO  [56818] [kmercounter::do_zipfian_gets@264] DEBUG: thread 52 | actual found 209708900 | cycles per get: 85
+2026-04-18 00:01:42.624 INFO  [56869] [kmercounter::do_zipfian_gets@264] DEBUG: thread 103 | actual found 209708900 | cycles per get: 86
+2026-04-18 00:01:42.624 INFO  [56879] [kmercounter::do_zipfian_gets@264] DEBUG: thread 113 | actual found 209708900 | cycles per get: 85
+2026-04-18 00:01:42.624 INFO  [56810] [kmercounter::do_zipfian_gets@264] DEBUG: thread 44 | actual found 209708900 | cycles per get: 84
+2026-04-18 00:01:42.624 INFO  [56888] [kmercounter::do_zipfian_gets@264] DEBUG: thread 122 | actual found 209708900 | cycles per get: 85
+2026-04-18 00:01:42.624 INFO  [56813] [kmercounter::do_zipfian_gets@264] DEBUG: thread 47 | actual found 209708900 | cycles per get: 84
+2026-04-18 00:01:42.624 INFO  [56828] [kmercounter::do_zipfian_gets@264] DEBUG: thread 62 | actual found 209708900 | cycles per get: 86
+2026-04-18 00:01:42.624 INFO  [56861] [kmercounter::do_zipfian_gets@264] DEBUG: thread 95 | actual found 209708900 | cycles per get: 86
+2026-04-18 00:01:42.624 INFO  [56878] [kmercounter::do_zipfian_gets@264] DEBUG: thread 112 | actual found 209708900 | cycles per get: 85
+2026-04-18 00:01:42.624 INFO  [56860] [kmercounter::do_zipfian_gets@264] DEBUG: thread 94 | actual found 209708900 | cycles per get: 85
+2026-04-18 00:01:42.624 INFO  [56890] [kmercounter::do_zipfian_gets@264] DEBUG: thread 124 | actual found 209708900 | cycles per get: 86
+2026-04-18 00:01:42.624 INFO  [56830] [kmercounter::do_zipfian_gets@264] DEBUG: thread 64 | actual found 209708900 | cycles per get: 88
+2026-04-18 00:01:42.624 INFO  [56887] [kmercounter::do_zipfian_gets@264] DEBUG: thread 121 | actual found 209708900 | cycles per get: 87
+2026-04-18 00:01:42.624 INFO  [56880] [kmercounter::do_zipfian_gets@264] DEBUG: thread 114 | actual found 209708900 | cycles per get: 85
+2026-04-18 00:01:42.624 INFO  [56840] [kmercounter::do_zipfian_gets@264] DEBUG: thread 74 | actual found 209708900 | cycles per get: 87
+2026-04-18 00:01:42.624 INFO  [56871] [kmercounter::do_zipfian_gets@264] DEBUG: thread 105 | actual found 209708900 | cycles per get: 86
+2026-04-18 00:01:42.624 INFO  [56857] [kmercounter::do_zipfian_gets@264] DEBUG: thread 91 | actual found 209708900 | cycles per get: 87
+2026-04-18 00:01:42.624 INFO  [56844] [kmercounter::do_zipfian_gets@264] DEBUG: thread 78 | actual found 209708900 | cycles per get: 88
+2026-04-18 00:01:42.624 INFO  [56854] [kmercounter::do_zipfian_gets@264] DEBUG: thread 88 | actual found 209708900 | cycles per get: 85
+2026-04-18 00:01:42.624 INFO  [56802] [kmercounter::do_zipfian_gets@264] DEBUG: thread 36 | actual found 209708900 | cycles per get: 85
+2026-04-18 00:01:42.624 INFO  [56774] [kmercounter::do_zipfian_gets@264] DEBUG: thread 8 | actual found 209708900 | cycles per get: 88
+2026-04-18 00:01:42.624 INFO  [56872] [kmercounter::do_zipfian_gets@264] DEBUG: thread 106 | actual found 209708900 | cycles per get: 87
+2026-04-18 00:01:42.624 INFO  [56846] [kmercounter::do_zipfian_gets@264] DEBUG: thread 80 | actual found 209708900 | cycles per get: 85
+2026-04-18 00:01:42.624 INFO  [56837] [kmercounter::do_zipfian_gets@264] DEBUG: thread 71 | actual found 209708900 | cycles per get: 86
+2026-04-18 00:01:42.624 INFO  [56851] [kmercounter::do_zipfian_gets@264] DEBUG: thread 85 | actual found 209708900 | cycles per get: 85
+2026-04-18 00:01:42.624 INFO  [56826] [kmercounter::do_zipfian_gets@264] DEBUG: thread 60 | actual found 209708900 | cycles per get: 87
+2026-04-18 00:01:42.624 INFO  [56849] [kmercounter::do_zipfian_gets@264] DEBUG: thread 83 | actual found 209708900 | cycles per get: 85
+2026-04-18 00:01:42.624 INFO  [56855] [kmercounter::do_zipfian_gets@264] DEBUG: thread 89 | actual found 209708900 | cycles per get: 86
+2026-04-18 00:01:42.624 INFO  [56884] [kmercounter::do_zipfian_gets@264] DEBUG: thread 118 | actual found 209708900 | cycles per get: 89
+2026-04-18 00:01:42.624 INFO  [56845] [kmercounter::do_zipfian_gets@264] DEBUG: thread 79 | actual found 209708900 | cycles per get: 85
+2026-04-18 00:01:42.624 INFO  [56835] [kmercounter::do_zipfian_gets@264] DEBUG: thread 69 | actual found 209708900 | cycles per get: 87
+2026-04-18 00:01:42.624 INFO  [56824] [kmercounter::do_zipfian_gets@264] DEBUG: thread 58 | actual found 209708900 | cycles per get: 84
+2026-04-18 00:01:42.624 INFO  [56798] [kmercounter::do_zipfian_gets@264] DEBUG: thread 32 | actual found 209708900 | cycles per get: 86
+2026-04-18 00:01:42.624 INFO  [56866] [kmercounter::do_zipfian_gets@264] DEBUG: thread 100 | actual found 209708900 | cycles per get: 86
+2026-04-18 00:01:42.624 INFO  [56859] [kmercounter::do_zipfian_gets@264] DEBUG: thread 93 | actual found 209708900 | cycles per get: 85
+2026-04-18 00:01:42.624 INFO  [56886] [kmercounter::do_zipfian_gets@264] DEBUG: thread 120 | actual found 209708900 | cycles per get: 87
+2026-04-18 00:01:42.624 INFO  [56848] [kmercounter::do_zipfian_gets@264] DEBUG: thread 82 | actual found 209708900 | cycles per get: 85
+2026-04-18 00:01:42.624 INFO  [56805] [kmercounter::do_zipfian_gets@264] DEBUG: thread 39 | actual found 209708900 | cycles per get: 85
+2026-04-18 00:01:42.624 INFO  [56847] [kmercounter::do_zipfian_gets@264] DEBUG: thread 81 | actual found 209708900 | cycles per get: 85
+2026-04-18 00:01:42.624 INFO  [56800] [kmercounter::do_zipfian_gets@264] DEBUG: thread 34 | actual found 209708900 | cycles per get: 86
+2026-04-18 00:01:42.624 INFO  [56850] [kmercounter::do_zipfian_gets@264] DEBUG: thread 84 | actual found 209708900 | cycles per get: 84
+2026-04-18 00:01:42.624 INFO  [56873] [kmercounter::do_zipfian_gets@264] DEBUG: thread 107 | actual found 209708900 | cycles per get: 85
+2026-04-18 00:01:42.624 INFO  [56768] [kmercounter::do_zipfian_gets@264] DEBUG: thread 2 | actual found 209708900 | cycles per get: 86
+2026-04-18 00:01:42.624 INFO  [56829] [kmercounter::do_zipfian_gets@264] DEBUG: thread 63 | actual found 209708900 | cycles per get: 87
+2026-04-18 00:01:42.624 INFO  [56877] [kmercounter::do_zipfian_gets@264] DEBUG: thread 111 | actual found 209708900 | cycles per get: 85
+2026-04-18 00:01:42.624 INFO  [56786] [kmercounter::do_zipfian_gets@264] DEBUG: thread 20 | actual found 209708900 | cycles per get: 85
+2026-04-18 00:01:42.624 INFO  [56809] [kmercounter::do_zipfian_gets@264] DEBUG: thread 43 | actual found 209708900 | cycles per get: 85
+2026-04-18 00:01:42.624 INFO  [56856] [kmercounter::do_zipfian_gets@264] DEBUG: thread 90 | actual found 209708900 | cycles per get: 87
+2026-04-18 00:01:42.624 INFO  [56868] [kmercounter::do_zipfian_gets@264] DEBUG: thread 102 | actual found 209708900 | cycles per get: 87
+2026-04-18 00:01:42.624 INFO  [56791] [kmercounter::do_zipfian_gets@264] DEBUG: thread 25 | actual found 209708900 | cycles per get: 86
+2026-04-18 00:01:42.624 INFO  [56885] [kmercounter::do_zipfian_gets@264] DEBUG: thread 119 | actual found 209708900 | cycles per get: 87
+2026-04-18 00:01:42.624 INFO  [56782] [kmercounter::do_zipfian_gets@264] DEBUG: thread 16 | actual found 209708900 | cycles per get: 84
+2026-04-18 00:01:42.624 INFO  [56876] [kmercounter::do_zipfian_gets@264] DEBUG: thread 110 | actual found 209708900 | cycles per get: 82
+2026-04-18 00:01:42.624 INFO  [56858] [kmercounter::do_zipfian_gets@264] DEBUG: thread 92 | actual found 209708900 | cycles per get: 86
+2026-04-18 00:01:42.630 INFO  [56766] [kmercounter::ZipfianTest::run@398] get fill 0.500
+2026-04-18 00:01:43.333 INFO  [56766] [kmercounter::free_mem@184] 0x7d5500000000 with sz 8589934592 unmapped
+{total_reprobes : 1190494519, total_finds : 26843545600, avg_cachelines_accessed : 1.0443}
+{reprobe_factor : 1.0443}
+===============================================================
+average_insert_task_duration : 370149752, total_insert_tas_duration : 370149752
+insert_ops : 268435456, insert_ops_per_run : 268435456
+average_find_task_duration : 186825605, total_find_duration : 18682560594
+find_ops : 26843545600, find_ops_per_run : 268435456
+{ set_cycles : 162, get_cycles : 85, set_mops : 1970.615, get_mops : 3738.084 }
+===============================================================
+/opt/dramhit-fork/build/dramhit --perf_cnt_path ./perf_cnt.txt --perf_def_path ./perf-cpp/perf_list.csv --find_queue 64 --ht-fill 50 --ht-type 3 --insert-factor 1 --read-factor 100 --num-threads 128 --numa-split 1 --no-prefetch 0 --mode 11 --ht-size 536870912 --skew 0.01 --hw-pref 0 --batch-len 16 --relation_r_size 375809638
+2026-04-18 00:01:43.661 INFO  [56978] [initializeLogger@17] ------------------------
+2026-04-18 00:01:43.661 INFO  [56978] [initializeLogger@18] Plog library initialized
+2026-04-18 00:01:43.661 INFO  [56978] [initializeLogger@19] ------------------------
+2026-04-18 00:01:43.661 INFO  [56978] [main@27] Starting dramhit
+2026-04-18 00:01:43.662 INFO  [56978] [MsrHandler::msr_open@46] msr-safe loaded!
+2026-04-18 00:01:43.663 INFO  [56978] [kmercounter::Application::process@769] Hashtable type : Cas HT
+2026-04-18 00:01:43.663 INFO  [56978] [kmercounter::Application::process@810] Dropping the page cache
+2026-04-18 00:01:44.458 INFO  [56978] [kmercounter::init_zipfian_dist@76] HT_TESTS_NUM_INSERTS 322122547
+2026-04-18 00:01:44.458 INFO  [56978] [kmercounter::init_zipfian_dist@81] /opt/zipfian/0.01_536870912_60.bin 0
+2026-04-18 00:01:44.458 INFO  [56978] [kmercounter::init_zipfian_dist@88] Initializing global zipf with skew 0.010000, seed 1776492103391179177
+2026-04-18 00:02:04.120 INFO  [56978] [kmercounter::init_zipfian_dist@93] Zipfian dist generated. size 322122547
+2026-04-18 00:02:04.120 INFO  [56978] [kmercounter::Application::spawn_shard_threads@413] total kv 322122547, num_threads 128, op per thread (per run) 2516582
+2026-04-18 00:02:04.120 INFO  [57057] [kmercounter::calloc_ht@132] opened file /mnt/huge/hugepagefile
+2026-04-18 00:02:04.120 INFO  [57057] [kmercounter::calloc_ht@148] allocating 8 1gb pages bytes 8589934592
+2026-04-18 00:02:04.120 INFO  [57057] [kmercounter::calloc_ht@161] mmap returns 0x7917c0000000
+2026-04-18 00:02:04.121 INFO  [57057] [kmercounter::distribute_mem_to_nodes@122] addr 0x7917c0000000, alloc_sz 8589934592
+2026-04-18 00:02:07.485 INFO  [57057] [KVQ>::CASHashTable@82] Hashtable base: 0x7917c0000000 Hashtable size: 536870912
+2026-04-18 00:02:07.485 INFO  [57057] [KVQ>::CASHashTable@84] queue item sz: 32
+2026-04-18 00:02:17.849 INFO  [57111] [kmercounter::do_zipfian_gets@264] DEBUG: thread 54 | actual found 251651300 | cycles per get: 79
+2026-04-18 00:02:17.850 INFO  [57114] [kmercounter::do_zipfian_gets@264] DEBUG: thread 57 | actual found 251651300 | cycles per get: 89
+2026-04-18 00:02:17.850 INFO  [57069] [kmercounter::do_zipfian_gets@264] DEBUG: thread 12 | actual found 251651300 | cycles per get: 97
+2026-04-18 00:02:17.849 INFO  [57127] [kmercounter::do_zipfian_gets@264] DEBUG: thread 70 | actual found 251651300 | cycles per get: 85
+2026-04-18 00:02:17.849 INFO  [57147] [kmercounter::do_zipfian_gets@264] DEBUG: thread 90 | actual found 251651300 | cycles per get: 84
+2026-04-18 00:02:17.849 INFO  [57138] [kmercounter::do_zipfian_gets@264] DEBUG: thread 81 | actual found 251651300 | cycles per get: 85
+2026-04-18 00:02:17.849 INFO  [57154] [kmercounter::do_zipfian_gets@264] DEBUG: thread 97 | actual found 251651300 | cycles per get: 84
+2026-04-18 00:02:17.849 INFO  [57103] [kmercounter::do_zipfian_gets@264] DEBUG: thread 46 | actual found 251651300 | cycles per get: 83
+2026-04-18 00:02:17.849 INFO  [57074] [kmercounter::do_zipfian_gets@264] DEBUG: thread 17 | actual found 251651300 | cycles per get: 81
+2026-04-18 00:02:17.850 INFO  [57166] [kmercounter::do_zipfian_gets@264] DEBUG: thread 109 | actual found 251651300 | cycles per get: 87
+2026-04-18 00:02:17.849 INFO  [57096] [kmercounter::do_zipfian_gets@264] DEBUG: thread 39 | actual found 251651300 | cycles per get: 73
+2026-04-18 00:02:17.849 INFO  [57112] [kmercounter::do_zipfian_gets@264] DEBUG: thread 55 | actual found 251651300 | cycles per get: 85
+2026-04-18 00:02:17.849 INFO  [57151] [kmercounter::do_zipfian_gets@264] DEBUG: thread 94 | actual found 251651300 | cycles per get: 82
+2026-04-18 00:02:17.849 INFO  [57126] [kmercounter::do_zipfian_gets@264] DEBUG: thread 69 | actual found 251651300 | cycles per get: 85
+2026-04-18 00:02:17.850 INFO  [57182] [kmercounter::do_zipfian_gets@264] DEBUG: thread 125 | actual found 251651300 | cycles per get: 88
+2026-04-18 00:02:17.850 INFO  [57158] [kmercounter::do_zipfian_gets@264] DEBUG: thread 101 | actual found 251651300 | cycles per get: 87
+2026-04-18 00:02:17.850 INFO  [57171] [kmercounter::do_zipfian_gets@264] DEBUG: thread 114 | actual found 251651300 | cycles per get: 87
+2026-04-18 00:02:17.849 INFO  [57164] [kmercounter::do_zipfian_gets@264] DEBUG: thread 107 | actual found 251651300 | cycles per get: 87
+2026-04-18 00:02:17.850 INFO  [57075] [kmercounter::do_zipfian_gets@264] DEBUG: thread 18 | actual found 251651300 | cycles per get: 86
+2026-04-18 00:02:17.850 INFO  [57107] [kmercounter::do_zipfian_gets@264] DEBUG: thread 50 | actual found 251651300 | cycles per get: 87
+2026-04-18 00:02:17.850 INFO  [57092] [kmercounter::do_zipfian_gets@264] DEBUG: thread 35 | actual found 251651300 | cycles per get: 87
+2026-04-18 00:02:17.850 INFO  [57174] [kmercounter::do_zipfian_gets@264] DEBUG: thread 117 | actual found 251651300 | cycles per get: 88
+2026-04-18 00:02:17.849 INFO  [57140] [kmercounter::do_zipfian_gets@264] DEBUG: thread 83 | actual found 251651300 | cycles per get: 86
+2026-04-18 00:02:17.849 INFO  [57142] [kmercounter::do_zipfian_gets@264] DEBUG: thread 85 | actual found 251651300 | cycles per get: 85
+2026-04-18 00:02:17.849 INFO  [57078] [kmercounter::do_zipfian_gets@264] DEBUG: thread 21 | actual found 251651300 | cycles per get: 86
+2026-04-18 00:02:17.850 INFO  [57066] [kmercounter::do_zipfian_gets@264] DEBUG: thread 9 | actual found 251651300 | cycles per get: 88
+2026-04-18 00:02:17.850 INFO  [57098] [kmercounter::do_zipfian_gets@264] DEBUG: thread 41 | actual found 251651300 | cycles per get: 88
+2026-04-18 00:02:17.850 INFO  [57136] [kmercounter::do_zipfian_gets@264] DEBUG: thread 79 | actual found 251651300 | cycles per get: 88
+2026-04-18 00:02:17.850 INFO  [57063] [kmercounter::do_zipfian_gets@264] DEBUG: thread 6 | actual found 251651300 | cycles per get: 88
+2026-04-18 00:02:17.850 INFO  [57170] [kmercounter::do_zipfian_gets@264] DEBUG: thread 113 | actual found 251651300 | cycles per get: 88
+2026-04-18 00:02:17.850 INFO  [57172] [kmercounter::do_zipfian_gets@264] DEBUG: thread 115 | actual found 251651300 | cycles per get: 88
+2026-04-18 00:02:17.849 INFO  [57148] [kmercounter::do_zipfian_gets@264] DEBUG: thread 91 | actual found 251651300 | cycles per get: 85
+2026-04-18 00:02:17.849 INFO  [57134] [kmercounter::do_zipfian_gets@264] DEBUG: thread 77 | actual found 251651300 | cycles per get: 85
+2026-04-18 00:02:17.850 INFO  [57108] [kmercounter::do_zipfian_gets@264] DEBUG: thread 51 | actual found 251651300 | cycles per get: 88
+2026-04-18 00:02:17.850 INFO  [57156] [kmercounter::do_zipfian_gets@264] DEBUG: thread 99 | actual found 251651300 | cycles per get: 88
+2026-04-18 00:02:17.850 INFO  [57083] [kmercounter::do_zipfian_gets@264] DEBUG: thread 26 | actual found 251651300 | cycles per get: 88
+2026-04-18 00:02:17.849 INFO  [57179] [kmercounter::do_zipfian_gets@264] DEBUG: thread 122 | actual found 251651300 | cycles per get: 87
+2026-04-18 00:02:17.849 INFO  [57135] [kmercounter::do_zipfian_gets@264] DEBUG: thread 78 | actual found 251651300 | cycles per get: 86
+2026-04-18 00:02:17.850 INFO  [57167] [kmercounter::do_zipfian_gets@264] DEBUG: thread 110 | actual found 251651300 | cycles per get: 88
+2026-04-18 00:02:17.850 INFO  [57176] [kmercounter::do_zipfian_gets@264] DEBUG: thread 119 | actual found 251651300 | cycles per get: 88
+2026-04-18 00:02:17.850 INFO  [57104] [kmercounter::do_zipfian_gets@264] DEBUG: thread 47 | actual found 251651300 | cycles per get: 87
+2026-04-18 00:02:17.849 INFO  [57144] [kmercounter::do_zipfian_gets@264] DEBUG: thread 87 | actual found 251651300 | cycles per get: 86
+2026-04-18 00:02:17.850 INFO  [57128] [kmercounter::do_zipfian_gets@264] DEBUG: thread 71 | actual found 251651300 | cycles per get: 88
+2026-04-18 00:02:17.850 INFO  [57076] [kmercounter::do_zipfian_gets@264] DEBUG: thread 19 | actual found 251651300 | cycles per get: 88
+2026-04-18 00:02:17.850 INFO  [57084] [kmercounter::do_zipfian_gets@264] DEBUG: thread 27 | actual found 251651300 | cycles per get: 87
+2026-04-18 00:02:17.849 INFO  [57130] [kmercounter::do_zipfian_gets@264] DEBUG: thread 73 | actual found 251651300 | cycles per get: 85
+2026-04-18 00:02:17.850 INFO  [57124] [kmercounter::do_zipfian_gets@264] DEBUG: thread 67 | actual found 251651300 | cycles per get: 86
+2026-04-18 00:02:17.850 INFO  [57162] [kmercounter::do_zipfian_gets@264] DEBUG: thread 105 | actual found 251651300 | cycles per get: 87
+2026-04-18 00:02:17.849 INFO  [57123] [kmercounter::do_zipfian_gets@264] DEBUG: thread 66 | actual found 251651300 | cycles per get: 83
+2026-04-18 00:02:17.850 INFO  [57116] [kmercounter::do_zipfian_gets@264] DEBUG: thread 59 | actual found 251651300 | cycles per get: 87
+2026-04-18 00:02:17.850 INFO  [57180] [kmercounter::do_zipfian_gets@264] DEBUG: thread 123 | actual found 251651300 | cycles per get: 87
+2026-04-18 00:02:17.850 INFO  [57102] [kmercounter::do_zipfian_gets@264] DEBUG: thread 45 | actual found 251651300 | cycles per get: 88
+2026-04-18 00:02:17.850 INFO  [57080] [kmercounter::do_zipfian_gets@264] DEBUG: thread 23 | actual found 251651300 | cycles per get: 88
+2026-04-18 00:02:17.850 INFO  [57070] [kmercounter::do_zipfian_gets@264] DEBUG: thread 13 | actual found 251651300 | cycles per get: 88
+2026-04-18 00:02:17.850 INFO  [57115] [kmercounter::do_zipfian_gets@264] DEBUG: thread 58 | actual found 251651300 | cycles per get: 89
+2026-04-18 00:02:17.850 INFO  [57060] [kmercounter::do_zipfian_gets@264] DEBUG: thread 3 | actual found 251651300 | cycles per get: 87
+2026-04-18 00:02:17.850 INFO  [57110] [kmercounter::do_zipfian_gets@264] DEBUG: thread 53 | actual found 251651300 | cycles per get: 88
+2026-04-18 00:02:17.849 INFO  [57150] [kmercounter::do_zipfian_gets@264] DEBUG: thread 93 | actual found 251651300 | cycles per get: 85
+2026-04-18 00:02:17.849 INFO  [57139] [kmercounter::do_zipfian_gets@264] DEBUG: thread 82 | actual found 251651300 | cycles per get: 85
+2026-04-18 00:02:17.850 INFO  [57087] [kmercounter::do_zipfian_gets@264] DEBUG: thread 30 | actual found 251651300 | cycles per get: 88
+2026-04-18 00:02:17.849 INFO  [57061] [kmercounter::do_zipfian_gets@264] DEBUG: thread 4 | actual found 251651300 | cycles per get: 85
+2026-04-18 00:02:17.850 INFO  [57160] [kmercounter::do_zipfian_gets@264] DEBUG: thread 103 | actual found 251651300 | cycles per get: 89
+2026-04-18 00:02:17.850 INFO  [57168] [kmercounter::do_zipfian_gets@264] DEBUG: thread 111 | actual found 251651300 | cycles per get: 88
+2026-04-18 00:02:17.850 INFO  [57072] [kmercounter::do_zipfian_gets@264] DEBUG: thread 15 | actual found 251651300 | cycles per get: 89
+2026-04-18 00:02:17.850 INFO  [57095] [kmercounter::do_zipfian_gets@264] DEBUG: thread 38 | actual found 251651300 | cycles per get: 89
+2026-04-18 00:02:17.850 INFO  [57101] [kmercounter::do_zipfian_gets@264] DEBUG: thread 44 | actual found 251651300 | cycles per get: 88
+2026-04-18 00:02:17.850 INFO  [57120] [kmercounter::do_zipfian_gets@264] DEBUG: thread 63 | actual found 251651300 | cycles per get: 89
+2026-04-18 00:02:17.850 INFO  [57175] [kmercounter::do_zipfian_gets@264] DEBUG: thread 118 | actual found 251651300 | cycles per get: 90
+2026-04-18 00:02:17.850 INFO  [57119] [kmercounter::do_zipfian_gets@264] DEBUG: thread 62 | actual found 251651300 | cycles per get: 88
+2026-04-18 00:02:17.850 INFO  [57091] [kmercounter::do_zipfian_gets@264] DEBUG: thread 34 | actual found 251651300 | cycles per get: 89
+2026-04-18 00:02:17.850 INFO  [57146] [kmercounter::do_zipfian_gets@264] DEBUG: thread 89 | actual found 251651300 | cycles per get: 88
+2026-04-18 00:02:17.850 INFO  [57137] [kmercounter::do_zipfian_gets@264] DEBUG: thread 80 | actual found 251651300 | cycles per get: 88
+2026-04-18 00:02:17.850 INFO  [57145] [kmercounter::do_zipfian_gets@264] DEBUG: thread 88 | actual found 251651300 | cycles per get: 89
+2026-04-18 00:02:17.850 INFO  [57131] [kmercounter::do_zipfian_gets@264] DEBUG: thread 74 | actual found 251651300 | cycles per get: 89
+2026-04-18 00:02:17.850 INFO  [57094] [kmercounter::do_zipfian_gets@264] DEBUG: thread 37 | actual found 251651300 | cycles per get: 91
+2026-04-18 00:02:17.850 INFO  [57058] [kmercounter::do_zipfian_gets@264] DEBUG: thread 1 | actual found 251651300 | cycles per get: 90
+2026-04-18 00:02:17.850 INFO  [57159] [kmercounter::do_zipfian_gets@264] DEBUG: thread 102 | actual found 251651300 | cycles per get: 87
+2026-04-18 00:02:17.850 INFO  [57090] [kmercounter::do_zipfian_gets@264] DEBUG: thread 33 | actual found 251651300 | cycles per get: 89
+2026-04-18 00:02:17.850 INFO  [56978] [kmercounter::do_zipfian_gets@264] DEBUG: thread 127 | actual found 251651300 | cycles per get: 90
+2026-04-18 00:02:17.850 INFO  [57155] [kmercounter::do_zipfian_gets@264] DEBUG: thread 98 | actual found 251651300 | cycles per get: 89
+2026-04-18 00:02:17.850 INFO  [57163] [kmercounter::do_zipfian_gets@264] DEBUG: thread 106 | actual found 251651300 | cycles per get: 91
+2026-04-18 00:02:17.850 INFO  [57118] [kmercounter::do_zipfian_gets@264] DEBUG: thread 61 | actual found 251651300 | cycles per get: 90
+2026-04-18 00:02:17.850 INFO  [57133] [kmercounter::do_zipfian_gets@264] DEBUG: thread 76 | actual found 251651300 | cycles per get: 89
+2026-04-18 00:02:17.849 INFO  [57132] [kmercounter::do_zipfian_gets@264] DEBUG: thread 75 | actual found 251651300 | cycles per get: 84
+2026-04-18 00:02:17.850 INFO  [57067] [kmercounter::do_zipfian_gets@264] DEBUG: thread 10 | actual found 251651300 | cycles per get: 90
+2026-04-18 00:02:17.850 INFO  [57099] [kmercounter::do_zipfian_gets@264] DEBUG: thread 42 | actual found 251651300 | cycles per get: 90
+2026-04-18 00:02:17.850 INFO  [57100] [kmercounter::do_zipfian_gets@264] DEBUG: thread 43 | actual found 251651300 | cycles per get: 90
+2026-04-18 00:02:17.850 INFO  [57105] [kmercounter::do_zipfian_gets@264] DEBUG: thread 48 | actual found 251651300 | cycles per get: 91
+2026-04-18 00:02:17.850 INFO  [57073] [kmercounter::do_zipfian_gets@264] DEBUG: thread 16 | actual found 251651300 | cycles per get: 92
+2026-04-18 00:02:17.850 INFO  [57152] [kmercounter::do_zipfian_gets@264] DEBUG: thread 95 | actual found 251651300 | cycles per get: 89
+2026-04-18 00:02:17.850 INFO  [57059] [kmercounter::do_zipfian_gets@264] DEBUG: thread 2 | actual found 251651300 | cycles per get: 89
+2026-04-18 00:02:17.850 INFO  [57129] [kmercounter::do_zipfian_gets@264] DEBUG: thread 72 | actual found 251651300 | cycles per get: 89
+2026-04-18 00:02:17.850 INFO  [57081] [kmercounter::do_zipfian_gets@264] DEBUG: thread 24 | actual found 251651300 | cycles per get: 92
+2026-04-18 00:02:17.850 INFO  [57086] [kmercounter::do_zipfian_gets@264] DEBUG: thread 29 | actual found 251651300 | cycles per get: 90
+2026-04-18 00:02:17.850 INFO  [57143] [kmercounter::do_zipfian_gets@264] DEBUG: thread 86 | actual found 251651300 | cycles per get: 88
+2026-04-18 00:02:17.850 INFO  [57117] [kmercounter::do_zipfian_gets@264] DEBUG: thread 60 | actual found 251651300 | cycles per get: 92
+2026-04-18 00:02:17.850 INFO  [57085] [kmercounter::do_zipfian_gets@264] DEBUG: thread 28 | actual found 251651300 | cycles per get: 92
+2026-04-18 00:02:17.850 INFO  [57071] [kmercounter::do_zipfian_gets@264] DEBUG: thread 14 | actual found 251651300 | cycles per get: 90
+2026-04-18 00:02:17.850 INFO  [57079] [kmercounter::do_zipfian_gets@264] DEBUG: thread 22 | actual found 251651300 | cycles per get: 92
+2026-04-18 00:02:17.850 INFO  [57178] [kmercounter::do_zipfian_gets@264] DEBUG: thread 121 | actual found 251651300 | cycles per get: 90
+2026-04-18 00:02:17.850 INFO  [57183] [kmercounter::do_zipfian_gets@264] DEBUG: thread 126 | actual found 251651300 | cycles per get: 92
+2026-04-18 00:02:17.850 INFO  [57057] [kmercounter::do_zipfian_gets@264] DEBUG: thread 0 | actual found 251651300 | cycles per get: 92
+2026-04-18 00:02:17.850 INFO  [57089] [kmercounter::do_zipfian_gets@264] DEBUG: thread 32 | actual found 251651300 | cycles per get: 92
+2026-04-18 00:02:17.850 INFO  [57125] [kmercounter::do_zipfian_gets@264] DEBUG: thread 68 | actual found 251651300 | cycles per get: 89
+2026-04-18 00:02:17.850 INFO  [57121] [kmercounter::do_zipfian_gets@264] DEBUG: thread 64 | actual found 251651300 | cycles per get: 92
+2026-04-18 00:02:17.850 INFO  [57153] [kmercounter::do_zipfian_gets@264] DEBUG: thread 96 | actual found 251651300 | cycles per get: 92
+2026-04-18 00:02:17.850 INFO  [57093] [kmercounter::do_zipfian_gets@264] DEBUG: thread 36 | actual found 251651300 | cycles per get: 101
+2026-04-18 00:02:17.850 INFO  [57161] [kmercounter::do_zipfian_gets@264] DEBUG: thread 104 | actual found 251651300 | cycles per get: 94
+2026-04-18 00:02:17.850 INFO  [57157] [kmercounter::do_zipfian_gets@264] DEBUG: thread 100 | actual found 251651300 | cycles per get: 94
+2026-04-18 00:02:17.850 INFO  [57088] [kmercounter::do_zipfian_gets@264] DEBUG: thread 31 | actual found 251651300 | cycles per get: 90
+2026-04-18 00:02:17.850 INFO  [57106] [kmercounter::do_zipfian_gets@264] DEBUG: thread 49 | actual found 251651300 | cycles per get: 92
+2026-04-18 00:02:17.850 INFO  [57149] [kmercounter::do_zipfian_gets@264] DEBUG: thread 92 | actual found 251651300 | cycles per get: 92
+2026-04-18 00:02:17.850 INFO  [57169] [kmercounter::do_zipfian_gets@264] DEBUG: thread 112 | actual found 251651300 | cycles per get: 96
+2026-04-18 00:02:17.850 INFO  [57165] [kmercounter::do_zipfian_gets@264] DEBUG: thread 108 | actual found 251651300 | cycles per get: 96
+2026-04-18 00:02:17.850 INFO  [57065] [kmercounter::do_zipfian_gets@264] DEBUG: thread 8 | actual found 251651300 | cycles per get: 93
+2026-04-18 00:02:17.850 INFO  [57177] [kmercounter::do_zipfian_gets@264] DEBUG: thread 120 | actual found 251651300 | cycles per get: 96
+2026-04-18 00:02:17.850 INFO  [57064] [kmercounter::do_zipfian_gets@264] DEBUG: thread 7 | actual found 251651300 | cycles per get: 98
+2026-04-18 00:02:17.850 INFO  [57077] [kmercounter::do_zipfian_gets@264] DEBUG: thread 20 | actual found 251651300 | cycles per get: 92
+2026-04-18 00:02:17.850 INFO  [57068] [kmercounter::do_zipfian_gets@264] DEBUG: thread 11 | actual found 251651300 | cycles per get: 92
+2026-04-18 00:02:17.850 INFO  [57109] [kmercounter::do_zipfian_gets@264] DEBUG: thread 52 | actual found 251651300 | cycles per get: 92
+2026-04-18 00:02:17.850 INFO  [57113] [kmercounter::do_zipfian_gets@264] DEBUG: thread 56 | actual found 251651300 | cycles per get: 92
+2026-04-18 00:02:17.850 INFO  [57097] [kmercounter::do_zipfian_gets@264] DEBUG: thread 40 | actual found 251651300 | cycles per get: 94
+2026-04-18 00:02:17.850 INFO  [57122] [kmercounter::do_zipfian_gets@264] DEBUG: thread 65 | actual found 251651300 | cycles per get: 92
+2026-04-18 00:02:17.850 INFO  [57181] [kmercounter::do_zipfian_gets@264] DEBUG: thread 124 | actual found 251651300 | cycles per get: 96
+2026-04-18 00:02:17.850 INFO  [57141] [kmercounter::do_zipfian_gets@264] DEBUG: thread 84 | actual found 251651300 | cycles per get: 95
+2026-04-18 00:02:17.850 INFO  [57173] [kmercounter::do_zipfian_gets@264] DEBUG: thread 116 | actual found 251651300 | cycles per get: 95
+2026-04-18 00:02:17.849 INFO  [57082] [kmercounter::do_zipfian_gets@264] DEBUG: thread 25 | actual found 251651300 | cycles per get: 84
+2026-04-18 00:02:17.849 INFO  [57062] [kmercounter::do_zipfian_gets@264] DEBUG: thread 5 | actual found 251651300 | cycles per get: 81
+2026-04-18 00:02:17.855 INFO  [57057] [kmercounter::ZipfianTest::run@398] get fill 0.600
+2026-04-18 00:02:18.556 INFO  [57057] [kmercounter::free_mem@184] 0x7917c0000000 with sz 8589934592 unmapped
+{total_reprobes : 2625417210, total_finds : 32212249600, avg_cachelines_accessed : 1.0815}
+{reprobe_factor : 1.0815}
+===============================================================
+average_insert_task_duration : 456676548, total_insert_tas_duration : 456676548
+insert_ops : 322122496, insert_ops_per_run : 322122496
+average_find_task_duration : 254653711, total_find_duration : 25465371196
+find_ops : 32212249600, find_ops_per_run : 322122496
+{ set_cycles : 161, get_cycles : 89, set_mops : 1975.637, get_mops : 3586.299 }
+===============================================================
+/opt/dramhit-fork/build/dramhit --perf_cnt_path ./perf_cnt.txt --perf_def_path ./perf-cpp/perf_list.csv --find_queue 64 --ht-fill 60 --ht-type 3 --insert-factor 1 --read-factor 100 --num-threads 128 --numa-split 1 --no-prefetch 0 --mode 11 --ht-size 536870912 --skew 0.01 --hw-pref 0 --batch-len 16 --relation_r_size 375809638
+2026-04-18 00:02:18.897 INFO  [57287] [initializeLogger@17] ------------------------
+2026-04-18 00:02:18.898 INFO  [57287] [initializeLogger@18] Plog library initialized
+2026-04-18 00:02:18.898 INFO  [57287] [initializeLogger@19] ------------------------
+2026-04-18 00:02:18.898 INFO  [57287] [main@27] Starting dramhit
+2026-04-18 00:02:18.898 INFO  [57287] [MsrHandler::msr_open@46] msr-safe loaded!
+2026-04-18 00:02:18.899 INFO  [57287] [kmercounter::Application::process@769] Hashtable type : Cas HT
+2026-04-18 00:02:18.899 INFO  [57287] [kmercounter::Application::process@810] Dropping the page cache
+2026-04-18 00:02:19.805 INFO  [57287] [kmercounter::init_zipfian_dist@76] HT_TESTS_NUM_INSERTS 375809638
+2026-04-18 00:02:19.805 INFO  [57287] [kmercounter::init_zipfian_dist@81] /opt/zipfian/0.01_536870912_70.bin 0
+2026-04-18 00:02:19.805 INFO  [57287] [kmercounter::init_zipfian_dist@88] Initializing global zipf with skew 0.010000, seed 1776492138615957151
+2026-04-18 00:02:42.733 INFO  [57287] [kmercounter::init_zipfian_dist@93] Zipfian dist generated. size 375809638
+2026-04-18 00:02:42.733 INFO  [57287] [kmercounter::Application::spawn_shard_threads@413] total kv 375809638, num_threads 128, op per thread (per run) 2936012
+2026-04-18 00:02:42.733 INFO  [57301] [kmercounter::calloc_ht@132] opened file /mnt/huge/hugepagefile
+2026-04-18 00:02:42.734 INFO  [57301] [kmercounter::calloc_ht@148] allocating 8 1gb pages bytes 8589934592
+2026-04-18 00:02:42.734 INFO  [57301] [kmercounter::calloc_ht@161] mmap returns 0x7eb540000000
+2026-04-18 00:02:42.734 INFO  [57301] [kmercounter::distribute_mem_to_nodes@122] addr 0x7eb540000000, alloc_sz 8589934592
+2026-04-18 00:02:46.110 INFO  [57301] [KVQ>::CASHashTable@82] Hashtable base: 0x7eb540000000 Hashtable size: 536870912
+2026-04-18 00:02:46.111 INFO  [57301] [KVQ>::CASHashTable@84] queue item sz: 32
+2026-04-18 00:02:58.562 INFO  [57326] [kmercounter::do_zipfian_gets@264] DEBUG: thread 25 | actual found 293593700 | cycles per get: 88
+2026-04-18 00:02:58.562 INFO  [57364] [kmercounter::do_zipfian_gets@264] DEBUG: thread 63 | actual found 293593700 | cycles per get: 97
+2026-04-18 00:02:58.562 INFO  [57361] [kmercounter::do_zipfian_gets@264] DEBUG: thread 60 | actual found 293593700 | cycles per get: 95
+2026-04-18 00:02:58.562 INFO  [57328] [kmercounter::do_zipfian_gets@264] DEBUG: thread 27 | actual found 293593700 | cycles per get: 87
+2026-04-18 00:02:58.562 INFO  [57356] [kmercounter::do_zipfian_gets@264] DEBUG: thread 55 | actual found 293593700 | cycles per get: 89
+2026-04-18 00:02:58.562 INFO  [57310] [kmercounter::do_zipfian_gets@264] DEBUG: thread 9 | actual found 293593700 | cycles per get: 88
+2026-04-18 00:02:58.562 INFO  [57350] [kmercounter::do_zipfian_gets@264] DEBUG: thread 49 | actual found 293593700 | cycles per get: 88
+2026-04-18 00:02:58.562 INFO  [57316] [kmercounter::do_zipfian_gets@264] DEBUG: thread 15 | actual found 293593700 | cycles per get: 88
+2026-04-18 00:02:58.562 INFO  [57322] [kmercounter::do_zipfian_gets@264] DEBUG: thread 21 | actual found 293593700 | cycles per get: 88
+2026-04-18 00:02:58.562 INFO  [57360] [kmercounter::do_zipfian_gets@264] DEBUG: thread 59 | actual found 293593700 | cycles per get: 87
+2026-04-18 00:02:58.562 INFO  [57342] [kmercounter::do_zipfian_gets@264] DEBUG: thread 41 | actual found 293593700 | cycles per get: 88
+2026-04-18 00:02:58.562 INFO  [57416] [kmercounter::do_zipfian_gets@264] DEBUG: thread 115 | actual found 293593700 | cycles per get: 82
+2026-04-18 00:02:58.562 INFO  [57348] [kmercounter::do_zipfian_gets@264] DEBUG: thread 47 | actual found 293593700 | cycles per get: 88
+2026-04-18 00:02:58.562 INFO  [57368] [kmercounter::do_zipfian_gets@264] DEBUG: thread 67 | actual found 293593700 | cycles per get: 88
+2026-04-18 00:02:58.562 INFO  [57338] [kmercounter::do_zipfian_gets@264] DEBUG: thread 37 | actual found 293593700 | cycles per get: 88
+2026-04-18 00:02:58.562 INFO  [57344] [kmercounter::do_zipfian_gets@264] DEBUG: thread 43 | actual found 293593700 | cycles per get: 89
+2026-04-18 00:02:58.562 INFO  [57394] [kmercounter::do_zipfian_gets@264] DEBUG: thread 93 | actual found 293593700 | cycles per get: 90
+2026-04-18 00:02:58.562 INFO  [57358] [kmercounter::do_zipfian_gets@264] DEBUG: thread 57 | actual found 293593700 | cycles per get: 88
+2026-04-18 00:02:58.562 INFO  [57330] [kmercounter::do_zipfian_gets@264] DEBUG: thread 29 | actual found 293593700 | cycles per get: 83
+2026-04-18 00:02:58.562 INFO  [57346] [kmercounter::do_zipfian_gets@264] DEBUG: thread 45 | actual found 293593700 | cycles per get: 89
+2026-04-18 00:02:58.562 INFO  [57302] [kmercounter::do_zipfian_gets@264] DEBUG: thread 1 | actual found 293593700 | cycles per get: 89
+2026-04-18 00:02:58.562 INFO  [57340] [kmercounter::do_zipfian_gets@264] DEBUG: thread 39 | actual found 293593700 | cycles per get: 89
+2026-04-18 00:02:58.562 INFO  [57334] [kmercounter::do_zipfian_gets@264] DEBUG: thread 33 | actual found 293593700 | cycles per get: 89
+2026-04-18 00:02:58.562 INFO  [57287] [kmercounter::do_zipfian_gets@264] DEBUG: thread 127 | actual found 293593700 | cycles per get: 91
+2026-04-18 00:02:58.562 INFO  [57332] [kmercounter::do_zipfian_gets@264] DEBUG: thread 31 | actual found 293593700 | cycles per get: 91
+2026-04-18 00:02:58.562 INFO  [57304] [kmercounter::do_zipfian_gets@264] DEBUG: thread 3 | actual found 293593700 | cycles per get: 88
+2026-04-18 00:02:58.562 INFO  [57406] [kmercounter::do_zipfian_gets@264] DEBUG: thread 105 | actual found 293593700 | cycles per get: 91
+2026-04-18 00:02:58.562 INFO  [57327] [kmercounter::do_zipfian_gets@264] DEBUG: thread 26 | actual found 293593700 | cycles per get: 91
+2026-04-18 00:02:58.562 INFO  [57351] [kmercounter::do_zipfian_gets@264] DEBUG: thread 50 | actual found 293593700 | cycles per get: 92
+2026-04-18 00:02:58.562 INFO  [57410] [kmercounter::do_zipfian_gets@264] DEBUG: thread 109 | actual found 293593700 | cycles per get: 92
+2026-04-18 00:02:58.562 INFO  [57414] [kmercounter::do_zipfian_gets@264] DEBUG: thread 113 | actual found 293593700 | cycles per get: 93
+2026-04-18 00:02:58.562 INFO  [57312] [kmercounter::do_zipfian_gets@264] DEBUG: thread 11 | actual found 293593700 | cycles per get: 89
+2026-04-18 00:02:58.562 INFO  [57378] [kmercounter::do_zipfian_gets@264] DEBUG: thread 77 | actual found 293593700 | cycles per get: 93
+2026-04-18 00:02:58.562 INFO  [57382] [kmercounter::do_zipfian_gets@264] DEBUG: thread 81 | actual found 293593700 | cycles per get: 93
+2026-04-18 00:02:58.562 INFO  [57390] [kmercounter::do_zipfian_gets@264] DEBUG: thread 89 | actual found 293593700 | cycles per get: 86
+2026-04-18 00:02:58.562 INFO  [57314] [kmercounter::do_zipfian_gets@264] DEBUG: thread 13 | actual found 293593700 | cycles per get: 89
+2026-04-18 00:02:58.562 INFO  [57418] [kmercounter::do_zipfian_gets@264] DEBUG: thread 117 | actual found 293593700 | cycles per get: 90
+2026-04-18 00:02:58.562 INFO  [57412] [kmercounter::do_zipfian_gets@264] DEBUG: thread 111 | actual found 293593700 | cycles per get: 93
+2026-04-18 00:02:58.562 INFO  [57380] [kmercounter::do_zipfian_gets@264] DEBUG: thread 79 | actual found 293593700 | cycles per get: 93
+2026-04-18 00:02:58.562 INFO  [57386] [kmercounter::do_zipfian_gets@264] DEBUG: thread 85 | actual found 293593700 | cycles per get: 91
+2026-04-18 00:02:58.562 INFO  [57318] [kmercounter::do_zipfian_gets@264] DEBUG: thread 17 | actual found 293593700 | cycles per get: 88
+2026-04-18 00:02:58.562 INFO  [57306] [kmercounter::do_zipfian_gets@264] DEBUG: thread 5 | actual found 293593700 | cycles per get: 89
+2026-04-18 00:02:58.562 INFO  [57376] [kmercounter::do_zipfian_gets@264] DEBUG: thread 75 | actual found 293593700 | cycles per get: 90
+2026-04-18 00:02:58.562 INFO  [57420] [kmercounter::do_zipfian_gets@264] DEBUG: thread 119 | actual found 293593700 | cycles per get: 87
+2026-04-18 00:02:58.562 INFO  [57404] [kmercounter::do_zipfian_gets@264] DEBUG: thread 103 | actual found 293593700 | cycles per get: 90
+2026-04-18 00:02:58.562 INFO  [57347] [kmercounter::do_zipfian_gets@264] DEBUG: thread 46 | actual found 293593700 | cycles per get: 92
+2026-04-18 00:02:58.562 INFO  [57374] [kmercounter::do_zipfian_gets@264] DEBUG: thread 73 | actual found 293593700 | cycles per get: 93
+2026-04-18 00:02:58.562 INFO  [57424] [kmercounter::do_zipfian_gets@264] DEBUG: thread 123 | actual found 293593700 | cycles per get: 90
+2026-04-18 00:02:58.562 INFO  [57370] [kmercounter::do_zipfian_gets@264] DEBUG: thread 69 | actual found 293593700 | cycles per get: 93
+2026-04-18 00:02:58.562 INFO  [57392] [kmercounter::do_zipfian_gets@264] DEBUG: thread 91 | actual found 293593700 | cycles per get: 92
+2026-04-18 00:02:58.562 INFO  [57325] [kmercounter::do_zipfian_gets@264] DEBUG: thread 24 | actual found 293593700 | cycles per get: 93
+2026-04-18 00:02:58.562 INFO  [57341] [kmercounter::do_zipfian_gets@264] DEBUG: thread 40 | actual found 293593700 | cycles per get: 90
+2026-04-18 00:02:58.562 INFO  [57331] [kmercounter::do_zipfian_gets@264] DEBUG: thread 30 | actual found 293593700 | cycles per get: 93
+2026-04-18 00:02:58.562 INFO  [57303] [kmercounter::do_zipfian_gets@264] DEBUG: thread 2 | actual found 293593700 | cycles per get: 93
+2026-04-18 00:02:58.562 INFO  [57357] [kmercounter::do_zipfian_gets@264] DEBUG: thread 56 | actual found 293593700 | cycles per get: 93
+2026-04-18 00:02:58.562 INFO  [57426] [kmercounter::do_zipfian_gets@264] DEBUG: thread 125 | actual found 293593700 | cycles per get: 89
+2026-04-18 00:02:58.562 INFO  [57345] [kmercounter::do_zipfian_gets@264] DEBUG: thread 44 | actual found 293593700 | cycles per get: 89
+2026-04-18 00:02:58.562 INFO  [57388] [kmercounter::do_zipfian_gets@264] DEBUG: thread 87 | actual found 293593700 | cycles per get: 94
+2026-04-18 00:02:58.562 INFO  [57337] [kmercounter::do_zipfian_gets@264] DEBUG: thread 36 | actual found 293593700 | cycles per get: 94
+2026-04-18 00:02:58.562 INFO  [57339] [kmercounter::do_zipfian_gets@264] DEBUG: thread 38 | actual found 293593700 | cycles per get: 94
+2026-04-18 00:02:58.562 INFO  [57307] [kmercounter::do_zipfian_gets@264] DEBUG: thread 6 | actual found 293593700 | cycles per get: 94
+2026-04-18 00:02:58.562 INFO  [57355] [kmercounter::do_zipfian_gets@264] DEBUG: thread 54 | actual found 293593700 | cycles per get: 94
+2026-04-18 00:02:58.562 INFO  [57301] [kmercounter::do_zipfian_gets@264] DEBUG: thread 0 | actual found 293593700 | cycles per get: 94
+2026-04-18 00:02:58.562 INFO  [57319] [kmercounter::do_zipfian_gets@264] DEBUG: thread 18 | actual found 293593700 | cycles per get: 95
+2026-04-18 00:02:58.562 INFO  [57362] [kmercounter::do_zipfian_gets@264] DEBUG: thread 61 | actual found 293593700 | cycles per get: 94
+2026-04-18 00:02:58.562 INFO  [57349] [kmercounter::do_zipfian_gets@264] DEBUG: thread 48 | actual found 293593700 | cycles per get: 93
+2026-04-18 00:02:58.562 INFO  [57336] [kmercounter::do_zipfian_gets@264] DEBUG: thread 35 | actual found 293593700 | cycles per get: 88
+2026-04-18 00:02:58.562 INFO  [57408] [kmercounter::do_zipfian_gets@264] DEBUG: thread 107 | actual found 293593700 | cycles per get: 93
+2026-04-18 00:02:58.562 INFO  [57323] [kmercounter::do_zipfian_gets@264] DEBUG: thread 22 | actual found 293593700 | cycles per get: 94
+2026-04-18 00:02:58.562 INFO  [57353] [kmercounter::do_zipfian_gets@264] DEBUG: thread 52 | actual found 293593700 | cycles per get: 94
+2026-04-18 00:02:58.562 INFO  [57317] [kmercounter::do_zipfian_gets@264] DEBUG: thread 16 | actual found 293593700 | cycles per get: 93
+2026-04-18 00:02:58.562 INFO  [57363] [kmercounter::do_zipfian_gets@264] DEBUG: thread 62 | actual found 293593700 | cycles per get: 93
+2026-04-18 00:02:58.562 INFO  [57305] [kmercounter::do_zipfian_gets@264] DEBUG: thread 4 | actual found 293593700 | cycles per get: 96
+2026-04-18 00:02:58.562 INFO  [57333] [kmercounter::do_zipfian_gets@264] DEBUG: thread 32 | actual found 293593700 | cycles per get: 94
+2026-04-18 00:02:58.562 INFO  [57422] [kmercounter::do_zipfian_gets@264] DEBUG: thread 121 | actual found 293593700 | cycles per get: 96
+2026-04-18 00:02:58.562 INFO  [57398] [kmercounter::do_zipfian_gets@264] DEBUG: thread 97 | actual found 293593700 | cycles per get: 95
+2026-04-18 00:02:58.562 INFO  [57409] [kmercounter::do_zipfian_gets@264] DEBUG: thread 108 | actual found 293593700 | cycles per get: 95
+2026-04-18 00:02:58.562 INFO  [57402] [kmercounter::do_zipfian_gets@264] DEBUG: thread 101 | actual found 293593700 | cycles per get: 93
+2026-04-18 00:02:58.562 INFO  [57372] [kmercounter::do_zipfian_gets@264] DEBUG: thread 71 | actual found 293593700 | cycles per get: 97
+2026-04-18 00:02:58.562 INFO  [57400] [kmercounter::do_zipfian_gets@264] DEBUG: thread 99 | actual found 293593700 | cycles per get: 97
+2026-04-18 00:02:58.562 INFO  [57417] [kmercounter::do_zipfian_gets@264] DEBUG: thread 116 | actual found 293593700 | cycles per get: 95
+2026-04-18 00:02:58.562 INFO  [57396] [kmercounter::do_zipfian_gets@264] DEBUG: thread 95 | actual found 293593700 | cycles per get: 95
+2026-04-18 00:02:58.562 INFO  [57315] [kmercounter::do_zipfian_gets@264] DEBUG: thread 14 | actual found 293593700 | cycles per get: 96
+2026-04-18 00:02:58.562 INFO  [57352] [kmercounter::do_zipfian_gets@264] DEBUG: thread 51 | actual found 293593700 | cycles per get: 95
+2026-04-18 00:02:58.562 INFO  [57343] [kmercounter::do_zipfian_gets@264] DEBUG: thread 42 | actual found 293593700 | cycles per get: 96
+2026-04-18 00:02:58.562 INFO  [57384] [kmercounter::do_zipfian_gets@264] DEBUG: thread 83 | actual found 293593700 | cycles per get: 95
+2026-04-18 00:02:58.562 INFO  [57421] [kmercounter::do_zipfian_gets@264] DEBUG: thread 120 | actual found 293593700 | cycles per get: 97
+2026-04-18 00:02:58.562 INFO  [57389] [kmercounter::do_zipfian_gets@264] DEBUG: thread 88 | actual found 293593700 | cycles per get: 97
+2026-04-18 00:02:58.562 INFO  [57385] [kmercounter::do_zipfian_gets@264] DEBUG: thread 84 | actual found 293593700 | cycles per get: 98
+2026-04-18 00:02:58.562 INFO  [57311] [kmercounter::do_zipfian_gets@264] DEBUG: thread 10 | actual found 293593700 | cycles per get: 96
+2026-04-18 00:02:58.562 INFO  [57335] [kmercounter::do_zipfian_gets@264] DEBUG: thread 34 | actual found 293593700 | cycles per get: 97
+2026-04-18 00:02:58.562 INFO  [57321] [kmercounter::do_zipfian_gets@264] DEBUG: thread 20 | actual found 293593700 | cycles per get: 94
+2026-04-18 00:02:58.562 INFO  [57393] [kmercounter::do_zipfian_gets@264] DEBUG: thread 92 | actual found 293593700 | cycles per get: 98
+2026-04-18 00:02:58.562 INFO  [57399] [kmercounter::do_zipfian_gets@264] DEBUG: thread 98 | actual found 293593700 | cycles per get: 97
+2026-04-18 00:02:58.562 INFO  [57381] [kmercounter::do_zipfian_gets@264] DEBUG: thread 80 | actual found 293593700 | cycles per get: 98
+2026-04-18 00:02:58.562 INFO  [57413] [kmercounter::do_zipfian_gets@264] DEBUG: thread 112 | actual found 293593700 | cycles per get: 98
+2026-04-18 00:02:58.562 INFO  [57395] [kmercounter::do_zipfian_gets@264] DEBUG: thread 94 | actual found 293593700 | cycles per get: 98
+2026-04-18 00:02:58.562 INFO  [57427] [kmercounter::do_zipfian_gets@264] DEBUG: thread 126 | actual found 293593700 | cycles per get: 98
+2026-04-18 00:02:58.562 INFO  [57354] [kmercounter::do_zipfian_gets@264] DEBUG: thread 53 | actual found 293593700 | cycles per get: 88
+2026-04-18 00:02:58.562 INFO  [57366] [kmercounter::do_zipfian_gets@264] DEBUG: thread 65 | actual found 293593700 | cycles per get: 94
+2026-04-18 00:02:58.562 INFO  [57415] [kmercounter::do_zipfian_gets@264] DEBUG: thread 114 | actual found 293593700 | cycles per get: 98
+2026-04-18 00:02:58.562 INFO  [57369] [kmercounter::do_zipfian_gets@264] DEBUG: thread 68 | actual found 293593700 | cycles per get: 98
+2026-04-18 00:02:58.562 INFO  [57401] [kmercounter::do_zipfian_gets@264] DEBUG: thread 100 | actual found 293593700 | cycles per get: 98
+2026-04-18 00:02:58.562 INFO  [57383] [kmercounter::do_zipfian_gets@264] DEBUG: thread 82 | actual found 293593700 | cycles per get: 98
+2026-04-18 00:02:58.562 INFO  [57391] [kmercounter::do_zipfian_gets@264] DEBUG: thread 90 | actual found 293593700 | cycles per get: 98
+2026-04-18 00:02:58.562 INFO  [57423] [kmercounter::do_zipfian_gets@264] DEBUG: thread 122 | actual found 293593700 | cycles per get: 98
+2026-04-18 00:02:58.562 INFO  [57367] [kmercounter::do_zipfian_gets@264] DEBUG: thread 66 | actual found 293593700 | cycles per get: 101
+2026-04-18 00:02:58.562 INFO  [57329] [kmercounter::do_zipfian_gets@264] DEBUG: thread 28 | actual found 293593700 | cycles per get: 100
+2026-04-18 00:02:58.562 INFO  [57411] [kmercounter::do_zipfian_gets@264] DEBUG: thread 110 | actual found 293593700 | cycles per get: 99
+2026-04-18 00:02:58.562 INFO  [57379] [kmercounter::do_zipfian_gets@264] DEBUG: thread 78 | actual found 293593700 | cycles per get: 99
+2026-04-18 00:02:58.562 INFO  [57425] [kmercounter::do_zipfian_gets@264] DEBUG: thread 124 | actual found 293593700 | cycles per get: 97
+2026-04-18 00:02:58.562 INFO  [57359] [kmercounter::do_zipfian_gets@264] DEBUG: thread 58 | actual found 293593700 | cycles per get: 100
+2026-04-18 00:02:58.562 INFO  [57377] [kmercounter::do_zipfian_gets@264] DEBUG: thread 76 | actual found 293593700 | cycles per get: 104
+2026-04-18 00:02:58.562 INFO  [57403] [kmercounter::do_zipfian_gets@264] DEBUG: thread 102 | actual found 293593700 | cycles per get: 99
+2026-04-18 00:02:58.562 INFO  [57373] [kmercounter::do_zipfian_gets@264] DEBUG: thread 72 | actual found 293593700 | cycles per get: 97
+2026-04-18 00:02:58.562 INFO  [57405] [kmercounter::do_zipfian_gets@264] DEBUG: thread 104 | actual found 293593700 | cycles per get: 101
+2026-04-18 00:02:58.562 INFO  [57397] [kmercounter::do_zipfian_gets@264] DEBUG: thread 96 | actual found 293593700 | cycles per get: 99
+2026-04-18 00:02:58.562 INFO  [57365] [kmercounter::do_zipfian_gets@264] DEBUG: thread 64 | actual found 293593700 | cycles per get: 99
+2026-04-18 00:02:58.562 INFO  [57309] [kmercounter::do_zipfian_gets@264] DEBUG: thread 8 | actual found 293593700 | cycles per get: 100
+2026-04-18 00:02:58.562 INFO  [57313] [kmercounter::do_zipfian_gets@264] DEBUG: thread 12 | actual found 293593700 | cycles per get: 100
+2026-04-18 00:02:58.562 INFO  [57387] [kmercounter::do_zipfian_gets@264] DEBUG: thread 86 | actual found 293593700 | cycles per get: 100
+2026-04-18 00:02:58.562 INFO  [57419] [kmercounter::do_zipfian_gets@264] DEBUG: thread 118 | actual found 293593700 | cycles per get: 100
+2026-04-18 00:02:58.562 INFO  [57371] [kmercounter::do_zipfian_gets@264] DEBUG: thread 70 | actual found 293593700 | cycles per get: 99
+2026-04-18 00:02:58.562 INFO  [57375] [kmercounter::do_zipfian_gets@264] DEBUG: thread 74 | actual found 293593700 | cycles per get: 102
+2026-04-18 00:02:58.562 INFO  [57407] [kmercounter::do_zipfian_gets@264] DEBUG: thread 106 | actual found 293593700 | cycles per get: 102
+2026-04-18 00:02:58.562 INFO  [57308] [kmercounter::do_zipfian_gets@264] DEBUG: thread 7 | actual found 293593700 | cycles per get: 89
+2026-04-18 00:02:58.562 INFO  [57324] [kmercounter::do_zipfian_gets@264] DEBUG: thread 23 | actual found 293593700 | cycles per get: 87
+2026-04-18 00:02:58.562 INFO  [57320] [kmercounter::do_zipfian_gets@264] DEBUG: thread 19 | actual found 293593700 | cycles per get: 77
+2026-04-18 00:02:58.567 INFO  [57301] [kmercounter::ZipfianTest::run@398] get fill 0.700
+2026-04-18 00:02:59.272 INFO  [57301] [kmercounter::free_mem@184] 0x7eb540000000 with sz 8589934592 unmapped
+{total_reprobes : 5282674487, total_finds : 37580953600, avg_cachelines_accessed : 1.1406}
+{reprobe_factor : 1.1406}
+===============================================================
+average_insert_task_duration : 572350614, total_insert_tas_duration : 572350614
+insert_ops : 375809536, insert_ops_per_run : 375809536
+average_find_task_duration : 305666542, total_find_duration : 30566654294
+find_ops : 37580953600, find_ops_per_run : 375809536
+{ set_cycles : 166, get_cycles : 93, set_mops : 1923.401, get_mops : 3409.442 }
+===============================================================
+/opt/dramhit-fork/build/dramhit --perf_cnt_path ./perf_cnt.txt --perf_def_path ./perf-cpp/perf_list.csv --find_queue 64 --ht-fill 70 --ht-type 3 --insert-factor 1 --read-factor 100 --num-threads 128 --numa-split 1 --no-prefetch 0 --mode 11 --ht-size 536870912 --skew 0.01 --hw-pref 0 --batch-len 16 --relation_r_size 375809638
+2026-04-18 00:02:59.606 INFO  [57491] [initializeLogger@17] ------------------------
+2026-04-18 00:02:59.606 INFO  [57491] [initializeLogger@18] Plog library initialized
+2026-04-18 00:02:59.606 INFO  [57491] [initializeLogger@19] ------------------------
+2026-04-18 00:02:59.606 INFO  [57491] [main@27] Starting dramhit
+2026-04-18 00:02:59.607 INFO  [57491] [MsrHandler::msr_open@46] msr-safe loaded!
+2026-04-18 00:02:59.608 INFO  [57491] [kmercounter::Application::process@769] Hashtable type : Cas HT
+2026-04-18 00:02:59.608 INFO  [57491] [kmercounter::Application::process@810] Dropping the page cache
+2026-04-18 00:03:00.546 INFO  [57491] [kmercounter::init_zipfian_dist@76] HT_TESTS_NUM_INSERTS 429496729
+2026-04-18 00:03:00.546 INFO  [57491] [kmercounter::init_zipfian_dist@81] /opt/zipfian/0.01_536870912_80.bin 0
+2026-04-18 00:03:00.547 INFO  [57491] [kmercounter::init_zipfian_dist@88] Initializing global zipf with skew 0.010000, seed 1776492179338319912
+2026-04-18 00:03:26.744 INFO  [57491] [kmercounter::init_zipfian_dist@93] Zipfian dist generated. size 429496729
+2026-04-18 00:03:26.744 INFO  [57491] [kmercounter::Application::spawn_shard_threads@413] total kv 429496729, num_threads 128, op per thread (per run) 3355443
+2026-04-18 00:03:26.744 INFO  [57505] [kmercounter::calloc_ht@132] opened file /mnt/huge/hugepagefile
+2026-04-18 00:03:26.744 INFO  [57505] [kmercounter::calloc_ht@148] allocating 8 1gb pages bytes 8589934592
+2026-04-18 00:03:26.744 INFO  [57505] [kmercounter::calloc_ht@161] mmap returns 0x78aec0000000
+2026-04-18 00:03:26.745 INFO  [57505] [kmercounter::distribute_mem_to_nodes@122] addr 0x78aec0000000, alloc_sz 8589934592
+2026-04-18 00:03:30.129 INFO  [57505] [KVQ>::CASHashTable@82] Hashtable base: 0x78aec0000000 Hashtable size: 536870912
+2026-04-18 00:03:30.129 INFO  [57505] [KVQ>::CASHashTable@84] queue item sz: 32
+2026-04-18 00:03:46.485 INFO  [57491] [kmercounter::do_zipfian_gets@264] DEBUG: thread 127 | actual found 335537700 | cycles per get: 94
+2026-04-18 00:03:46.485 INFO  [57584] [kmercounter::do_zipfian_gets@264] DEBUG: thread 79 | actual found 335537700 | cycles per get: 105
+2026-04-18 00:03:46.485 INFO  [57601] [kmercounter::do_zipfian_gets@264] DEBUG: thread 96 | actual found 335537700 | cycles per get: 117
+2026-04-18 00:03:46.485 INFO  [57523] [kmercounter::do_zipfian_gets@264] DEBUG: thread 18 | actual found 335537700 | cycles per get: 94
+2026-04-18 00:03:46.485 INFO  [57508] [kmercounter::do_zipfian_gets@264] DEBUG: thread 3 | actual found 335537700 | cycles per get: 84
+2026-04-18 00:03:46.485 INFO  [57516] [kmercounter::do_zipfian_gets@264] DEBUG: thread 11 | actual found 335537700 | cycles per get: 90
+2026-04-18 00:03:46.485 INFO  [57541] [kmercounter::do_zipfian_gets@264] DEBUG: thread 36 | actual found 335537700 | cycles per get: 90
+2026-04-18 00:03:46.485 INFO  [57532] [kmercounter::do_zipfian_gets@264] DEBUG: thread 27 | actual found 335537700 | cycles per get: 94
+2026-04-18 00:03:46.485 INFO  [57549] [kmercounter::do_zipfian_gets@264] DEBUG: thread 44 | actual found 335537700 | cycles per get: 94
+2026-04-18 00:03:46.485 INFO  [57562] [kmercounter::do_zipfian_gets@264] DEBUG: thread 57 | actual found 335537700 | cycles per get: 94
+2026-04-18 00:03:46.485 INFO  [57507] [kmercounter::do_zipfian_gets@264] DEBUG: thread 2 | actual found 335537700 | cycles per get: 95
+2026-04-18 00:03:46.485 INFO  [57556] [kmercounter::do_zipfian_gets@264] DEBUG: thread 51 | actual found 335537700 | cycles per get: 95
+2026-04-18 00:03:46.485 INFO  [57524] [kmercounter::do_zipfian_gets@264] DEBUG: thread 19 | actual found 335537700 | cycles per get: 95
+2026-04-18 00:03:46.485 INFO  [57517] [kmercounter::do_zipfian_gets@264] DEBUG: thread 12 | actual found 335537700 | cycles per get: 94
+2026-04-18 00:03:46.485 INFO  [57567] [kmercounter::do_zipfian_gets@264] DEBUG: thread 62 | actual found 335537700 | cycles per get: 95
+2026-04-18 00:03:46.485 INFO  [57535] [kmercounter::do_zipfian_gets@264] DEBUG: thread 30 | actual found 335537700 | cycles per get: 95
+2026-04-18 00:03:46.485 INFO  [57528] [kmercounter::do_zipfian_gets@264] DEBUG: thread 23 | actual found 335537700 | cycles per get: 97
+2026-04-18 00:03:46.485 INFO  [57555] [kmercounter::do_zipfian_gets@264] DEBUG: thread 50 | actual found 335537700 | cycles per get: 94
+2026-04-18 00:03:46.485 INFO  [57531] [kmercounter::do_zipfian_gets@264] DEBUG: thread 26 | actual found 335537700 | cycles per get: 96
+2026-04-18 00:03:46.485 INFO  [57543] [kmercounter::do_zipfian_gets@264] DEBUG: thread 38 | actual found 335537700 | cycles per get: 96
+2026-04-18 00:03:46.485 INFO  [57544] [kmercounter::do_zipfian_gets@264] DEBUG: thread 39 | actual found 335537700 | cycles per get: 95
+2026-04-18 00:03:46.485 INFO  [57552] [kmercounter::do_zipfian_gets@264] DEBUG: thread 47 | actual found 335537700 | cycles per get: 95
+2026-04-18 00:03:46.485 INFO  [57538] [kmercounter::do_zipfian_gets@264] DEBUG: thread 33 | actual found 335537700 | cycles per get: 95
+2026-04-18 00:03:46.485 INFO  [57514] [kmercounter::do_zipfian_gets@264] DEBUG: thread 9 | actual found 335537700 | cycles per get: 95
+2026-04-18 00:03:46.485 INFO  [57509] [kmercounter::do_zipfian_gets@264] DEBUG: thread 4 | actual found 335537700 | cycles per get: 97
+2026-04-18 00:03:46.485 INFO  [57522] [kmercounter::do_zipfian_gets@264] DEBUG: thread 17 | actual found 335537700 | cycles per get: 95
+2026-04-18 00:03:46.485 INFO  [57565] [kmercounter::do_zipfian_gets@264] DEBUG: thread 60 | actual found 335537700 | cycles per get: 95
+2026-04-18 00:03:46.485 INFO  [57525] [kmercounter::do_zipfian_gets@264] DEBUG: thread 20 | actual found 335537700 | cycles per get: 96
+2026-04-18 00:03:46.485 INFO  [57551] [kmercounter::do_zipfian_gets@264] DEBUG: thread 46 | actual found 335537700 | cycles per get: 97
+2026-04-18 00:03:46.485 INFO  [57557] [kmercounter::do_zipfian_gets@264] DEBUG: thread 52 | actual found 335537700 | cycles per get: 96
+2026-04-18 00:03:46.485 INFO  [57519] [kmercounter::do_zipfian_gets@264] DEBUG: thread 14 | actual found 335537700 | cycles per get: 90
+2026-04-18 00:03:46.485 INFO  [57506] [kmercounter::do_zipfian_gets@264] DEBUG: thread 1 | actual found 335537700 | cycles per get: 98
+2026-04-18 00:03:46.485 INFO  [57527] [kmercounter::do_zipfian_gets@264] DEBUG: thread 22 | actual found 335537700 | cycles per get: 96
+2026-04-18 00:03:46.485 INFO  [57539] [kmercounter::do_zipfian_gets@264] DEBUG: thread 34 | actual found 335537700 | cycles per get: 98
+2026-04-18 00:03:46.485 INFO  [57520] [kmercounter::do_zipfian_gets@264] DEBUG: thread 15 | actual found 335537700 | cycles per get: 95
+2026-04-18 00:03:46.485 INFO  [57512] [kmercounter::do_zipfian_gets@264] DEBUG: thread 7 | actual found 335537700 | cycles per get: 96
+2026-04-18 00:03:46.485 INFO  [57563] [kmercounter::do_zipfian_gets@264] DEBUG: thread 58 | actual found 335537700 | cycles per get: 96
+2026-04-18 00:03:46.485 INFO  [57540] [kmercounter::do_zipfian_gets@264] DEBUG: thread 35 | actual found 335537700 | cycles per get: 99
+2026-04-18 00:03:46.485 INFO  [57511] [kmercounter::do_zipfian_gets@264] DEBUG: thread 6 | actual found 335537700 | cycles per get: 95
+2026-04-18 00:03:46.485 INFO  [57559] [kmercounter::do_zipfian_gets@264] DEBUG: thread 54 | actual found 335537700 | cycles per get: 96
+2026-04-18 00:03:46.485 INFO  [57533] [kmercounter::do_zipfian_gets@264] DEBUG: thread 28 | actual found 335537700 | cycles per get: 95
+2026-04-18 00:03:46.485 INFO  [57518] [kmercounter::do_zipfian_gets@264] DEBUG: thread 13 | actual found 335537700 | cycles per get: 98
+2026-04-18 00:03:46.485 INFO  [57546] [kmercounter::do_zipfian_gets@264] DEBUG: thread 41 | actual found 335537700 | cycles per get: 95
+2026-04-18 00:03:46.485 INFO  [57564] [kmercounter::do_zipfian_gets@264] DEBUG: thread 59 | actual found 335537700 | cycles per get: 94
+2026-04-18 00:03:46.485 INFO  [57554] [kmercounter::do_zipfian_gets@264] DEBUG: thread 49 | actual found 335537700 | cycles per get: 95
+2026-04-18 00:03:46.485 INFO  [57536] [kmercounter::do_zipfian_gets@264] DEBUG: thread 31 | actual found 335537700 | cycles per get: 100
+2026-04-18 00:03:46.485 INFO  [57526] [kmercounter::do_zipfian_gets@264] DEBUG: thread 21 | actual found 335537700 | cycles per get: 101
+2026-04-18 00:03:46.485 INFO  [57558] [kmercounter::do_zipfian_gets@264] DEBUG: thread 53 | actual found 335537700 | cycles per get: 101
+2026-04-18 00:03:46.485 INFO  [57547] [kmercounter::do_zipfian_gets@264] DEBUG: thread 42 | actual found 335537700 | cycles per get: 99
+2026-04-18 00:03:46.485 INFO  [57548] [kmercounter::do_zipfian_gets@264] DEBUG: thread 43 | actual found 335537700 | cycles per get: 98
+2026-04-18 00:03:46.485 INFO  [57515] [kmercounter::do_zipfian_gets@264] DEBUG: thread 10 | actual found 335537700 | cycles per get: 99
+2026-04-18 00:03:46.485 INFO  [57505] [kmercounter::do_zipfian_gets@264] DEBUG: thread 0 | actual found 335537700 | cycles per get: 101
+2026-04-18 00:03:46.485 INFO  [57510] [kmercounter::do_zipfian_gets@264] DEBUG: thread 5 | actual found 335537700 | cycles per get: 101
+2026-04-18 00:03:46.485 INFO  [57542] [kmercounter::do_zipfian_gets@264] DEBUG: thread 37 | actual found 335537700 | cycles per get: 101
+2026-04-18 00:03:46.485 INFO  [57553] [kmercounter::do_zipfian_gets@264] DEBUG: thread 48 | actual found 335537700 | cycles per get: 101
+2026-04-18 00:03:46.485 INFO  [57561] [kmercounter::do_zipfian_gets@264] DEBUG: thread 56 | actual found 335537700 | cycles per get: 104
+2026-04-18 00:03:46.485 INFO  [57529] [kmercounter::do_zipfian_gets@264] DEBUG: thread 24 | actual found 335537700 | cycles per get: 102
+2026-04-18 00:03:46.485 INFO  [57545] [kmercounter::do_zipfian_gets@264] DEBUG: thread 40 | actual found 335537700 | cycles per get: 103
+2026-04-18 00:03:46.485 INFO  [57513] [kmercounter::do_zipfian_gets@264] DEBUG: thread 8 | actual found 335537700 | cycles per get: 103
+2026-04-18 00:03:46.485 INFO  [57521] [kmercounter::do_zipfian_gets@264] DEBUG: thread 16 | actual found 335537700 | cycles per get: 101
+2026-04-18 00:03:46.485 INFO  [57596] [kmercounter::do_zipfian_gets@264] DEBUG: thread 91 | actual found 335537700 | cycles per get: 101
+2026-04-18 00:03:46.485 INFO  [57631] [kmercounter::do_zipfian_gets@264] DEBUG: thread 126 | actual found 335537700 | cycles per get: 100
+2026-04-18 00:03:46.485 INFO  [57586] [kmercounter::do_zipfian_gets@264] DEBUG: thread 81 | actual found 335537700 | cycles per get: 105
+2026-04-18 00:03:46.485 INFO  [57618] [kmercounter::do_zipfian_gets@264] DEBUG: thread 113 | actual found 335537700 | cycles per get: 105
+2026-04-18 00:03:46.485 INFO  [57530] [kmercounter::do_zipfian_gets@264] DEBUG: thread 25 | actual found 335537700 | cycles per get: 94
+2026-04-18 00:03:46.485 INFO  [57575] [kmercounter::do_zipfian_gets@264] DEBUG: thread 70 | actual found 335537700 | cycles per get: 106
+2026-04-18 00:03:46.485 INFO  [57624] [kmercounter::do_zipfian_gets@264] DEBUG: thread 119 | actual found 335537700 | cycles per get: 106
+2026-04-18 00:03:46.485 INFO  [57599] [kmercounter::do_zipfian_gets@264] DEBUG: thread 94 | actual found 335537700 | cycles per get: 103
+2026-04-18 00:03:46.485 INFO  [57595] [kmercounter::do_zipfian_gets@264] DEBUG: thread 90 | actual found 335537700 | cycles per get: 107
+2026-04-18 00:03:46.485 INFO  [57605] [kmercounter::do_zipfian_gets@264] DEBUG: thread 100 | actual found 335537700 | cycles per get: 101
+2026-04-18 00:03:46.485 INFO  [57612] [kmercounter::do_zipfian_gets@264] DEBUG: thread 107 | actual found 335537700 | cycles per get: 104
+2026-04-18 00:03:46.485 INFO  [57566] [kmercounter::do_zipfian_gets@264] DEBUG: thread 61 | actual found 335537700 | cycles per get: 104
+2026-04-18 00:03:46.485 INFO  [57610] [kmercounter::do_zipfian_gets@264] DEBUG: thread 105 | actual found 335537700 | cycles per get: 100
+2026-04-18 00:03:46.485 INFO  [57550] [kmercounter::do_zipfian_gets@264] DEBUG: thread 45 | actual found 335537700 | cycles per get: 106
+2026-04-18 00:03:46.485 INFO  [57620] [kmercounter::do_zipfian_gets@264] DEBUG: thread 115 | actual found 335537700 | cycles per get: 107
+2026-04-18 00:03:46.485 INFO  [57621] [kmercounter::do_zipfian_gets@264] DEBUG: thread 116 | actual found 335537700 | cycles per get: 107
+2026-04-18 00:03:46.485 INFO  [57603] [kmercounter::do_zipfian_gets@264] DEBUG: thread 98 | actual found 335537700 | cycles per get: 106
+2026-04-18 00:03:46.485 INFO  [57572] [kmercounter::do_zipfian_gets@264] DEBUG: thread 67 | actual found 335537700 | cycles per get: 107
+2026-04-18 00:03:46.485 INFO  [57604] [kmercounter::do_zipfian_gets@264] DEBUG: thread 99 | actual found 335537700 | cycles per get: 107
+2026-04-18 00:03:46.485 INFO  [57587] [kmercounter::do_zipfian_gets@264] DEBUG: thread 82 | actual found 335537700 | cycles per get: 106
+2026-04-18 00:03:46.485 INFO  [57581] [kmercounter::do_zipfian_gets@264] DEBUG: thread 76 | actual found 335537700 | cycles per get: 107
+2026-04-18 00:03:46.485 INFO  [57619] [kmercounter::do_zipfian_gets@264] DEBUG: thread 114 | actual found 335537700 | cycles per get: 106
+2026-04-18 00:03:46.485 INFO  [57578] [kmercounter::do_zipfian_gets@264] DEBUG: thread 73 | actual found 335537700 | cycles per get: 109
+2026-04-18 00:03:46.485 INFO  [57627] [kmercounter::do_zipfian_gets@264] DEBUG: thread 122 | actual found 335537700 | cycles per get: 106
+2026-04-18 00:03:46.485 INFO  [57629] [kmercounter::do_zipfian_gets@264] DEBUG: thread 124 | actual found 335537700 | cycles per get: 107
+2026-04-18 00:03:46.485 INFO  [57583] [kmercounter::do_zipfian_gets@264] DEBUG: thread 78 | actual found 335537700 | cycles per get: 106
+2026-04-18 00:03:46.485 INFO  [57615] [kmercounter::do_zipfian_gets@264] DEBUG: thread 110 | actual found 335537700 | cycles per get: 107
+2026-04-18 00:03:46.485 INFO  [57628] [kmercounter::do_zipfian_gets@264] DEBUG: thread 123 | actual found 335537700 | cycles per get: 110
+2026-04-18 00:03:46.485 INFO  [57592] [kmercounter::do_zipfian_gets@264] DEBUG: thread 87 | actual found 335537700 | cycles per get: 106
+2026-04-18 00:03:46.485 INFO  [57600] [kmercounter::do_zipfian_gets@264] DEBUG: thread 95 | actual found 335537700 | cycles per get: 107
+2026-04-18 00:03:46.485 INFO  [57607] [kmercounter::do_zipfian_gets@264] DEBUG: thread 102 | actual found 335537700 | cycles per get: 106
+2026-04-18 00:03:46.485 INFO  [57608] [kmercounter::do_zipfian_gets@264] DEBUG: thread 103 | actual found 335537700 | cycles per get: 112
+2026-04-18 00:03:46.485 INFO  [57576] [kmercounter::do_zipfian_gets@264] DEBUG: thread 71 | actual found 335537700 | cycles per get: 108
+2026-04-18 00:03:46.485 INFO  [57623] [kmercounter::do_zipfian_gets@264] DEBUG: thread 118 | actual found 335537700 | cycles per get: 108
+2026-04-18 00:03:46.485 INFO  [57613] [kmercounter::do_zipfian_gets@264] DEBUG: thread 108 | actual found 335537700 | cycles per get: 107
+2026-04-18 00:03:46.485 INFO  [57630] [kmercounter::do_zipfian_gets@264] DEBUG: thread 125 | actual found 335537700 | cycles per get: 113
+2026-04-18 00:03:46.485 INFO  [57598] [kmercounter::do_zipfian_gets@264] DEBUG: thread 93 | actual found 335537700 | cycles per get: 109
+2026-04-18 00:03:46.485 INFO  [57571] [kmercounter::do_zipfian_gets@264] DEBUG: thread 66 | actual found 335537700 | cycles per get: 106
+2026-04-18 00:03:46.485 INFO  [57570] [kmercounter::do_zipfian_gets@264] DEBUG: thread 65 | actual found 335537700 | cycles per get: 109
+2026-04-18 00:03:46.485 INFO  [57537] [kmercounter::do_zipfian_gets@264] DEBUG: thread 32 | actual found 335537700 | cycles per get: 107
+2026-04-18 00:03:46.485 INFO  [57597] [kmercounter::do_zipfian_gets@264] DEBUG: thread 92 | actual found 335537700 | cycles per get: 107
+2026-04-18 00:03:46.485 INFO  [57589] [kmercounter::do_zipfian_gets@264] DEBUG: thread 84 | actual found 335537700 | cycles per get: 107
+2026-04-18 00:03:46.485 INFO  [57594] [kmercounter::do_zipfian_gets@264] DEBUG: thread 89 | actual found 335537700 | cycles per get: 110
+2026-04-18 00:03:46.485 INFO  [57626] [kmercounter::do_zipfian_gets@264] DEBUG: thread 121 | actual found 335537700 | cycles per get: 110
+2026-04-18 00:03:46.485 INFO  [57568] [kmercounter::do_zipfian_gets@264] DEBUG: thread 63 | actual found 335537700 | cycles per get: 109
+2026-04-18 00:03:46.485 INFO  [57580] [kmercounter::do_zipfian_gets@264] DEBUG: thread 75 | actual found 335537700 | cycles per get: 108
+2026-04-18 00:03:46.485 INFO  [57573] [kmercounter::do_zipfian_gets@264] DEBUG: thread 68 | actual found 335537700 | cycles per get: 109
+2026-04-18 00:03:46.485 INFO  [57582] [kmercounter::do_zipfian_gets@264] DEBUG: thread 77 | actual found 335537700 | cycles per get: 114
+2026-04-18 00:03:46.485 INFO  [57614] [kmercounter::do_zipfian_gets@264] DEBUG: thread 109 | actual found 335537700 | cycles per get: 114
+2026-04-18 00:03:46.485 INFO  [57591] [kmercounter::do_zipfian_gets@264] DEBUG: thread 86 | actual found 335537700 | cycles per get: 112
+2026-04-18 00:03:46.485 INFO  [57590] [kmercounter::do_zipfian_gets@264] DEBUG: thread 85 | actual found 335537700 | cycles per get: 113
+2026-04-18 00:03:46.485 INFO  [57616] [kmercounter::do_zipfian_gets@264] DEBUG: thread 111 | actual found 335537700 | cycles per get: 109
+2026-04-18 00:03:46.485 INFO  [57622] [kmercounter::do_zipfian_gets@264] DEBUG: thread 117 | actual found 335537700 | cycles per get: 117
+2026-04-18 00:03:46.485 INFO  [57602] [kmercounter::do_zipfian_gets@264] DEBUG: thread 97 | actual found 335537700 | cycles per get: 109
+2026-04-18 00:03:46.485 INFO  [57625] [kmercounter::do_zipfian_gets@264] DEBUG: thread 120 | actual found 335537700 | cycles per get: 114
+2026-04-18 00:03:46.485 INFO  [57609] [kmercounter::do_zipfian_gets@264] DEBUG: thread 104 | actual found 335537700 | cycles per get: 119
+2026-04-18 00:03:46.485 INFO  [57577] [kmercounter::do_zipfian_gets@264] DEBUG: thread 72 | actual found 335537700 | cycles per get: 118
+2026-04-18 00:03:46.485 INFO  [57534] [kmercounter::do_zipfian_gets@264] DEBUG: thread 29 | actual found 335537700 | cycles per get: 109
+2026-04-18 00:03:46.485 INFO  [57617] [kmercounter::do_zipfian_gets@264] DEBUG: thread 112 | actual found 335537700 | cycles per get: 116
+2026-04-18 00:03:46.485 INFO  [57569] [kmercounter::do_zipfian_gets@264] DEBUG: thread 64 | actual found 335537700 | cycles per get: 117
+2026-04-18 00:03:46.485 INFO  [57606] [kmercounter::do_zipfian_gets@264] DEBUG: thread 101 | actual found 335537700 | cycles per get: 115
+2026-04-18 00:03:46.485 INFO  [57588] [kmercounter::do_zipfian_gets@264] DEBUG: thread 83 | actual found 335537700 | cycles per get: 107
+2026-04-18 00:03:46.485 INFO  [57585] [kmercounter::do_zipfian_gets@264] DEBUG: thread 80 | actual found 335537700 | cycles per get: 119
+2026-04-18 00:03:46.485 INFO  [57579] [kmercounter::do_zipfian_gets@264] DEBUG: thread 74 | actual found 335537700 | cycles per get: 112
+2026-04-18 00:03:46.485 INFO  [57611] [kmercounter::do_zipfian_gets@264] DEBUG: thread 106 | actual found 335537700 | cycles per get: 112
+2026-04-18 00:03:46.485 INFO  [57593] [kmercounter::do_zipfian_gets@264] DEBUG: thread 88 | actual found 335537700 | cycles per get: 114
+2026-04-18 00:03:46.485 INFO  [57574] [kmercounter::do_zipfian_gets@264] DEBUG: thread 69 | actual found 335537700 | cycles per get: 115
+2026-04-18 00:03:46.485 INFO  [57560] [kmercounter::do_zipfian_gets@264] DEBUG: thread 55 | actual found 335537700 | cycles per get: 89
+2026-04-18 00:03:46.490 INFO  [57505] [kmercounter::ZipfianTest::run@398] get fill 0.800
+2026-04-18 00:03:47.200 INFO  [57505] [kmercounter::free_mem@184] 0x78aec0000000 with sz 8589934592 unmapped
+{total_reprobes : 10280977988, total_finds : 42949670400, avg_cachelines_accessed : 1.2394}
+{reprobe_factor : 1.2394}
+===============================================================
+average_insert_task_duration : 728715172, total_insert_tas_duration : 728715172
+insert_ops : 429496704, insert_ops_per_run : 429496704
+average_find_task_duration : 401702176, total_find_duration : 40170217694
+find_ops : 42949670400, find_ops_per_run : 429496704
+{ set_cycles : 175, get_cycles : 103, set_mops : 1821.630, get_mops : 3093.772 }
+===============================================================
+/opt/dramhit-fork/build/dramhit --perf_cnt_path ./perf_cnt.txt --perf_def_path ./perf-cpp/perf_list.csv --find_queue 64 --ht-fill 80 --ht-type 3 --insert-factor 1 --read-factor 100 --num-threads 128 --numa-split 1 --no-prefetch 0 --mode 11 --ht-size 536870912 --skew 0.01 --hw-pref 0 --batch-len 16 --relation_r_size 375809638
+2026-04-18 00:03:47.542 INFO  [57706] [initializeLogger@17] ------------------------
+2026-04-18 00:03:47.543 INFO  [57706] [initializeLogger@18] Plog library initialized
+2026-04-18 00:03:47.543 INFO  [57706] [initializeLogger@19] ------------------------
+2026-04-18 00:03:47.543 INFO  [57706] [main@27] Starting dramhit
+2026-04-18 00:03:47.543 INFO  [57706] [MsrHandler::msr_open@46] msr-safe loaded!
+2026-04-18 00:03:47.544 INFO  [57706] [kmercounter::Application::process@769] Hashtable type : Cas HT
+2026-04-18 00:03:47.544 INFO  [57706] [kmercounter::Application::process@810] Dropping the page cache
+2026-04-18 00:03:48.587 INFO  [57706] [kmercounter::init_zipfian_dist@76] HT_TESTS_NUM_INSERTS 483183820
+2026-04-18 00:03:48.588 INFO  [57706] [kmercounter::init_zipfian_dist@81] /opt/zipfian/0.01_536870912_90.bin 0
+2026-04-18 00:03:48.588 INFO  [57706] [kmercounter::init_zipfian_dist@88] Initializing global zipf with skew 0.010000, seed 1776492227271175848
+2026-04-18 00:04:18.060 INFO  [57706] [kmercounter::init_zipfian_dist@93] Zipfian dist generated. size 483183820
+2026-04-18 00:04:18.060 INFO  [57706] [kmercounter::Application::spawn_shard_threads@413] total kv 483183820, num_threads 128, op per thread (per run) 3774873
+2026-04-18 00:04:18.060 INFO  [57717] [kmercounter::calloc_ht@132] opened file /mnt/huge/hugepagefile
+2026-04-18 00:04:18.060 INFO  [57717] [kmercounter::calloc_ht@148] allocating 8 1gb pages bytes 8589934592
+2026-04-18 00:04:18.060 INFO  [57717] [kmercounter::calloc_ht@161] mmap returns 0x792100000000
+2026-04-18 00:04:18.060 INFO  [57717] [kmercounter::distribute_mem_to_nodes@122] addr 0x792100000000, alloc_sz 8589934592
+2026-04-18 00:04:21.454 INFO  [57717] [KVQ>::CASHashTable@82] Hashtable base: 0x792100000000 Hashtable size: 536870912
+2026-04-18 00:04:21.454 INFO  [57717] [KVQ>::CASHashTable@84] queue item sz: 32
+2026-04-18 00:04:44.052 INFO  [57737] [kmercounter::do_zipfian_gets@264] DEBUG: thread 20 | actual found 377480100 | cycles per get: 96
+2026-04-18 00:04:44.052 INFO  [57732] [kmercounter::do_zipfian_gets@264] DEBUG: thread 15 | actual found 377480100 | cycles per get: 120
+2026-04-18 00:04:44.052 INFO  [57820] [kmercounter::do_zipfian_gets@264] DEBUG: thread 103 | actual found 377480100 | cycles per get: 143
+2026-04-18 00:04:44.052 INFO  [57726] [kmercounter::do_zipfian_gets@264] DEBUG: thread 9 | actual found 377480100 | cycles per get: 108
+2026-04-18 00:04:44.052 INFO  [57770] [kmercounter::do_zipfian_gets@264] DEBUG: thread 53 | actual found 377480100 | cycles per get: 106
+2026-04-18 00:04:44.052 INFO  [57742] [kmercounter::do_zipfian_gets@264] DEBUG: thread 25 | actual found 377480100 | cycles per get: 102
+2026-04-18 00:04:44.052 INFO  [57758] [kmercounter::do_zipfian_gets@264] DEBUG: thread 41 | actual found 377480100 | cycles per get: 104
+2026-04-18 00:04:44.052 INFO  [57734] [kmercounter::do_zipfian_gets@264] DEBUG: thread 17 | actual found 377480100 | cycles per get: 108
+2026-04-18 00:04:44.052 INFO  [57745] [kmercounter::do_zipfian_gets@264] DEBUG: thread 28 | actual found 377480100 | cycles per get: 107
+2026-04-18 00:04:44.052 INFO  [57777] [kmercounter::do_zipfian_gets@264] DEBUG: thread 60 | actual found 377480100 | cycles per get: 107
+2026-04-18 00:04:44.052 INFO  [57753] [kmercounter::do_zipfian_gets@264] DEBUG: thread 36 | actual found 377480100 | cycles per get: 97
+2026-04-18 00:04:44.052 INFO  [57720] [kmercounter::do_zipfian_gets@264] DEBUG: thread 3 | actual found 377480100 | cycles per get: 107
+2026-04-18 00:04:44.052 INFO  [57752] [kmercounter::do_zipfian_gets@264] DEBUG: thread 35 | actual found 377480100 | cycles per get: 108
+2026-04-18 00:04:44.052 INFO  [57767] [kmercounter::do_zipfian_gets@264] DEBUG: thread 50 | actual found 377480100 | cycles per get: 98
+2026-04-18 00:04:44.052 INFO  [57754] [kmercounter::do_zipfian_gets@264] DEBUG: thread 37 | actual found 377480100 | cycles per get: 101
+2026-04-18 00:04:44.052 INFO  [57723] [kmercounter::do_zipfian_gets@264] DEBUG: thread 6 | actual found 377480100 | cycles per get: 108
+2026-04-18 00:04:44.052 INFO  [57738] [kmercounter::do_zipfian_gets@264] DEBUG: thread 21 | actual found 377480100 | cycles per get: 106
+2026-04-18 00:04:44.052 INFO  [57761] [kmercounter::do_zipfian_gets@264] DEBUG: thread 44 | actual found 377480100 | cycles per get: 106
+2026-04-18 00:04:44.052 INFO  [57746] [kmercounter::do_zipfian_gets@264] DEBUG: thread 29 | actual found 377480100 | cycles per get: 108
+2026-04-18 00:04:44.052 INFO  [57766] [kmercounter::do_zipfian_gets@264] DEBUG: thread 49 | actual found 377480100 | cycles per get: 108
+2026-04-18 00:04:44.052 INFO  [57743] [kmercounter::do_zipfian_gets@264] DEBUG: thread 26 | actual found 377480100 | cycles per get: 110
+2026-04-18 00:04:44.052 INFO  [57760] [kmercounter::do_zipfian_gets@264] DEBUG: thread 43 | actual found 377480100 | cycles per get: 109
+2026-04-18 00:04:44.052 INFO  [57762] [kmercounter::do_zipfian_gets@264] DEBUG: thread 45 | actual found 377480100 | cycles per get: 108
+2026-04-18 00:04:44.052 INFO  [57731] [kmercounter::do_zipfian_gets@264] DEBUG: thread 14 | actual found 377480100 | cycles per get: 99
+2026-04-18 00:04:44.052 INFO  [57763] [kmercounter::do_zipfian_gets@264] DEBUG: thread 46 | actual found 377480100 | cycles per get: 111
+2026-04-18 00:04:44.052 INFO  [57747] [kmercounter::do_zipfian_gets@264] DEBUG: thread 30 | actual found 377480100 | cycles per get: 105
+2026-04-18 00:04:44.052 INFO  [57779] [kmercounter::do_zipfian_gets@264] DEBUG: thread 62 | actual found 377480100 | cycles per get: 110
+2026-04-18 00:04:44.052 INFO  [57750] [kmercounter::do_zipfian_gets@264] DEBUG: thread 33 | actual found 377480100 | cycles per get: 109
+2026-04-18 00:04:44.052 INFO  [57776] [kmercounter::do_zipfian_gets@264] DEBUG: thread 59 | actual found 377480100 | cycles per get: 108
+2026-04-18 00:04:44.052 INFO  [57736] [kmercounter::do_zipfian_gets@264] DEBUG: thread 19 | actual found 377480100 | cycles per get: 108
+2026-04-18 00:04:44.052 INFO  [57721] [kmercounter::do_zipfian_gets@264] DEBUG: thread 4 | actual found 377480100 | cycles per get: 114
+2026-04-18 00:04:44.052 INFO  [57775] [kmercounter::do_zipfian_gets@264] DEBUG: thread 58 | actual found 377480100 | cycles per get: 107
+2026-04-18 00:04:44.052 INFO  [57768] [kmercounter::do_zipfian_gets@264] DEBUG: thread 51 | actual found 377480100 | cycles per get: 108
+2026-04-18 00:04:44.052 INFO  [57718] [kmercounter::do_zipfian_gets@264] DEBUG: thread 1 | actual found 377480100 | cycles per get: 112
+2026-04-18 00:04:44.052 INFO  [57840] [kmercounter::do_zipfian_gets@264] DEBUG: thread 123 | actual found 377480100 | cycles per get: 101
+2026-04-18 00:04:44.052 INFO  [57722] [kmercounter::do_zipfian_gets@264] DEBUG: thread 5 | actual found 377480100 | cycles per get: 115
+2026-04-18 00:04:44.052 INFO  [57774] [kmercounter::do_zipfian_gets@264] DEBUG: thread 57 | actual found 377480100 | cycles per get: 108
+2026-04-18 00:04:44.052 INFO  [57719] [kmercounter::do_zipfian_gets@264] DEBUG: thread 2 | actual found 377480100 | cycles per get: 115
+2026-04-18 00:04:44.052 INFO  [57771] [kmercounter::do_zipfian_gets@264] DEBUG: thread 54 | actual found 377480100 | cycles per get: 109
+2026-04-18 00:04:44.052 INFO  [57778] [kmercounter::do_zipfian_gets@264] DEBUG: thread 61 | actual found 377480100 | cycles per get: 116
+2026-04-18 00:04:44.052 INFO  [57730] [kmercounter::do_zipfian_gets@264] DEBUG: thread 13 | actual found 377480100 | cycles per get: 108
+2026-04-18 00:04:44.052 INFO  [57729] [kmercounter::do_zipfian_gets@264] DEBUG: thread 12 | actual found 377480100 | cycles per get: 106
+2026-04-18 00:04:44.052 INFO  [57759] [kmercounter::do_zipfian_gets@264] DEBUG: thread 42 | actual found 377480100 | cycles per get: 109
+2026-04-18 00:04:44.052 INFO  [57727] [kmercounter::do_zipfian_gets@264] DEBUG: thread 10 | actual found 377480100 | cycles per get: 117
+2026-04-18 00:04:44.052 INFO  [57735] [kmercounter::do_zipfian_gets@264] DEBUG: thread 18 | actual found 377480100 | cycles per get: 109
+2026-04-18 00:04:44.052 INFO  [57728] [kmercounter::do_zipfian_gets@264] DEBUG: thread 11 | actual found 377480100 | cycles per get: 109
+2026-04-18 00:04:44.052 INFO  [57755] [kmercounter::do_zipfian_gets@264] DEBUG: thread 38 | actual found 377480100 | cycles per get: 110
+2026-04-18 00:04:44.052 INFO  [57739] [kmercounter::do_zipfian_gets@264] DEBUG: thread 22 | actual found 377480100 | cycles per get: 109
+2026-04-18 00:04:44.052 INFO  [57810] [kmercounter::do_zipfian_gets@264] DEBUG: thread 93 | actual found 377480100 | cycles per get: 117
+2026-04-18 00:04:44.052 INFO  [57839] [kmercounter::do_zipfian_gets@264] DEBUG: thread 122 | actual found 377480100 | cycles per get: 111
+2026-04-18 00:04:44.052 INFO  [57807] [kmercounter::do_zipfian_gets@264] DEBUG: thread 90 | actual found 377480100 | cycles per get: 117
+2026-04-18 00:04:44.052 INFO  [57834] [kmercounter::do_zipfian_gets@264] DEBUG: thread 117 | actual found 377480100 | cycles per get: 112
+2026-04-18 00:04:44.052 INFO  [57841] [kmercounter::do_zipfian_gets@264] DEBUG: thread 124 | actual found 377480100 | cycles per get: 116
+2026-04-18 00:04:44.052 INFO  [57802] [kmercounter::do_zipfian_gets@264] DEBUG: thread 85 | actual found 377480100 | cycles per get: 118
+2026-04-18 00:04:44.052 INFO  [57741] [kmercounter::do_zipfian_gets@264] DEBUG: thread 24 | actual found 377480100 | cycles per get: 118
+2026-04-18 00:04:44.052 INFO  [57838] [kmercounter::do_zipfian_gets@264] DEBUG: thread 121 | actual found 377480100 | cycles per get: 118
+2026-04-18 00:04:44.052 INFO  [57843] [kmercounter::do_zipfian_gets@264] DEBUG: thread 126 | actual found 377480100 | cycles per get: 118
+2026-04-18 00:04:44.052 INFO  [57835] [kmercounter::do_zipfian_gets@264] DEBUG: thread 118 | actual found 377480100 | cycles per get: 118
+2026-04-18 00:04:44.052 INFO  [57765] [kmercounter::do_zipfian_gets@264] DEBUG: thread 48 | actual found 377480100 | cycles per get: 119
+2026-04-18 00:04:44.052 INFO  [57764] [kmercounter::do_zipfian_gets@264] DEBUG: thread 47 | actual found 377480100 | cycles per get: 120
+2026-04-18 00:04:44.052 INFO  [57740] [kmercounter::do_zipfian_gets@264] DEBUG: thread 23 | actual found 377480100 | cycles per get: 119
+2026-04-18 00:04:44.052 INFO  [57724] [kmercounter::do_zipfian_gets@264] DEBUG: thread 7 | actual found 377480100 | cycles per get: 121
+2026-04-18 00:04:44.052 INFO  [57842] [kmercounter::do_zipfian_gets@264] DEBUG: thread 125 | actual found 377480100 | cycles per get: 109
+2026-04-18 00:04:44.052 INFO  [57811] [kmercounter::do_zipfian_gets@264] DEBUG: thread 94 | actual found 377480100 | cycles per get: 118
+2026-04-18 00:04:44.052 INFO  [57800] [kmercounter::do_zipfian_gets@264] DEBUG: thread 83 | actual found 377480100 | cycles per get: 121
+2026-04-18 00:04:44.052 INFO  [57832] [kmercounter::do_zipfian_gets@264] DEBUG: thread 115 | actual found 377480100 | cycles per get: 117
+2026-04-18 00:04:44.052 INFO  [57806] [kmercounter::do_zipfian_gets@264] DEBUG: thread 89 | actual found 377480100 | cycles per get: 123
+2026-04-18 00:04:44.052 INFO  [57833] [kmercounter::do_zipfian_gets@264] DEBUG: thread 116 | actual found 377480100 | cycles per get: 119
+2026-04-18 00:04:44.052 INFO  [57769] [kmercounter::do_zipfian_gets@264] DEBUG: thread 52 | actual found 377480100 | cycles per get: 114
+2026-04-18 00:04:44.052 INFO  [57808] [kmercounter::do_zipfian_gets@264] DEBUG: thread 91 | actual found 377480100 | cycles per get: 122
+2026-04-18 00:04:44.052 INFO  [57717] [kmercounter::do_zipfian_gets@264] DEBUG: thread 0 | actual found 377480100 | cycles per get: 122
+2026-04-18 00:04:44.052 INFO  [57756] [kmercounter::do_zipfian_gets@264] DEBUG: thread 39 | actual found 377480100 | cycles per get: 120
+2026-04-18 00:04:44.052 INFO  [57809] [kmercounter::do_zipfian_gets@264] DEBUG: thread 92 | actual found 377480100 | cycles per get: 125
+2026-04-18 00:04:44.052 INFO  [57748] [kmercounter::do_zipfian_gets@264] DEBUG: thread 31 | actual found 377480100 | cycles per get: 123
+2026-04-18 00:04:44.052 INFO  [57733] [kmercounter::do_zipfian_gets@264] DEBUG: thread 16 | actual found 377480100 | cycles per get: 121
+2026-04-18 00:04:44.052 INFO  [57706] [kmercounter::do_zipfian_gets@264] DEBUG: thread 127 | actual found 377480100 | cycles per get: 126
+2026-04-18 00:04:44.052 INFO  [57757] [kmercounter::do_zipfian_gets@264] DEBUG: thread 40 | actual found 377480100 | cycles per get: 123
+2026-04-18 00:04:44.052 INFO  [57725] [kmercounter::do_zipfian_gets@264] DEBUG: thread 8 | actual found 377480100 | cycles per get: 123
+2026-04-18 00:04:44.052 INFO  [57803] [kmercounter::do_zipfian_gets@264] DEBUG: thread 86 | actual found 377480100 | cycles per get: 123
+2026-04-18 00:04:44.052 INFO  [57801] [kmercounter::do_zipfian_gets@264] DEBUG: thread 84 | actual found 377480100 | cycles per get: 123
+2026-04-18 00:04:44.052 INFO  [57772] [kmercounter::do_zipfian_gets@264] DEBUG: thread 55 | actual found 377480100 | cycles per get: 121
+2026-04-18 00:04:44.052 INFO  [57814] [kmercounter::do_zipfian_gets@264] DEBUG: thread 97 | actual found 377480100 | cycles per get: 125
+2026-04-18 00:04:44.052 INFO  [57825] [kmercounter::do_zipfian_gets@264] DEBUG: thread 108 | actual found 377480100 | cycles per get: 124
+2026-04-18 00:04:44.052 INFO  [57773] [kmercounter::do_zipfian_gets@264] DEBUG: thread 56 | actual found 377480100 | cycles per get: 126
+2026-04-18 00:04:44.052 INFO  [57784] [kmercounter::do_zipfian_gets@264] DEBUG: thread 67 | actual found 377480100 | cycles per get: 125
+2026-04-18 00:04:44.052 INFO  [57744] [kmercounter::do_zipfian_gets@264] DEBUG: thread 27 | actual found 377480100 | cycles per get: 104
+2026-04-18 00:04:44.052 INFO  [57794] [kmercounter::do_zipfian_gets@264] DEBUG: thread 77 | actual found 377480100 | cycles per get: 127
+2026-04-18 00:04:44.052 INFO  [57826] [kmercounter::do_zipfian_gets@264] DEBUG: thread 109 | actual found 377480100 | cycles per get: 127
+2026-04-18 00:04:44.052 INFO  [57799] [kmercounter::do_zipfian_gets@264] DEBUG: thread 82 | actual found 377480100 | cycles per get: 122
+2026-04-18 00:04:44.052 INFO  [57830] [kmercounter::do_zipfian_gets@264] DEBUG: thread 113 | actual found 377480100 | cycles per get: 126
+2026-04-18 00:04:44.052 INFO  [57790] [kmercounter::do_zipfian_gets@264] DEBUG: thread 73 | actual found 377480100 | cycles per get: 128
+2026-04-18 00:04:44.052 INFO  [57822] [kmercounter::do_zipfian_gets@264] DEBUG: thread 105 | actual found 377480100 | cycles per get: 127
+2026-04-18 00:04:44.052 INFO  [57815] [kmercounter::do_zipfian_gets@264] DEBUG: thread 98 | actual found 377480100 | cycles per get: 127
+2026-04-18 00:04:44.052 INFO  [57749] [kmercounter::do_zipfian_gets@264] DEBUG: thread 32 | actual found 377480100 | cycles per get: 123
+2026-04-18 00:04:44.052 INFO  [57792] [kmercounter::do_zipfian_gets@264] DEBUG: thread 75 | actual found 377480100 | cycles per get: 127
+2026-04-18 00:04:44.052 INFO  [57787] [kmercounter::do_zipfian_gets@264] DEBUG: thread 70 | actual found 377480100 | cycles per get: 128
+2026-04-18 00:04:44.052 INFO  [57824] [kmercounter::do_zipfian_gets@264] DEBUG: thread 107 | actual found 377480100 | cycles per get: 127
+2026-04-18 00:04:44.052 INFO  [57793] [kmercounter::do_zipfian_gets@264] DEBUG: thread 76 | actual found 377480100 | cycles per get: 137
+2026-04-18 00:04:44.052 INFO  [57783] [kmercounter::do_zipfian_gets@264] DEBUG: thread 66 | actual found 377480100 | cycles per get: 130
+2026-04-18 00:04:44.052 INFO  [57819] [kmercounter::do_zipfian_gets@264] DEBUG: thread 102 | actual found 377480100 | cycles per get: 128
+2026-04-18 00:04:44.052 INFO  [57798] [kmercounter::do_zipfian_gets@264] DEBUG: thread 81 | actual found 377480100 | cycles per get: 127
+2026-04-18 00:04:44.052 INFO  [57785] [kmercounter::do_zipfian_gets@264] DEBUG: thread 68 | actual found 377480100 | cycles per get: 128
+2026-04-18 00:04:44.052 INFO  [57805] [kmercounter::do_zipfian_gets@264] DEBUG: thread 88 | actual found 377480100 | cycles per get: 133
+2026-04-18 00:04:44.052 INFO  [57817] [kmercounter::do_zipfian_gets@264] DEBUG: thread 100 | actual found 377480100 | cycles per get: 128
+2026-04-18 00:04:44.052 INFO  [57837] [kmercounter::do_zipfian_gets@264] DEBUG: thread 120 | actual found 377480100 | cycles per get: 136
+2026-04-18 00:04:44.052 INFO  [57795] [kmercounter::do_zipfian_gets@264] DEBUG: thread 78 | actual found 377480100 | cycles per get: 137
+2026-04-18 00:04:44.052 INFO  [57786] [kmercounter::do_zipfian_gets@264] DEBUG: thread 69 | actual found 377480100 | cycles per get: 128
+2026-04-18 00:04:44.052 INFO  [57804] [kmercounter::do_zipfian_gets@264] DEBUG: thread 87 | actual found 377480100 | cycles per get: 134
+2026-04-18 00:04:44.052 INFO  [57836] [kmercounter::do_zipfian_gets@264] DEBUG: thread 119 | actual found 377480100 | cycles per get: 136
+2026-04-18 00:04:44.052 INFO  [57812] [kmercounter::do_zipfian_gets@264] DEBUG: thread 95 | actual found 377480100 | cycles per get: 147
+2026-04-18 00:04:44.052 INFO  [57780] [kmercounter::do_zipfian_gets@264] DEBUG: thread 63 | actual found 377480100 | cycles per get: 141
+2026-04-18 00:04:44.052 INFO  [57827] [kmercounter::do_zipfian_gets@264] DEBUG: thread 110 | actual found 377480100 | cycles per get: 128
+2026-04-18 00:04:44.052 INFO  [57797] [kmercounter::do_zipfian_gets@264] DEBUG: thread 80 | actual found 377480100 | cycles per get: 141
+2026-04-18 00:04:44.052 INFO  [57829] [kmercounter::do_zipfian_gets@264] DEBUG: thread 112 | actual found 377480100 | cycles per get: 140
+2026-04-18 00:04:44.052 INFO  [57828] [kmercounter::do_zipfian_gets@264] DEBUG: thread 111 | actual found 377480100 | cycles per get: 143
+2026-04-18 00:04:44.052 INFO  [57781] [kmercounter::do_zipfian_gets@264] DEBUG: thread 64 | actual found 377480100 | cycles per get: 144
+2026-04-18 00:04:44.052 INFO  [57791] [kmercounter::do_zipfian_gets@264] DEBUG: thread 74 | actual found 377480100 | cycles per get: 134
+2026-04-18 00:04:44.052 INFO  [57816] [kmercounter::do_zipfian_gets@264] DEBUG: thread 99 | actual found 377480100 | cycles per get: 132
+2026-04-18 00:04:44.052 INFO  [57821] [kmercounter::do_zipfian_gets@264] DEBUG: thread 104 | actual found 377480100 | cycles per get: 143
+2026-04-18 00:04:44.052 INFO  [57831] [kmercounter::do_zipfian_gets@264] DEBUG: thread 114 | actual found 377480100 | cycles per get: 119
+2026-04-18 00:04:44.052 INFO  [57782] [kmercounter::do_zipfian_gets@264] DEBUG: thread 65 | actual found 377480100 | cycles per get: 135
+2026-04-18 00:04:44.052 INFO  [57789] [kmercounter::do_zipfian_gets@264] DEBUG: thread 72 | actual found 377480100 | cycles per get: 142
+2026-04-18 00:04:44.052 INFO  [57813] [kmercounter::do_zipfian_gets@264] DEBUG: thread 96 | actual found 377480100 | cycles per get: 140
+2026-04-18 00:04:44.052 INFO  [57788] [kmercounter::do_zipfian_gets@264] DEBUG: thread 71 | actual found 377480100 | cycles per get: 142
+2026-04-18 00:04:44.052 INFO  [57823] [kmercounter::do_zipfian_gets@264] DEBUG: thread 106 | actual found 377480100 | cycles per get: 134
+2026-04-18 00:04:44.052 INFO  [57818] [kmercounter::do_zipfian_gets@264] DEBUG: thread 101 | actual found 377480100 | cycles per get: 129
+2026-04-18 00:04:44.052 INFO  [57796] [kmercounter::do_zipfian_gets@264] DEBUG: thread 79 | actual found 377480100 | cycles per get: 139
+2026-04-18 00:04:44.052 INFO  [57751] [kmercounter::do_zipfian_gets@264] DEBUG: thread 34 | actual found 377480100 | cycles per get: 98
+2026-04-18 00:04:44.056 INFO  [57717] [kmercounter::ZipfianTest::run@398] get fill 0.900
+2026-04-18 00:04:44.771 INFO  [57717] [kmercounter::free_mem@184] 0x792100000000 with sz 8589934592 unmapped
+{total_reprobes : 21061742871, total_finds : 48318374400, avg_cachelines_accessed : 1.4359}
+{reprobe_factor : 1.4359}
+===============================================================
+average_insert_task_duration : 890356072, total_insert_tas_duration : 890356072
+insert_ops : 483183744, insert_ops_per_run : 483183744
+average_find_task_duration : 556050402, total_find_duration : 55605040270
+find_ops : 48318374400, find_ops_per_run : 483183744
+{ set_cycles : 192, get_cycles : 119, set_mops : 1664.074, get_mops : 2667.981 }
+===============================================================
+/opt/dramhit-fork/build/dramhit --perf_cnt_path ./perf_cnt.txt --perf_def_path ./perf-cpp/perf_list.csv --find_queue 64 --ht-fill 90 --ht-type 3 --insert-factor 1 --read-factor 100 --num-threads 128 --numa-split 1 --no-prefetch 0 --mode 11 --ht-size 536870912 --skew 0.01 --hw-pref 0 --batch-len 16 --relation_r_size 375809638
+} END uniform test
+} END dramblast

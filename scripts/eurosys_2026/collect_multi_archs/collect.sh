@@ -4,7 +4,7 @@
 #  sudo apt-get install cmake-curses-gui
 #  nix develop --extra-experimental-features nix-command --extra-experimental-features flakes
 # 'Constants' hash table types
-
+set -e
 
 # ./collect.sh large single-local 32
 
@@ -49,8 +49,8 @@ elif [ "$test" = "large" ]; then
     # size=1073741824
     # size=268435456
     # size=524288
-    insertFactor=200
-    readFactor=200
+    insertFactor=1
+    readFactor=1
 fi
 
 # size=134217728
@@ -69,7 +69,7 @@ UNIFORM=14
 OUTPUT_FILE=output.txt
 HOME_DIR=/opt/dramhit-fork
 # This is for in-order batching tests
-cmake -S $HOME_DIR -B $HOME_DIR/build -DIN_ORDER_BATCHING=OFF -DDRAMHiT_VARIANT=2025_INLINE -DBUCKETIZATION=ON -DBRANCH=simd -DUNIFORM_PROBING=ON -DPREFETCH=DOUBLE
+cmake -S $HOME_DIR -B $HOME_DIR/build -DCALC_STATS=ON -DIN_ORDER_BATCHING=OFF -DDRAMHiT_VARIANT=2025_INLINE -DBUCKETIZATION=ON -DBRANCH=simd -DUNIFORM_PROBING=ON -DPREFETCH=DOUBLE
 cmake --build $HOME_DIR/build
 
 # Let's test this with MLC, Folklore, DRAMHit, dramblast regular double prefetch?
@@ -86,7 +86,7 @@ echo "" > $OUTPUT_FILE
 
     EVENTS="unc_m_cas_count.all,unc_m_cas_count.rd,unc_m_cas_count.wr"
     # Get bw info
-    sudo perf stat -I 1000 -e $EVENTS -- $HOME_DIR/build/dramhit $cmd > /dev/null 2>> $OUTPUT_FILE
+    # sudo perf stat -I 1000 -e $EVENTS -- $HOME_DIR/build/dramhit $cmd > /dev/null 2>> $OUTPUT_FILE
 
     echo "START uniform test {" >> $OUTPUT_FILE
     # 10-90 fill performance
@@ -96,7 +96,8 @@ echo "" > $OUTPUT_FILE
         --find_queue 64 --ht-fill $fill_loop --ht-type $DRAMHIT --insert-factor $insertFactor --read-factor $readFactor\
         --num-threads $numThreads --numa-split $numa_policy --no-prefetch 0 --mode $ZIPFIAN --ht-size $size --skew 0.01\
         --hw-pref 0 --batch-len 16 --relation_r_size $rsize"
-        sudo $HOME_DIR/build/dramhit $cmd | grep "get_mops" >> $OUTPUT_FILE
+        sudo $HOME_DIR/build/dramhit $cmd >> $OUTPUT_FILE
+        # | grep -E "get_mops|fill" >> $OUTPUT_FILE
          echo $HOME_DIR/build/dramhit $cmd >> $OUTPUT_FILE
     done  
     
@@ -105,68 +106,68 @@ echo "" > $OUTPUT_FILE
     echo "} END dramblast" >> $OUTPUT_FILE
 
 
-#DRAMHIT23
+# #DRAMHIT23
    
-    echo "START dramhit23 {" >> $OUTPUT_FILE
-    cmd="--perf_cnt_path ./perf_cnt.txt --perf_def_path ./perf-cpp/perf_list.csv \
-    --find_queue 64 --ht-fill $fill --ht-type $DRAMHIT23 --insert-factor $insertFactor --read-factor $readFactor\
-    --num-threads $numThreads --numa-split $numa_policy --no-prefetch 0 --mode $ZIPFIAN --ht-size $size --skew 0.01\
-    --hw-pref 0 --batch-len 16 --relation_r_size $rsize"
+#     echo "START dramhit23 {" >> $OUTPUT_FILE
+#     cmd="--perf_cnt_path ./perf_cnt.txt --perf_def_path ./perf-cpp/perf_list.csv \
+#     --find_queue 64 --ht-fill $fill --ht-type $DRAMHIT23 --insert-factor $insertFactor --read-factor $readFactor\
+#     --num-threads $numThreads --numa-split $numa_policy --no-prefetch 0 --mode $ZIPFIAN --ht-size $size --skew 0.01\
+#     --hw-pref 0 --batch-len 16 --relation_r_size $rsize"
 
-    EVENTS="unc_m_cas_count.all,unc_m_cas_count.rd,unc_m_cas_count.wr"
-    # Get bw info
-    sudo perf stat -I 1000 -e $EVENTS -- $HOME_DIR/build/dramhit $cmd > /dev/null 2>> $OUTPUT_FILE
+#     EVENTS="unc_m_cas_count.all,unc_m_cas_count.rd,unc_m_cas_count.wr"
+#     # Get bw info
+#     sudo perf stat -I 1000 -e $EVENTS -- $HOME_DIR/build/dramhit $cmd > /dev/null 2>> $OUTPUT_FILE
 
-    echo "START uniform test {" >> $OUTPUT_FILE
-    # 10-90 fill performance
-    for fill_loop in $(seq 10 10 90);
-    do  
-        cmd="--perf_cnt_path ./perf_cnt.txt --perf_def_path ./perf-cpp/perf_list.csv \
-        --find_queue 64 --ht-fill $fill_loop --ht-type $DRAMHIT23 --insert-factor $insertFactor --read-factor $readFactor\
-        --num-threads $numThreads --numa-split $numa_policy --no-prefetch 0 --mode $ZIPFIAN --ht-size $size --skew 0.01\
-        --hw-pref 0 --batch-len 16 --relation_r_size $rsize"
-        sudo $HOME_DIR/build/dramhit $cmd | grep "get_mops" >> $OUTPUT_FILE
-         echo $HOME_DIR/build/dramhit $cmd >> $OUTPUT_FILE
-    done  
+#     echo "START uniform test {" >> $OUTPUT_FILE
+#     # 10-90 fill performance
+#     for fill_loop in $(seq 10 10 90);
+#     do  
+#         cmd="--perf_cnt_path ./perf_cnt.txt --perf_def_path ./perf-cpp/perf_list.csv \
+#         --find_queue 64 --ht-fill $fill_loop --ht-type $DRAMHIT23 --insert-factor $insertFactor --read-factor $readFactor\
+#         --num-threads $numThreads --numa-split $numa_policy --no-prefetch 0 --mode $ZIPFIAN --ht-size $size --skew 0.01\
+#         --hw-pref 0 --batch-len 16 --relation_r_size $rsize"
+#         sudo $HOME_DIR/build/dramhit $cmd | grep "get_mops" >> $OUTPUT_FILE
+#          echo $HOME_DIR/build/dramhit $cmd >> $OUTPUT_FILE
+#     done  
     
 
-    echo "} END uniform test" >> $OUTPUT_FILE
-    echo "} END dramhit23" >> $OUTPUT_FILE
+#     echo "} END uniform test" >> $OUTPUT_FILE
+#     echo "} END dramhit23" >> $OUTPUT_FILE
 
-#FOLKLORE
-   echo "START folklore {" >> $OUTPUT_FILE
-    cmd="--perf_cnt_path ./perf_cnt.txt --perf_def_path ./perf-cpp/perf_list.csv \
-    --find_queue 64 --ht-fill $fill --ht-type $DRAMHIT23 --insert-factor $insertFactor --read-factor $readFactor\
-    --num-threads $numThreads --numa-split $numa_policy --no-prefetch 1 --mode $ZIPFIAN --ht-size $size --skew 0.01\
-    --hw-pref 0 --batch-len 16 --relation_r_size $rsize"
+# #FOLKLORE
+#    echo "START folklore {" >> $OUTPUT_FILE
+#     cmd="--perf_cnt_path ./perf_cnt.txt --perf_def_path ./perf-cpp/perf_list.csv \
+#     --find_queue 64 --ht-fill $fill --ht-type $DRAMHIT23 --insert-factor $insertFactor --read-factor $readFactor\
+#     --num-threads $numThreads --numa-split $numa_policy --no-prefetch 1 --mode $ZIPFIAN --ht-size $size --skew 0.01\
+#     --hw-pref 0 --batch-len 16 --relation_r_size $rsize"
 
-    EVENTS="unc_m_cas_count.all,unc_m_cas_count.rd,unc_m_cas_count.wr"
-    # Get bw info
-    sudo perf stat -I 1000 -e $EVENTS -- $HOME_DIR/build/dramhit $cmd > /dev/null 2>> $OUTPUT_FILE
+#     EVENTS="unc_m_cas_count.all,unc_m_cas_count.rd,unc_m_cas_count.wr"
+#     # Get bw info
+#     sudo perf stat -I 1000 -e $EVENTS -- $HOME_DIR/build/dramhit $cmd > /dev/null 2>> $OUTPUT_FILE
 
-    echo "START uniform test {" >> $OUTPUT_FILE
-    # 10-90 fill performance
-    for fill_loop in $(seq 10 10 90);
-    do  
-        cmd="--perf_cnt_path ./perf_cnt.txt --perf_def_path ./perf-cpp/perf_list.csv \
-        --find_queue 64 --ht-fill $fill_loop --ht-type $DRAMHIT23 --insert-factor $insertFactor --read-factor $readFactor\
-        --num-threads $numThreads --numa-split $numa_policy --no-prefetch 1 --mode $ZIPFIAN --ht-size $size --skew 0.01\
-        --hw-pref 0 --batch-len 16 --relation_r_size $rsize"
-        sudo $HOME_DIR/build/dramhit $cmd | grep "get_mops" >> $OUTPUT_FILE
-         echo $HOME_DIR/build/dramhit $cmd >> $OUTPUT_FILE
-    done  
+#     echo "START uniform test {" >> $OUTPUT_FILE
+#     # 10-90 fill performance
+#     for fill_loop in $(seq 10 10 90);
+#     do  
+#         cmd="--perf_cnt_path ./perf_cnt.txt --perf_def_path ./perf-cpp/perf_list.csv \
+#         --find_queue 64 --ht-fill $fill_loop --ht-type $DRAMHIT23 --insert-factor $insertFactor --read-factor $readFactor\
+#         --num-threads $numThreads --numa-split $numa_policy --no-prefetch 1 --mode $ZIPFIAN --ht-size $size --skew 0.01\
+#         --hw-pref 0 --batch-len 16 --relation_r_size $rsize"
+#         sudo $HOME_DIR/build/dramhit $cmd | grep "get_mops" >> $OUTPUT_FILE
+#          echo $HOME_DIR/build/dramhit $cmd >> $OUTPUT_FILE
+#     done  
     
 
-    echo "} END uniform test" >> $OUTPUT_FILE
-    echo "} END folklore" >> $OUTPUT_FILE
+#     echo "} END uniform test" >> $OUTPUT_FILE
+#     echo "} END folklore" >> $OUTPUT_FILE
 
 
 
 
-    echo "MLC {" >> $OUTPUT_FILE
+#     echo "MLC {" >> $OUTPUT_FILE
 
-    sudo $HOME_DIR/tools/mlc/mlc --bandwidth_matrix -U -h>> $OUTPUT_FILE
+#     sudo $HOME_DIR/tools/mlc/mlc --bandwidth_matrix -U -h>> $OUTPUT_FILE
 
-    echo "} MLC" >> $OUTPUT_FILE
+#     echo "} MLC" >> $OUTPUT_FILE
 
 
